@@ -116,6 +116,7 @@ propiedades.push(new Propiedad(2, "San Martín", 310, "Departamento", 17000));
 propiedades.push(new Propiedad(3, "Alem", 132, "Casa", 30000));
 propiedades.push(new Propiedad(4, "Sarmiento", 100, "Local comercial", 22000));
 
+/*
 alert("Mostramos a continuación las propiedades disponibles en este momento")
 alert(mostrarTodos(propiedades));
 
@@ -133,4 +134,29 @@ if (propiedadEncontrada != 0) {
     alert("Muchas gracias por visitarnos! Nos comunicaremos pronto con usted!");
 } else {
     alert("No ha seleccionado ninguna propiedad. Debe comenzar de nuevo")
+}
+*/
+
+let mensajeBienvenida = document.getElementById("tituloBienvenida");
+
+//1° crear la etiqueta
+let tituloBienvenida = document.createElement("h2");
+//1° definir el interior de la etiqueta
+let nombre = prompt("Ingrese su nombre");
+tituloBienvenida.innerHTML = "Bienvenid@ " + nombre + ". Te presentamos a continuación las propiedades disponibles.";
+//3° agregar la etiqueta al HTML
+mensajeBienvenida.appendChild(tituloBienvenida);
+
+let seccionPropiedades = document.getElementById("propiedadesDisp");
+
+for (const propiedad of propiedades) {
+    //1° crear la etiqueta
+    let divPropiedad = document.createElement("div");
+    divPropiedad.classList.add("propiedadDisp");
+    //2° definir el interior de la etiqueta
+    divPropiedad.innerHTML = `<h3 class="tituloPropiedad">Calle: ${propiedad.calle} ${propiedad.numero}</h3>
+                                <p class="infoPropiedad">Tipo de propiedad: ${propiedad.tipo}</p>
+                                <p class="infoPropiedad">Valor del alquiler: ${propiedad.alquilerInicial}</p>`
+    //3° agregar la etiqueta al HTML
+    seccionPropiedades.appendChild(divPropiedad);
 }

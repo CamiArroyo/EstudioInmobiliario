@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /* Variables: colores */
 /* Variables: tamaños */
+html, body {
+  width: 100%;
+  overflow-x: hidden; }
+
 .contenedor .navbar {
   background-color: #FFFF00;
   font-size: 18px; }
@@ -13,8 +17,15 @@ h1 {
   margin: 20px 0px; }
 
 h2 {
-  color: #BBBBBB;
+  color: #787878;
   font-size: 34px;
+  text-align: center;
+  font-weight: 600;
+  margin: 30px 0px; }
+
+h3 {
+  color: #787878;
+  font-size: 25px;
   text-align: center;
   font-weight: 600;
   margin: 30px 0px; }
@@ -28,6 +39,12 @@ p {
 
 p {
   text-indent: 15px; }
+
+.propiedadDisp {
+  background-color: #F6FF8B; }
+
+.tituloPropiedad {
+  text-transform: uppercase; }
 
 .container-fluid .footerBootstrap {
   background-color: #BBBBBB;
