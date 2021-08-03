@@ -113,6 +113,8 @@ function seleccionPropiedad() {
     const propiedadEncontrada = propiedades.find(propiedad => propiedad.id == idProp);
     console.log(propiedadEncontrada.mostrar());
 
+    seccionActual.innerHTML = "";
+
     let divNombreProp = document.createElement("p");
     divNombreProp.classList.add("propSeleccInfo");
     divNombreProp.innerHTML = `Se ha seleccionado la propiedad: ${propiedadEncontrada.calle} ${propiedadEncontrada.numero}`;
