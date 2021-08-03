@@ -35,7 +35,7 @@ p {
   font-size: 16px;
   text-align: justify;
   font-weight: 400;
-  margin: 10px 0px; }
+  margin: 10px; }
 
 p {
   text-indent: 15px; }
@@ -45,6 +45,10 @@ p {
 
 .tituloPropiedad {
   text-transform: uppercase; }
+
+.propSeleccInfo {
+  background-color: #BBBBBB;
+  border: 1px solid black; }
 
 .container-fluid .footerBootstrap {
   background-color: #BBBBBB;

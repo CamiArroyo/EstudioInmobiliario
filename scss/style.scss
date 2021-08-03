@@ -25,7 +25,7 @@ html, body{
 h1 {@include etiquetas($grisOscuro, $xlarge, center, 900, 20px 0px)}
 h2 {@include etiquetas($grisOscuro, $large, center, 600, 30px 0px)}
 h3 {@include etiquetas($grisOscuro, $medium, center, 600, 30px 0px)}
-p {@include etiquetas($negro, $xsmall, justify, 400, 10px 0px)}
+p {@include etiquetas($negro, $xsmall, justify, 400, 10px)}
 p {text-indent: 15px;}
 
 .propiedadDisp {
@@ -34,6 +34,11 @@ p {text-indent: 15px;}
 
 .tituloPropiedad {
     text-transform: uppercase;
+}
+
+.propSeleccInfo {
+    background-color: $grisClaro;
+    border: 1px solid black;
 }
 
 
