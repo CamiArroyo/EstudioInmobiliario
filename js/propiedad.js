@@ -1,11 +1,12 @@
 //Definición de la clase Propiedad
 
 class Propiedad {
-    constructor (id, calle, numero, tipo, alquilerInicial, img) {
+    constructor (id, calle, numero, tipo, descripcion, alquilerInicial, img) {
         this.id = id;
         this.calle = calle;
         this.numero = parseInt(numero);
         this.tipo = tipo;
+        this.descripcion = descripcion;
         this.alquilerInicial = parseInt(alquilerInicial);
         this.img = img;
     }
@@ -14,6 +15,7 @@ class Propiedad {
         return "Propiedad N° " + this.id +
                 "\nCalle: " + this.calle + " " + this.numero +
                 "\nTipo: " + this.tipo +
+                "\nDescripción: " + this.descripcion +
                 "\nAlquiler inicial: $" + this.alquilerInicial
     }
 

@@ -5,41 +5,84 @@ html, body {
   width: 100%;
   overflow-x: hidden; }
 
+/* Barra de navegación */
 .contenedor .navbar {
   background-color: #FFFF00;
-  font-size: 18px; }
+  font-size: 18px;
+  font-family: 'Alegreya', serif; }
+  .contenedor .navbar .navbar-collapse {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
 
+/* Imágen parallax */
+.parallax {
+  /* The image used */
+  background-image: url("../img/oficinaInterior21.jpg");
+  /* Set a specific height */
+  height: 500px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* box modeling */
+  margin-bottom: 50px; }
+  .parallax .parallax__tituloSeccion {
+    padding-top: 15%;
+    text-align: center; }
+    .parallax .parallax__tituloSeccion .parallax__tituloSeccion--titulo {
+      background-color: #BBBBBB;
+      color: black;
+      font-size: 40px;
+      font-family: 'Pompiere', cursive; }
+
+/* Configuración general */
 h1 {
   color: #787878;
-  font-size: 60px;
+  font-size: 65px;
   text-align: center;
   font-weight: 900;
-  margin: 20px 0px; }
+  margin: 20px 0px;
+  font-family: 'Pompiere', cursive; }
 
 h2 {
   color: #787878;
-  font-size: 34px;
+  font-size: 40px;
   text-align: center;
   font-weight: 600;
-  margin: 30px 0px; }
+  margin: 30px 0px;
+  font-family: 'Pompiere', cursive; }
 
 h3 {
   color: #787878;
-  font-size: 25px;
+  font-size: 30px;
   text-align: center;
   font-weight: 600;
-  margin: 30px 0px; }
+  margin: 30px 0px;
+  font-family: 'Pompiere', cursive; }
 
 p {
   color: black;
-  font-size: 16px;
+  font-size: 18px;
   text-align: justify;
   font-weight: 400;
-  margin: 10px; }
+  margin: 10px;
+  font-family: 'Alegreya', serif; }
 
 p {
   text-indent: 15px; }
 
+/* Sección index.html */
+.bodyIndex {
+  background-color: #F6FF8B; }
+
+.imgLogo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+/* Sección propiedades.html */
 .propiedadDisp {
   background-color: #F6FF8B; }
 
@@ -48,11 +91,50 @@ p {
 
 .propSeleccInfo {
   background-color: #BBBBBB;
-  border: 1px solid black; }
+  text-align: center; }
 
+.padreLinkFormulario {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
+  .padreLinkFormulario .linkFormulario {
+    background-color: #FFFF00;
+    color: black;
+    padding: 10px;
+    border-radius: 10px; }
+
+/* Sección contacto.html */
+#registroSolicitante {
+  border: 1px solid #787878;
+  border-radius: 5px;
+  background-color: #F6FF8B;
+  font-size: 16px;
+  margin: 0px 20px; }
+  #registroSolicitante .itemForm {
+    margin-bottom: 5px;
+    width: 100%; }
+  #registroSolicitante .itemForm2 {
+    width: 80%;
+    margin-left: 40px; }
+  #registroSolicitante .botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    #registroSolicitante .botones .boton {
+      padding: 10px;
+      margin: 15px;
+      background-color: #FFFF00;
+      border: none;
+      border-radius: 5px;
+      transition: 1s; }
+    #registroSolicitante .botones .boton:hover {
+      transform: scale(1.3); }
+
+/* Footer de las secciones */
 .container-fluid .footerBootstrap {
   background-color: #BBBBBB;
   font-size: 18px;
+  font-family: 'Alegreya', serif;
   margin-top: 60px;
   padding-top: 30px;
   padding-bottom: 10px; }
@@ -67,4 +149,5 @@ p {
   font-size: 16px;
   text-align: center;
   background-color: #FFFF00;
-  color: black; }
+  color: black;
+  font-family: 'Alegreya', serif; }

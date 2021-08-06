@@ -62,10 +62,10 @@ const propiedades = [];
 const asignacionPropiedad = [];
 
 //Propiedades hardcodeadas
-propiedades.push(new Propiedad(1, "Velez Sársfield", 780, "Departamento", 15000, "img/edificio1.jpg"));
-propiedades.push(new Propiedad(2, "San Martín", 310, "Departamento", 17000, "img/edificio2.jpg"));
-propiedades.push(new Propiedad(3, "Alem", 132, "Casa", 30000, "img/casa1.jpg"));
-propiedades.push(new Propiedad(4, "Sarmiento", 100, "Local comercial", 22000, "img/localComercial.jpg"));
+propiedades.push(new Propiedad(1, "Velez Sársfield", 780, "Departamento", "Cocina comedor integrada, una habitación, baño y cochera.", 15000, "../img/edificio1.jpg"));
+propiedades.push(new Propiedad(2, "San Martín", 310, "Departamento", "Cocina comedor integrada, dos habitaciones, baño, garage y patio.", 18000, "../img/edificio2.jpg"));
+propiedades.push(new Propiedad(3, "Alem", 132, "Casa", "Comedor amplio, cocina separada, dos habitaciones, dos baños, garage y patio amplio.", 30000, "../img/casa1.jpg"));
+propiedades.push(new Propiedad(4, "Sarmiento", 100, "Local comercial", "Local amplio con vidriera a la calle, cocina y baño.", 22000, "../img/localComercial.jpg"));
 
 //Agrego propiedades desde el Local Storage
 if ("propiedades" in localStorage) { 
@@ -73,21 +73,11 @@ if ("propiedades" in localStorage) {
     const guardados = JSON.parse(localStorage.getItem("propiedades")); 
     console.log(guardados);
     for (const propiedad of guardados) {
-        propiedades.push(new Propiedad(propiedad.id, propiedad.calle, propiedad.numero, propiedad.tipo, propiedad.alquilerInicial, propiedad.img));
+        propiedades.push(new Propiedad(propiedad.id, propiedad.calle, propiedad.numero, propiedad.tipo, propiedad.descripcion, propiedad.alquilerInicial, propiedad.img));
     }
 }
 
 //-----------------------------SEGUNDA PARTE: CREO LA INTERFAZ DINÁMICA-----------------------------
-
-let mensajeBienvenida = document.getElementById("tituloBienvenida");
-
-//1° crear la etiqueta
-let tituloBienvenida = document.createElement("h2");
-//1° definir el interior de la etiqueta
-let nombre = prompt("Ingrese su nombre");
-tituloBienvenida.innerHTML = "Bienvenid@ " + nombre + ". Te presentamos a continuación las propiedades disponibles.";
-//3° agregar la etiqueta al HTML
-mensajeBienvenida.appendChild(tituloBienvenida);
 
 for (const propiedad of propiedades) {
     //1° crear la etiqueta
@@ -107,6 +97,8 @@ for (const propiedad of propiedades) {
 
 seccionActual = document.getElementById("seleccionProp");
 
+let idProp = "";
+
 function seleccionPropiedad() {
     idProp = this.id;
     console.log("Se seleccionó la propiedad: " + idProp);
@@ -115,10 +107,14 @@ function seleccionPropiedad() {
 
     seccionActual.innerHTML = "";
 
-    let divNombreProp = document.createElement("p");
+    let divNombreProp = document.createElement("h3");
     divNombreProp.classList.add("propSeleccInfo");
     divNombreProp.innerHTML = `Se ha seleccionado la propiedad: ${propiedadEncontrada.calle} ${propiedadEncontrada.numero}`;
     seccionActual.appendChild(divNombreProp);
+
+    let divDescripcion = document.createElement("p");
+    divDescripcion.innerHTML = `${propiedadEncontrada.descripcion}`;
+    seccionActual.appendChild(divDescripcion);
 
     let divInfoHonorarios = document.createElement("p");
     divInfoHonorarios.innerHTML = propiedadEncontrada.montoHonorarios();
@@ -131,6 +127,12 @@ function seleccionPropiedad() {
     let opciones = document.createElement("p");
     opciones.innerHTML = `Podrás abonar en 1 cuota de $${honorarios1}, en 2 cuotas de $${honorarios2} o en 3 cuotas de $${honorarios3}`;
     seccionActual.appendChild(opciones);
+
+    let linkFormulario = document.createElement("div");
+    linkFormulario.classList.add("padreLinkFormulario");
+    linkFormulario.innerHTML = `<a href="contacto.html#formulario" class="linkFormulario">IR AL FORMULARIO DE SOLICITUD</a>`
+    seccionActual.appendChild(linkFormulario);
+
 }
 
 //1° acceder a los elementos
