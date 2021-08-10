@@ -185,3 +185,20 @@ p {text-indent: 15px;}
         font-family: 'Alegreya', serif;
     }
 }
+
+#propiedadesContenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card {
+    margin: 0px 20px;
+}
+
+.dropdown {
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

@@ -57,13 +57,27 @@
     <h1>PROPIEDADES DISPONIBLES</h1>
 
     <div class="row">
-        <div class="col-xs-12 col-lg-7" id="propiedadesDisp">
-            <h2>SELECCIONA UNA PROPIEDAD</h2>
-        </div>
-        <div class="col-xs-12 col-lg-5">
-            <h2>INFORMACIÓN DE LAS PROPIEDADES SELECCIONADAS</h2>
-            <p>Seleccione una propiedad y verá aquí debajo la información correspondiente a la misma.</p>
-            <div id="seleccionProp"></div>
+        <div class="col-xs-12 col-lg-12" id="propiedadesDisp">
+
+            <h2>SELECCIONA LAS PROPIEDADES QUE TE GUSTEN</h2>
+            <p>Podrás seleccionar las propiedades que quieras. Una vez que finalices, haz click en el botón "confirmar".</p>
+
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    PROPIEDADES A SOLICITAR <span id="carritoCantidad" class="badge badge-light">0</span>
+                </button>
+                <div id="carritoPropiedades" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <!-- Acá genero el carrito -->
+                </div>
+            </div>
+
+            <div id="infoPropiedad">
+                <!-- Acá se muestra la información de la propiedad elegida -->
+            </div>
+            
+            <div id="propiedadesContenedor" class="row row-cols-1 row-cols-md-2">
+                <!-- Acá se van agregando las propiedades -->
+            </div>
         </div>
     </div>
 
@@ -98,6 +112,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
     <!-- Importación del código JS -->
+    <script src="../js/globales.js"> </script>
+    <script src="../js/funciones.js"></script>
     <script src="../js/propiedad.js"> </script>
     <script src="../js/inquilino.js"> </script>
     <script src="../js/propiedadesDisp.js"> </script>
