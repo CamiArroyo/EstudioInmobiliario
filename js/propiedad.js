@@ -25,7 +25,12 @@ class Propiedad {
     }
 
     montoHonorariosValor() {
-        //corresponde al 5% del total del contrato
-        return this.alquilerInicial * 36 * 0.05 ;
+        //corresponde al 5% del total del contrato, pudiendo pagarse en 1, 2, 3 o 4 cuotas
+        const honorarios = [];
+        honorarios.push(this.alquilerInicial * 36 * 0.05);
+        honorarios.push((this.alquilerInicial * 36 * 0.05) / 2);
+        honorarios.push((this.alquilerInicial * 36 * 0.05) / 3);
+        honorarios.push((this.alquilerInicial * 36 * 0.05) / 4);
+        return honorarios;
     }
 }

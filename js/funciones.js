@@ -68,8 +68,8 @@ function propiedadesUIjQuery(propiedades, id) {
                                     <h5 class="card-title tituloPropiedad">${propiedad.calle} ${propiedad.numero}</h5>
                                     <h6 class="card-subtitle mb-2 text-muted infoPropiedad">${propiedad.tipo}</h6>
                                     <p class="card-text infoPropiedad">Valor del alquiler: $${propiedad.alquilerInicial}</p>
-                                    <a id="${propiedad.id}" class="btn btn-primary btnProp">MÁS INFORMACIÓN</a>
-                                    <a id="${propiedad.id}" class="btn btn-primary btnSoli">SOLICITAR</a>
+                                    <a id="${propiedad.id}" class="btn btn-secondary btnProp boton">VER INFORMACIÓN</a>
+                                    <a id="${propiedad.id}" class="btn btn-secondary btnSoli boton">SOLICITAR</a>
                                 </div>
                             </div>
                         </div>
@@ -80,35 +80,21 @@ function propiedadesUIjQuery(propiedades, id) {
 //Función manejadora del evento "click" del botón "más información"
 
 function seleccionPropiedad() {
-    let seccionActual = document.getElementById("infoPropiedad"); 
-    const idProp = this.id;
 
+    const idProp = this.id;
     console.log("Se seleccionó la propiedad: " + idProp);
     const propiedadEncontrada = propiedades.find(propiedad => propiedad.id == idProp);
     console.log(propiedadEncontrada.mostrar());
+    let honorariosProp = propiedadEncontrada.montoHonorariosValor();
 
-    seccionActual.innerHTML = "";
-
-    let divNombreProp = document.createElement("h3");
-    divNombreProp.classList.add("propSeleccInfo");
-    divNombreProp.innerHTML = `Se ha seleccionado la propiedad: ${propiedadEncontrada.calle} ${propiedadEncontrada.numero}`;
-    seccionActual.appendChild(divNombreProp);
-
-    let divDescripcion = document.createElement("p");
-    divDescripcion.innerHTML = `${propiedadEncontrada.descripcion}`;
-    seccionActual.appendChild(divDescripcion);
-
-    let divInfoHonorarios = document.createElement("p");
-    divInfoHonorarios.innerHTML = propiedadEncontrada.montoHonorarios();
-    seccionActual.appendChild(divInfoHonorarios);
-
-    const honorarios1 = propiedadEncontrada.montoHonorariosValor();
-    const honorarios2 = propiedadEncontrada.montoHonorariosValor() / 2;
-    const honorarios3 = propiedadEncontrada.montoHonorariosValor() / 3;
-
-    let opciones = document.createElement("p");
-    opciones.innerHTML = `Podrás abonar en 1 cuota de $${honorarios1}, en 2 cuotas de $${honorarios2} o en 3 cuotas de $${honorarios3}`;
-    seccionActual.appendChild(opciones);
+    $("#infoPropiedad").empty();
+    $("#infoPropiedad").append(`<p class="propSeleccInfo">Información de la propiedad: ${propiedadEncontrada.calle} ${propiedadEncontrada.numero}</p>`);
+    $("#infoPropiedad").append(`<p>Descripción: ${propiedadEncontrada.descripcion}</p>`);
+    $("#infoPropiedad").append(`<p>El monto total de los honorarios a abonar es $${honorariosProp[0]}.</p>`);
+    $("#infoPropiedad").append(`<p>Podrás abonar en 1 pago de $${honorariosProp[0]}, 
+                                en 2 cuotas de $${honorariosProp[1]}, 
+                                en 3 cuotas de $${honorariosProp[2]} o
+                                en 4 cuotas de $${honorariosProp[3]}.</p>`);
 }
 
 //Función manejadora del evento "click" del botón "solicitar"
@@ -117,10 +103,26 @@ function solicitudPropiedad(e) {
     e.preventDefault(); //prevengo que se refresque la página cuando se presiona el botón "solicitar", que es un enlace (ver etiqueta <a></a>)
     const propiedadID = e.target.id;
     const propSeleccionada = propiedades.find(propiedad => propiedad.id == propiedadID);
-    carrito.push(propSeleccionada);
-    console.log(carrito);
-    carritoUI(carrito);
+
+    if (carrito.includes(propSeleccionada)) {
+        console.log("Esta propiedad ya fue agregada");
+        $("#infoPropiedad").prepend(propiedadRepetida(propSeleccionada));
+    }
+    else {
+        carrito.push(propSeleccionada);
+        console.log(carrito);
+    
+        //Guardamos el carrito en el storage
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+    
+        carritoUI(carrito);
+    }
 }
+
+function propiedadRepetida(propSeleccionada) {
+    return `<p>La propiedad ${propSeleccionada.calle} ${propSeleccionada.numero} ya fue agregada. Puede seleccionar otra si lo desea.</p>`
+}
+
 function carritoUI(carrito) {
     //Modifico la cantidad
     $("#carritoCantidad").html(carrito.length);
@@ -130,7 +132,24 @@ function carritoUI(carrito) {
     for (const propiedad of carrito) {
         $("#carritoPropiedades").append(componenteCarrito(propiedad));
     }
+    //Asociación de evento para eliminar una propiedad
+    $(".btn-delete").on("click", eliminarCarrito);
 }
+
 function componenteCarrito(propiedad) {
-    return `<p>${propiedad.calle} ${propiedad.numero} - Valor del alquier: $${propiedad.alquilerInicial}<button>X</button></p>`
+    return `<p>${propiedad.calle} ${propiedad.numero} - Valor del alquier: $${propiedad.alquilerInicial}
+            <a id='${propiedad.id}' class="btn btn-delete boton">X</a>`
+}
+
+function eliminarCarrito(e) {
+    const propiedadID = e.target.id;
+    //1°: busco la posición del elemento a eliminar
+    let posicion = carrito.findIndex(producto => producto.id == propiedadID);
+    //2°: corto el array carrito --> splice(desde qué posición, cuántos elementos borro)
+    carrito.splice(posicion, 1);
+    //3°: actualizar interfaz
+    carritoUI(carrito);
+
+    //Guardamos el carrito modificado en el storage
+    localStorage.setItem("carrito", JSON.stringify(carrito));
 }

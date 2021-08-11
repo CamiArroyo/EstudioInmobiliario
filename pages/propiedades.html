@@ -55,15 +55,17 @@
     <!-- Apertura de section -->
 
     <h1>PROPIEDADES DISPONIBLES</h1>
+    <div id="indicadorCarga" class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
 
     <div class="row">
-        <div class="col-xs-12 col-lg-12" id="propiedadesDisp">
+        <div class="col-xs-12 col-lg-12">
 
-            <h2>SELECCIONA LAS PROPIEDADES QUE TE GUSTEN</h2>
-            <p>Podrás seleccionar las propiedades que quieras. Una vez que finalices, haz click en el botón "confirmar".</p>
+            <h2>SELECCIONA LAS PROPIEDADES QUE TE INTERESAN</h2>
 
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-secondary dropdown-toggle boton" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     PROPIEDADES A SOLICITAR <span id="carritoCantidad" class="badge badge-light">0</span>
                 </button>
                 <div id="carritoPropiedades" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -72,11 +74,12 @@
             </div>
 
             <div id="infoPropiedad">
-                <!-- Acá se muestra la información de la propiedad elegida -->
+                <p class="subtitulo">Aquí verás información de la propiedad que indiques.</p>
+                <!-- Acá se muestra la información de la propiedad indicada -->
             </div>
             
             <div id="propiedadesContenedor" class="row row-cols-1 row-cols-md-2">
-                <!-- Acá se van agregando las propiedades -->
+                <!-- Acá se van agregando las propiedades disponibles -->
             </div>
         </div>
     </div>
