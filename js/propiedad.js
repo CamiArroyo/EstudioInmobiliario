@@ -3,9 +3,9 @@
 class Propiedad {
     constructor (id, calle, numero, tipo, descripcion, alquilerInicial, img) {
         this.id = id;
-        this.calle = calle;
+        this.calle = calle.toUpperCase();
         this.numero = parseInt(numero);
-        this.tipo = tipo;
+        this.tipo = tipo.toUpperCase();
         this.descripcion = descripcion;
         this.alquilerInicial = parseInt(alquilerInicial);
         this.img = img;

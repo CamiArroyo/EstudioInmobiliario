@@ -13,14 +13,7 @@ $(document).ready(function () { //Todo esto ocurre una vez que el DOM ya fue gen
         }
     }
 
-    //2) Asociación de evento a elementos generados 
-
-    //Botón "más información"
-    $(".btnProp").click(seleccionPropiedad)
-    //Botón "solicitar"
-    $(".btnSoli").click(solicitudPropiedad)
-
-    //3) Eliminar la propagación: cuando hago click en la cruz para borrar un elemento, no se cierra la ventana el carrito
+    //2) Eliminar la propagación: cuando hago click en la cruz para borrar un elemento, no se cierra la ventana el carrito
 
     $(".dropdown-menu").click(function (e) { 
         e.stopPropagation(); //Propagación: cuando hago un click adentro, por defecto, se propaga hacia el padre
@@ -44,8 +37,59 @@ propiedades.push(new Propiedad(2, "San Martín", 310, tipoPropiedad[1], "Cocina 
 propiedades.push(new Propiedad(3, "Alem", 132, tipoPropiedad[0], "Comedor amplio, cocina separada, dos habitaciones, dos baños, garage y patio amplio.", 30000, "../img/casa1.jpg"));
 propiedades.push(new Propiedad(4, "Sarmiento", 100, tipoPropiedad[2], "Local amplio con vidriera a la calle, cocina y baño.", 22000, "../img/localComercial.jpg"));
 propiedades.push(new Propiedad(5, "Velez Sársfield", 780, tipoPropiedad[1], "Comedor amplio, cocina separada, dos habitaciones, dos baños, garage y patio amplio.", 14000, "../img/edificio1.jpg"));
-propiedades.push(new Propiedad(6, "Buenos Aires", 35, tipoPropiedad[0], "Comedor amplio, cocina separada, dos habitaciones, dos baños, garage y patio amplio.", 30000, "../img/casa2.jpg"));
+propiedades.push(new Propiedad(6, "Buenos Aires", 35, tipoPropiedad[0], "Comedor amplio, cocina separada, dos habitaciones, dos baños, garage y patio amplio.", 35000, "../img/casa2.jpg"));
 
 //---------------------------> CREO LA INTERFAZ DINÁMICA <---------------------------
 
 propiedadesUIjQuery(propiedades, '#propiedadesContenedor');
+
+//---------------------------> CREO EL FILTRO POR CATEGORÍAS <---------------------------
+
+//1° generar select
+selectUI(tipoPropiedad, "#filtroTipoPropiedad")
+
+//2° asociar el evento (podría ir en ready)
+$("#filtroTipoPropiedad").change(function (e) { 
+    $("#propiedadesContenedor").fadeOut(600, function() {
+        const value = e.target.value.toUpperCase();
+        console.log(value); //hacemos esto para ver si funciona
+        if(value === "Todas las propiedades".toUpperCase()) {
+            propiedadesUIjQuery(propiedades, "#propiedadesContenedor");
+        } 
+        else {
+            const filtrados = propiedades.filter(propiedad => propiedad.tipo.toUpperCase() == value); //filtro los productos por categoría
+            if (filtrados.length == 0) {
+                console.log("NO hay propiedades") //hacemos esto para ver si funciona
+                $("#infoFiltros").slideDown().delay(1000).slideUp();
+            }
+            propiedadesUIjQuery(filtrados, "#propiedadesContenedor"); //genero la interfaz
+        }
+    }).fadeIn(600);
+});
+
+//---------------------------> CREO EL FILTRO POR BÚSQUEDA <---------------------------
+
+$("#busquedaPropiedad").keyup(function (e) { 
+    const criterio = this.value.toUpperCase();
+    console.log(criterio);
+    if(criterio != ""){
+        const encontrados = propiedades.filter(propiedad => propiedad.calle.includes(criterio.toUpperCase()) 
+                                            || propiedad.tipo.includes(criterio.toUpperCase()));  //hago un filter porque puede haber más de uno
+        if (encontrados.length == 0) {
+            console.log("NO hay propiedades") //hacemos esto para ver si funciona
+            $("#infoFiltros").slideDown().delay(1000).slideUp();
+        }
+        propiedadesUIjQuery(encontrados, '#propiedadesContenedor');
+    }
+});
+
+//---------------------------> CREO EL FILTRO POR RANGO DE PRECIO <---------------------------
+
+$(".inputPrecio").change(function (e) { 
+    const min = $("#minProducto").val();
+    const max = $("#maxProducto").val();
+    if((min > 0) && (max > 0)){ //el resulado de esto es verdadero
+        const encontrados = propiedades.filter(propiedad => propiedad.alquilerInicial >= min && propiedad.alquilerInicial <= max);
+        propiedadesUIjQuery(encontrados, '#propiedadesContenedor');
+    }
+});
