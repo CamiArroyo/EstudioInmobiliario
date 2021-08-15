@@ -55,16 +55,13 @@
     <!-- Apertura de section -->
 
     <h1>PROPIEDADES DISPONIBLES</h1>
-    <div id="indicadorCarga" class="spinner-border" role="status">
-        <span class="sr-only">Loading...</span>
-    </div>
 
     <div class="row">
         <div class="col-xs-12 col-lg-12">
 
             <h2>BUSQUE Y AGREGUE LAS PROPIEDADES QUE LE INTERESAN</h2>
 
-            <div class="row">
+            <div class="row contenedorFiltros">
                 <div class="col-sm">
                     <p>Escriba el nombre de la calle o de categoría.</p>
                     <div class="input-group mb-3">
@@ -84,7 +81,7 @@
                     </div>
                 </div>
                 <div class="col-sm">
-                    <p>Ingrese el rango de precio de alquiler</p>
+                    <p>Ingrese el rango de precio de alquiler.</p>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroup-sizing-default">Mínimo</span>
@@ -110,8 +107,12 @@
                     <!-- Acá genero el carrito -->
                 </div>
             </div>
+
+            <div id="indicadorCarga" class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
             
-            <div id="propiedadesContenedor" class="row row-cols-1 row-cols-md-2">
+            <div id="propiedadesContenedor" style="display: none;" class="row row-cols-1 row-cols-md-2">
                 <!-- Acá se van agregando las propiedades disponibles -->
             </div>
         </div>

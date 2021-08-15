@@ -21,13 +21,15 @@ $(document).ready(function () { //Todo esto ocurre una vez que el DOM ya fue gen
 
 })
 
-//---------------------------> MÉTODO LOAD <---------------------------
+//---------------------------> MÉTODO LOAD APLICADO A WINDOW <---------------------------
 
 window.addEventListener("load", () => { //Todo esto ocurre una vez que fueron cargados todos los elementos de la interfaz
-
     //Desaparece el spinner de carga
     $("#indicadorCarga").remove();
-
+    //Aparecen las propiedades
+    $("#propiedadesContenedor").fadeIn(1000, () => {
+        console.log("Finalización de animación")
+    });
 })
 
 //---------------------------> AGREGO LAS PROPIEDADES (HARDCODEO) <---------------------------
@@ -90,6 +92,10 @@ $(".inputPrecio").change(function (e) {
     const max = $("#maxProducto").val();
     if((min > 0) && (max > 0)){ //el resulado de esto es verdadero
         const encontrados = propiedades.filter(propiedad => propiedad.alquilerInicial >= min && propiedad.alquilerInicial <= max);
+        if (encontrados.length == 0) {
+            console.log("NO hay propiedades") //hacemos esto para ver si funciona
+            $("#infoFiltros").slideDown().delay(1000).slideUp();
+        }
         propiedadesUIjQuery(encontrados, '#propiedadesContenedor');
     }
 });

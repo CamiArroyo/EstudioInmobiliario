@@ -182,3 +182,9 @@ p {
 
 .subtitulo {
   text-align: center; }
+
+.contenedorFiltros {
+  margin: 0px 15px; }
+
+.input-group-text, .custom-select, .form-control {
+  font-family: 'Alegreya', serif; }
