@@ -54,53 +54,54 @@
 
     <!-- Apertura de section -->
 
-    <h1>PROPIEDADES DISPONIBLES</h1>
-
     <div class="row">
         <div class="col-xs-12 col-lg-12">
-
+            <h1>PROPIEDADES DISPONIBLES</h1>
             <h2>BUSQUE Y AGREGUE LAS PROPIEDADES QUE LE INTERESAN</h2>
-
-            <div class="row contenedorFiltros">
-                <div class="col-sm">
-                    <p>Escriba el nombre de la calle o de categoría.</p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-xs-12 col-lg-4">
+            <div class="contenedorFiltros">
+                <div>
+                    <p>Seleccione un tipo de acción.</p>
                     <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Busqueda</span>
+                        <div class="input-group-prepend">  
+                            <label class="input-group-text" for="filtroActividades">Acción</label>
                         </div>
-                        <input id="busquedaPropiedad" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <select class="custom-select" id="filtroTipoActividad"></select>
                     </div>
                 </div>
-                <div class="col-sm">
+                <div>
                     <p>Seleccione una categoría de la lista.</p>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">  
-                            <label class="input-group-text" for="filtroCategorias">Categorias</label>
+                            <label class="input-group-text" for="filtroCategorias">Categoria</label>
                         </div>
                         <select class="custom-select" id="filtroTipoPropiedad"></select>
                     </div>
                 </div>
-                <div class="col-sm">
+                <div>
                     <p>Ingrese el rango de precio de alquiler.</p>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroup-sizing-default">Mínimo</span>
                         </div>
-                        <input id="minProducto" value="0" type="number" class="form-control inputPrecio" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <input id="minProducto" value="8000" type="number" class="form-control inputPrecio" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroup-sizing-default">Máximo</span>
                         </div>
-                        <input id="maxProducto" value="0" type="number" class="form-control inputPrecio" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <input id="maxProducto" value="10000" type="number" class="form-control inputPrecio" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                 </div>
             </div>
-            <div id="infoFiltros" style="display: none;"><p>No hay propiedades con los datos ingresados</p></div>
-
-
+        </div>
+        <div class="col-xs-12 col-lg-8">
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle boton" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     PROPIEDADES A SOLICITAR <span id="carritoCantidad" class="badge badge-light">0</span>
                 </button>
                 <div id="carritoPropiedades" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -112,8 +113,34 @@
                 <span class="sr-only">Loading...</span>
             </div>
             
-            <div id="propiedadesContenedor" style="display: none;" class="row row-cols-1 row-cols-md-2">
+            <div id="propiedadesContenedor" style="display: none;" class="propContenedor col">
                 <!-- Acá se van agregando las propiedades disponibles -->
+            </div>
+
+            <div id="propiedadesContenedorInfo" class="propiedadesContenedorInfoClass">
+                <!-- Acá se informa cuando no se filtra nada -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        <div id="tituloModal"></div>
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="contenidoModal"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
+                </div>
             </div>
         </div>
     </div>

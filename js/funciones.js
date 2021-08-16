@@ -12,48 +12,6 @@ function mostrarTodos(array) {
     return salida;
 }
 
-function buscarPropiedadNumero() {
-    let nroPropiedad = prompt("Ingrese el número de propiedad sobre la cual desea saber más");
-    const propiedadEncontrada = propiedades.find(propiedad => propiedad.id == nroPropiedad);
-    if (propiedadEncontrada != undefined) {
-        alert("Propiedad encontrada. Mostramos a continuación toda la información")
-        alert(propiedadEncontrada.mostrar());
-        return propiedadEncontrada;
-    } else {
-        alert("No existe propiedad con el número ingresado");
-        return 0;
-    }
-}
-
-function buscarPropiedadRango() {
-    let minimo = prompt("Ingrese valor mínimo:");
-    let maximo = prompt("Ingrese valor máximo:");
-    const filtrados = propiedades.filter(propiedad => (propiedad.alquilerInicial <= maximo) && (propiedad.alquilerInicial >= minimo));
-    if (filtrados.length != 0) {
-        alert(mostrarTodos(filtrados));
-        alert("Ahora sí debe seleccionar una propiedad");
-        const propiedadEncontrada = buscarPropiedadNumero();
-        return propiedadEncontrada;
-    } else {
-        alert("No existen propiedades en ese rango de precios");
-        return 0;
-    }
-}
-
-function buscarPropiedad(opcion) {
-    switch (opcion) {
-        case 1:
-            const propiedadEncontradaNumero = buscarPropiedadNumero();
-            return propiedadEncontradaNumero;
-        case 2:
-            const propiedadEncontradaRango = buscarPropiedadRango();
-            return propiedadEncontradaRango;
-        default:
-            alert("La opción ingresada es incorrecta");
-            return 0;
-    }
-}
-
 //Función que genera los elementos HTML en la interfaz dinámica
 
 function propiedadesUIjQuery(propiedades, id) {
@@ -62,20 +20,47 @@ function propiedadesUIjQuery(propiedades, id) {
     for (const propiedad of propiedades) {
         //1° genero la interfaz de los productos
         let honorariosProp = propiedad.montoHonorariosValor();
-        $(id).append(`<div class="card mb-4 h-100 text-center" style="max-width: 540px;">
-                            <div class="row no-gutters">
-                                <div class="col-md-4">
-                                    <img src="${propiedad.img}" alt="..." width="200px" height="200px">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                    <h5 class="card-title tituloPropiedad">${propiedad.calle} ${propiedad.numero}</h5>
-                                    <h6 class="card-subtitle mb-2 text-muted infoPropiedad">${propiedad.tipo}</h6>
-                                    <p class="card-text infoPropiedad">Valor del alquiler: $${propiedad.alquilerInicial}</p>
-                                    <a id="${propiedad.id}" class="btn btn-secondary btnSoli boton">SOLICITAR</a>
-                                    <a id="${propiedad.id}" class="btn btn-secondary btnProp boton">VER INFORMACIÓN</a>
-                                </div>
+        $(id).append(`<div class="card text-center" style="width: 40rem;">
+
+                            <div class="card-header">
+                                <p>${propiedad.actividad}</p>
                             </div>
+
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="../img/casa1.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/casa2.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/edificio1.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title tituloPropiedad">${propiedad.calle} ${propiedad.numero}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted infoPropiedad">${propiedad.tipo}</h6>
+                                <p class="card-text infoPropiedad">Valor: $${propiedad.precio}</p>
+                                <a id="${propiedad.id}" type="button" class="btn btn-primary btnSoli boton" data-toggle="modal" data-target="#exampleModal">SOLICITAR</a>
+                                <a id="${propiedad.id}" class="btn btn-secondary btnProp boton">VER INFORMACIÓN</a>
+                            </div>
+
                             <div id="infoProp${propiedad.id}" style="display: none;">
                                 <p class="propSeleccInfo">Información de la propiedad: ${propiedad.calle} ${propiedad.numero}</p>
                                 <p>Descripción: ${propiedad.descripcion}</p>
@@ -86,10 +71,10 @@ function propiedadesUIjQuery(propiedades, id) {
                                     en 4 cuotas de $${honorariosProp[3]}.</p>
                                 <a id="${propiedad.id}" class="btn btn-secondary btnPropMenos boton">OCULTAR INFORMACIÓN</a>
                             </div>
-                            <div id="propRep${propiedad.id}">
-                            </div>
+
                         </div>
                         `)
+        }
         //2° asocio los eventos a los botones de la interfaz
         //Botón "ver información"
         $(".btnProp").click(function (e) {
@@ -103,12 +88,21 @@ function propiedadesUIjQuery(propiedades, id) {
         });
         //Botón "solicitar"
         $(".btnSoli").click(solicitudPropiedad);
-        }
+}
+
+//Función para generar el select usado en filtro por tipo de actividad
+
+function selectActUI(lista, selector) {
+    $(selector).empty(); //lo vaciamos por las dudas
+    $(selector).append(`<option value="Todas las acciones">Todas las acciones</option>`)
+    for (const element of lista) {
+        $(selector).append(`<option value="${element}">${element}</option>`);
+    }
 }
 
 //Función para generar el select usado en filtro por categoría
 
-function selectUI(lista, selector) {
+function selectCatUI(lista, selector) {
     $(selector).empty(); //lo vaciamos por las dudas
     $(selector).append(`<option value="Todas las propiedades">Todas las propiedades</option>`)
     for (const element of lista) {
@@ -123,38 +117,43 @@ function solicitudPropiedad(e) {
     const propiedadID = e.target.id;
     const propSeleccionada = propiedades.find(propiedad => propiedad.id == propiedadID);
 
+    let bandera = false;
+
     if (carrito.includes(propSeleccionada)) {
-        //----> NECESITO AYUDA ACÁ
-        /*
-        $("#propRep" + propiedadID).animate(
-            {margin: '30px',
-            width: 500},
-                500, function() {
-                    this.innerHTML = `<p>¡Propiedad agregada con éxito!</p>`;
-                }).
-                    delay(1500).
-                        slideUp();
-        */
+        console.log("Propiedad repetida, no puede agregarse");
     }
     else {
         carrito.push(propSeleccionada);
         console.log(carrito);
+        console.log("¡Propiedad agregada con éxito!")
     
         //Guardamos el carrito en el storage
         localStorage.setItem("carrito", JSON.stringify(carrito));
         //Creamos la interfaz del carrito nuevamente
         carritoUI(carrito);
-        //Informo que la propiedad se agregó correctamente
-        $("#propRep" + propiedadID).animate(
-            {margin: '30px',
-            width: 500},
-                500, function() {
-                    this.innerHTML = `<p>¡Propiedad agregada con éxito!</p>`;
-                }).
-                    delay(1500).
-                        slideUp();
+
+        bandera = true;
+    }
+    console.log(bandera);
+    mostrarResultado(bandera);
+}
+
+function mostrarResultado(bandera) {
+    if(bandera == true) {
+        $("#contenidoModal").empty();
+        $("#contenidoModal").append("Propiedad agregada con éxito");
+        
+        $("#tituloModal").empty();
+        $("#tituloModal").append("Listo!")
+    } else {
+        $("#contenidoModal").empty();
+        $("#contenidoModal").append("Esta propiedad ya fue agregada");
+
+        $("#tituloModal").empty();
+        $("#tituloModal").append("Error!")
     }
 }
+
 
 function carritoUI(carrito) {
     //Modifico la cantidad
@@ -170,7 +169,7 @@ function carritoUI(carrito) {
 }
 
 function componenteCarrito(propiedad) {
-    return `<p>${propiedad.calle} ${propiedad.numero} - Valor del alquier: $${propiedad.alquilerInicial}
+    return `<p>${propiedad.calle} ${propiedad.numero} - Valor del alquier: $${propiedad.precio}
             <a id='${propiedad.id}' class="btn btn-delete boton">X</a>`
 }
 
