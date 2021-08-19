@@ -7,9 +7,9 @@ html, body {
 
 /* Barra de navegación */
 .contenedor .navbar {
-  background-color: #FFFF00;
-  font-size: 18px;
-  font-family: 'Alegreya', serif; }
+  background-color: #80C5FF;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif; }
   .contenedor .navbar .navbar-collapse {
     display: flex;
     flex-direction: row;
@@ -32,7 +32,7 @@ html, body {
     padding-top: 15%;
     text-align: center; }
     .parallax .parallax__tituloSeccion .parallax__tituloSeccion--titulo {
-      background-color: #BBBBBB;
+      background-color: #CFE3E2;
       color: black;
       font-size: 40px;
       font-family: 'Pompiere', cursive; }
@@ -40,7 +40,7 @@ html, body {
 /* Configuración general */
 h1 {
   color: #787878;
-  font-size: 65px;
+  font-size: 50px;
   text-align: center;
   font-weight: 900;
   margin: 20px 0px;
@@ -51,7 +51,7 @@ h2 {
   font-size: 40px;
   text-align: center;
   font-weight: 600;
-  margin: 30px 0px;
+  margin: 20px 0px;
   font-family: 'Pompiere', cursive; }
 
 h3 {
@@ -59,76 +59,32 @@ h3 {
   font-size: 30px;
   text-align: center;
   font-weight: 600;
-  margin: 30px 0px;
+  margin: 20px 0px;
   font-family: 'Pompiere', cursive; }
 
 p {
   color: black;
-  font-size: 18px;
+  font-size: 16px;
   text-align: justify;
   font-weight: 400;
   margin: 10px;
-  font-family: 'Alegreya', serif; }
+  font-family: 'Roboto', sans-serif; }
 
 p {
   text-indent: 15px; }
 
-/* Sección index.html */
-.bodyIndex {
-  background-color: #F6FF8B; }
-
-.imgLogo {
+.botones {
   display: flex;
   flex-direction: row;
-  justify-content: center; }
-
-/* Sección propiedades.html */
-.propiedadDisp {
-  background-color: #F6FF8B; }
-
-.tituloPropiedad {
-  text-transform: uppercase; }
-
-.propSeleccInfo {
-  text-transform: uppercase;
-  font-family: 'Pompiere', cursive;
-  background-color: #BBBBBB;
-  text-align: center; }
-
-.padreLinkFormulario {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end; }
-  .padreLinkFormulario .linkFormulario {
-    background-color: #FFFF00;
-    font-family: 'Pompiere', cursive;
-    color: black;
-    padding: 10px;
-    border-radius: 10px; }
-
-/* Sección contacto.html */
-#registroSolicitante {
-  border: 1px solid #787878;
-  border-radius: 5px;
-  background-color: #F6FF8B;
-  font-size: 16px;
-  margin: 0px 20px; }
-  #registroSolicitante .itemForm {
-    margin-bottom: 5px;
-    width: 100%; }
-  #registroSolicitante .itemForm2 {
-    width: 80%;
-    margin-left: 40px; }
-  #registroSolicitante .botones {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 20px; }
+  justify-content: center;
+  margin: 20px; }
 
 .boton {
+  font-size: 18px;
+  font-weight: 550;
   margin: 5px;
   color: black;
-  background-color: #FFFF00;
+  background-color: #80C5FF;
   font-family: 'Pompiere', cursive;
   border: none;
   border-radius: 5px;
@@ -137,11 +93,65 @@ p {
 .boton:hover {
   transform: scale(1.1); }
 
+/* Sección index.html */
+.bodyIndex {
+  background-color: #FFFFFF; }
+
+/* Sección propiedades.html */
+.tituloPropiedad {
+  text-transform: uppercase; }
+
+.propSeleccInfo {
+  text-transform: uppercase;
+  background-color: #CFE3E2; }
+
+.card {
+  margin-bottom: 25px; }
+  .card .card-header {
+    padding: 0px; }
+
+.propContenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.dropdown, .card-text, .propContenedorInfoNoHay {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.dropdown {
+  margin-bottom: 30px; }
+
+.input-group-text, .custom-select, .form-control, .dropdown-toggle {
+  font-family: 'Roboto', sans-serif; }
+
+.contenedorFiltros {
+  background-color: #CFE3E2;
+  margin: 0px 20px 20px 20px;
+  padding: 10px;
+  border: solid 1px #56ACDA;
+  border-radius: 5px; }
+
+/* Sección contacto.html */
+#registroSolicitante {
+  border: 1px solid #787878;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  font-size: 16px;
+  margin: 0px 20px; }
+  #registroSolicitante .itemForm {
+    margin-bottom: 5px;
+    width: 100%; }
+  #registroSolicitante .itemForm2 {
+    width: 80%;
+    margin-left: 40px; }
+
 /* Footer de las secciones */
 .container-fluid .footerBootstrap {
-  background-color: #BBBBBB;
-  font-size: 18px;
-  font-family: 'Alegreya', serif;
+  background-color: #CFE3E2;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
   margin-top: 60px;
   padding-top: 30px;
   padding-bottom: 10px; }
@@ -153,43 +163,8 @@ p {
 
 .contenedor .hechoPor {
   padding: 10px;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
-  background-color: #FFFF00;
+  background-color: #80C5FF;
   color: black;
-  font-family: 'Alegreya', serif; }
-
-.card {
-  margin: 20px 0px; }
-
-.dropdown {
-  margin-bottom: 30px; }
-
-.dropdown, .card-text, .propiedadesContenedorInfoClass {
-  display: flex;
-  flex-direction: row;
-  justify-content: center; }
-
-.card-title {
-  font-family: 'Pompiere', cursive; }
-
-#infoPropiedad {
-  border: solid 1px black;
-  margin: 20px; }
-
-.subtitulo {
-  text-align: center; }
-
-.input-group-text, .custom-select, .form-control {
-  font-family: 'Alegreya', serif; }
-
-.contenedorFiltros {
-  background-color: #F6FF8B;
-  margin: 0px 20px 20px 20px;
-  padding: 10px;
-  border: solid 1px black; }
-
-.propContenedor {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
+  font-family: 'Roboto', sans-serif; }

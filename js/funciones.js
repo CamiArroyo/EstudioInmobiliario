@@ -4,10 +4,11 @@ function mostrarTodos(array) {
     let salida = "";
     for(let i=0 ; i<array.length ; i++) {
         salida += "PROPIEDAD N° " + array[i].id + "\n" +
-                "Calle: " + array[i].calle +
+                " Actividad: " + array[i].actividad +
+                " Calle: " + array[i].calle +
                 " Número: " + array[i].numero + 
                 " Tipo: " + array[i].tipo +
-                " Alquiler: $" + array[i].alquilerInicial + "\n"
+                " Alquiler: $" + array[i].precio + "\n"
     }
     return salida;
 }
@@ -23,7 +24,7 @@ function propiedadesUIjQuery(propiedades, id) {
         $(id).append(`<div class="card text-center" style="width: 40rem;">
 
                             <div class="card-header">
-                                <p>${propiedad.actividad}</p>
+                                <h3>${propiedad.actividad}</h3>
                             </div>
 
                             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -54,15 +55,15 @@ function propiedadesUIjQuery(propiedades, id) {
                             </div>
 
                             <div class="card-body">
-                                <h5 class="card-title tituloPropiedad">${propiedad.calle} ${propiedad.numero}</h5>
-                                <h6 class="card-subtitle mb-2 text-muted infoPropiedad">${propiedad.tipo}</h6>
-                                <p class="card-text infoPropiedad">Valor: $${propiedad.precio}</p>
+                                <h3 class="card-title tituloPropiedad">${propiedad.calle} ${propiedad.numero}</h3>
+                                <h3 class="card-subtitle">${propiedad.tipo}</h3>
+                                <p class="card-text">Valor: $${propiedad.precio}</p>
                                 <a id="${propiedad.id}" type="button" class="btn btn-primary btnSoli boton" data-toggle="modal" data-target="#exampleModal">SOLICITAR</a>
                                 <a id="${propiedad.id}" class="btn btn-secondary btnProp boton">VER INFORMACIÓN</a>
                             </div>
 
                             <div id="infoProp${propiedad.id}" style="display: none;">
-                                <p class="propSeleccInfo">Información de la propiedad: ${propiedad.calle} ${propiedad.numero}</p>
+                                <h3 class="propSeleccInfo">Información de la propiedad: ${propiedad.calle} ${propiedad.numero}</h3>
                                 <p>Descripción: ${propiedad.descripcion}</p>
                                 <p>El monto total de los honorarios a abonar es $${honorariosProp[0]}.</p>
                                 <p>Podrás abonar en 1 pago de $${honorariosProp[0]}, 

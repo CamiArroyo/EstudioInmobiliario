@@ -1,0 +1,56 @@
+[
+    {
+        "actividad": "alquilar",
+        "id": "1",
+        "calle": "Velez Sarsfield",
+        "numero": "780",
+        "tipo": "departamento",
+        "descripcion": "Cocina comedor integrada, una habitación, baño y cochera.",
+        "precio": "15000"
+    },
+    {
+        "actividad": "comprar",
+        "id": "2",
+        "calle": "San Martin",
+        "numero": "310",
+        "tipo": "departamento",
+        "descripcion": "Cocina comedor integrada, dos habitaciones, baño, garage y patio.",
+        "precio": "18000"
+    },
+    {
+        "actividad": "comprar",
+        "id": "3",
+        "calle": "Alem",
+        "numero": "132",
+        "tipo": "casa",
+        "descripcion": "Comedor amplio, cocina separada, dos habitaciones, dos baños, garage y patio amplio.",
+        "precio": "30000"
+    },
+    {
+        "actividad": "alquilar",
+        "id": "4",
+        "calle": "Sarmiento",
+        "numero": "100",
+        "tipo": "casa",
+        "descripcion": "Local amplio con vidriera a la calle, cocina y baño.",
+        "precio": "22000"
+    },
+    {
+        "actividad": "comprar",
+        "id": "5",
+        "calle": "Velez Sarsfield",
+        "numero": "780",
+        "tipo": "casa",
+        "descripcion": "Comedor amplio, cocina separada, dos habitaciones, dos baños, garage y patio amplio.",
+        "precio": "14000"
+    },
+    {
+        "actividad": "alquilar",
+        "id": "6",
+        "calle": "Buenos Aires",
+        "numero": "35",
+        "tipo": "departamento",
+        "descripcion": "Comedor amplio, cocina separada, dos habitaciones, dos baños, garage y patio amplio.",
+        "precio": "35000"
+    }
+]

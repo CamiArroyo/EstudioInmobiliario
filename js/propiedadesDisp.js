@@ -19,6 +19,20 @@ $(document).ready(function () { //Todo esto ocurre una vez que el DOM ya fue gen
         e.stopPropagation(); //Propagación: cuando hago un click adentro, por defecto, se propaga hacia el padre
     });
 
+    //3) Peticiones jquery: origen de la información local -> archivo "propiedades.json"
+    $.get("../data/propiedades.json", function(datos, estado) {
+        console.log(datos);
+        console.log(estado);
+        if (estado == "success") { //verifico haber obtenido la info correctamente
+            for (const literal of datos) {
+                propiedades.push(new Propiedad(literal.actividad, literal.id, literal.calle, literal.numero, literal.tipo, literal.descripcion, literal.precio));
+            }
+        }
+        console.log(propiedades);
+    //Creo la interfaz dinámica (aquí porque es un proceso asíncrono)
+    propiedadesUIjQuery(propiedades, '#propiedadesContenedor');
+    })
+
 })
 
 //---------------------------> MÉTODO LOAD APLICADO A WINDOW <---------------------------
@@ -32,18 +46,6 @@ window.addEventListener("load", () => { //Todo esto ocurre una vez que fueron ca
     });
 })
 
-//---------------------------> AGREGO LAS PROPIEDADES (HARDCODEO) <---------------------------
-
-propiedades.push(new Propiedad(tipoActividad[1], 1, "Velez Sársfield", 780, tipoPropiedad[1], "Cocina comedor integrada, una habitación, baño y cochera.", 15000, "../img/edificio1.jpg"));
-propiedades.push(new Propiedad(tipoActividad[0], 2, "San Martín", 310, tipoPropiedad[1], "Cocina comedor integrada, dos habitaciones, baño, garage y patio.", 18000, "../img/edificio2.jpg"));
-propiedades.push(new Propiedad(tipoActividad[0], 3, "Alem", 132, tipoPropiedad[0], "Comedor amplio, cocina separada, dos habitaciones, dos baños, garage y patio amplio.", 30000, "../img/casa1.jpg"));
-propiedades.push(new Propiedad(tipoActividad[1], 4, "Sarmiento", 100, tipoPropiedad[2], "Local amplio con vidriera a la calle, cocina y baño.", 22000, "../img/localComercial.jpg"));
-propiedades.push(new Propiedad(tipoActividad[0], 5, "Velez Sársfield", 780, tipoPropiedad[1], "Comedor amplio, cocina separada, dos habitaciones, dos baños, garage y patio amplio.", 14000, "../img/edificio1.jpg"));
-propiedades.push(new Propiedad(tipoActividad[1], 6, "Buenos Aires", 35, tipoPropiedad[0], "Comedor amplio, cocina separada, dos habitaciones, dos baños, garage y patio amplio.", 35000, "../img/casa2.jpg"));
-
-//---------------------------> CREO LA INTERFAZ DINÁMICA <---------------------------
-
-propiedadesUIjQuery(propiedades, '#propiedadesContenedor');
 
 //---------------------------> CREO EL FILTRO POR TIPO DE ACTIVIDAD <---------------------------
 
@@ -60,7 +62,7 @@ $("#filtroTipoActividad").change(function (e) {
             propiedadesUIjQuery(propiedades, "#propiedadesContenedor");
         } 
         else {
-            const filtrados = propiedades.filter(propiedad => propiedad.actividad.toUpperCase() == value); //filtro los productos por categoría
+            const filtrados = propiedades.filter(propiedad => propiedad.actividad.toUpperCase() == value); //filtro los productos por tipo de actividad
             if (filtrados.length == 0) {
                 console.log("NO hay propiedades") //hacemos esto para ver si funciona
                 $("#propiedadesContenedorInfo").append(`<p>En este momento no hay propiedades disponibles para ${value}.</p>`);
@@ -110,3 +112,49 @@ $(".inputPrecio").change(function (e) {
         propiedadesUIjQuery(encontrados, '#propiedadesContenedor');
     }
 });
+
+/*
+let conjuntoFiltradosUno = propiedades;
+let conjuntoFiltradosDos = [];
+let conjuntoFiltradosTres = [];
+let valueAct = "";
+let valueCat = "";
+let min = 8000;
+let max = 50000;
+
+selectActUI(tipoActividad, "#filtroTipoActividad");
+$("#filtroTipoActividad").change(function (e) {  //filtro los productos por tipo de actividad
+    valueAct = e.target.value.toUpperCase();
+});
+
+selectCatUI(tipoPropiedad, "#filtroTipoPropiedad");
+$("#filtroTipoPropiedad").change(function (e) {  //filtro los productos por categoría
+    valueCat = e.target.value.toUpperCase();
+});
+
+$(".inputPrecio").change(function (e) {
+    min = $("#minProducto").val();
+    max = $("#maxProducto").val();
+});
+
+$("#buttonFiltros").click(function() {
+
+    if(valueAct == "Todas las acciones".toUpperCase()) {
+        conjuntoFiltradosUno = propiedades;
+    } 
+    else {
+        conjuntoFiltradosUno = propiedades.filter(propiedad => propiedad.actividad.toUpperCase() == valueAct); 
+    }
+
+    if(valueCat == "Todas las propiedades".toUpperCase()) {
+        conjuntoFiltradosDos = conjuntoFiltradosUno;
+    } 
+    else {
+        conjuntoFiltradosDos = conjuntoFiltradosUno.filter(propiedad => propiedad.tipo.toUpperCase() == valueCat); 
+    }
+
+    conjuntoFiltradosTres = conjuntoFiltradosDos.filter(propiedad => propiedad.precio >= min && propiedad.precio <= max);
+
+    propiedadesUIjQuery(conjuntoFiltradosTres, '#propiedadesContenedor');
+})
+*/
