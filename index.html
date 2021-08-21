@@ -20,15 +20,85 @@
 </head>
 <body class="bodyIndex">
 
+    <!-- Apertura de nav -->
+    <div class="contenedor">
+        <nav class="navbar navbar-expand-lg navbar-light"> 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <div class="btn-group btn-active">
+                            <button type="button" class="btn"><a href="index.html"><p class="btnSubtitle">Página principal</p></a></button>
+                            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="index.html">Nuestros servicios</a>
+                                <a class="dropdown-item" href="index.html">Blog de noticias</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn-group">
+                            <button type="button" class="btn"><a href="pages/quienesSomos.html"><p class="btnSubtitle">Quiénes somos</p></a></button>
+                            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="pages/quienesSomos.html">Nuestros profesionales</a>
+                                <a class="dropdown-item" href="pages/quienesSomos.html">Por qué elegirnos</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn-group">
+                            <button type="button" class="btn"><a href="pages/propiedades.html"><p class="btnSubtitle">Encontrá tu propiedad</p></a></button>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn-group">
+                            <button type="button" class="btn"><a href="pages/infoInteres.html"><p class="btnSubtitle">Información de interés</p></a></button>
+                            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="pages/infoInteres.html">Ley de alquileres 27.551</a>
+                                <a class="dropdown-item" href="pages/infoInteres.html">Cálculo de honorarios</a>
+                                <a class="dropdown-item" href="pages/infoInteres.html">Cálculo de aumentos</a>
+                                <a class="dropdown-item" href="pages/infoInteres.html">Trámites de servicios</a>
+                                <a class="dropdown-item" href="pages/infoInteres.html">Reparaciones</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn-group">
+                            <button type="button" class="btn"><a href="pages/contacto.html"><p class="btnSubtitle">Medios de contacto</p></a></button>
+                            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="pages/contacto.html">Formulario de contacto</a>
+                                <a class="dropdown-item" href="pages/contacto.html">Redes sociales</a>
+                                <a class="dropdown-item" href="pages/contacto.html">Dónde estamos</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Cierre de nav -->
+
     <!-- Apertura de section -->
 
-    <div class="imgLogo">
-        <!--
-        <img src="img/logo.png">
-        -->
+    <div class="row contenido">
+        <div class="col-xs-12 col-lg-12">
+            <h1 class="tituloIndex">ESTUDIO INMOBILIARIO RAICES</h1>
+        </div>
     </div>
-
-    <h1 class="tituloIndex">ESTUDIO INMOBILIARIO RAICES</h1>
 
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner parallax">
@@ -36,16 +106,16 @@
                 <div class="parallax__tituloSeccion">
                     <div class="row">
                         <div class="col-xs-12 col-lg-3">
-                            <a href="pages/quienesSomos.html" class="parallax__tituloSeccion--titulo">QUIENES SOMOS</a>
+                            <a href="pages/quienesSomos.html"><h2 class="parallax__tituloSeccion--titulo">QUIENES SOMOS</h2></a>
                         </div>
                         <div class="col-xs-12 col-lg-3">
-                            <a href="pages/nuestrosServicios.html" class="parallax__tituloSeccion--titulo">NUESTROS SERVICIOS</a>
+                            <a href="pages/propiedades.html"><h2 class="parallax__tituloSeccion--titulo">ENCONTRÁ TU PROPIEDAD</h2></a>
                         </div>
                         <div class="col-xs-12 col-lg-3">
-                            <a href="pages/propiedades.html" class="parallax__tituloSeccion--titulo">BUSCAR PROPIEDADES</a>
+                            <a href="pages/infoInteres.html"><h2 class="parallax__tituloSeccion--titulo">INFORMACIÓN DE INTERÉS</h2></a>
                         </div>
                         <div class="col-xs-12 col-lg-3">
-                            <a href="pages/contacto.html" class="parallax__tituloSeccion--titulo">MEDIOS DE CONTACTO</a>
+                            <a href="pages/contacto.html"><h2 class="parallax__tituloSeccion--titulo">MEDIOS DE CONTACTO</h2></a>
                         </div>
                     </div>
                 </div>
@@ -53,6 +123,110 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-xs-12 col-lg-12">
+            <h2>NUESTROS SERVICIOS</h2>
+        </div>
+    </div>
+
+    <div class="row contenedorServ">
+        <div class="col-xs-12 col-lg-5">
+            <h3>Administración inmobiliaria</h3>
+            <div class="botones">
+                <button id="btnServicio1" class="boton">MÁS INFORMACIÓN</button>
+            </div>
+        </div>
+        <div class="col-xs-12 col-lg-7">
+            <div class="contenedorServImgInfo">
+                <img id="imgServicio1" src="img/casasLogo.jpg" height="200px" width="300">
+            </div>
+            <div id="infoServicio1" class="jumbotron" style="display: none;">
+                Nos encargamos de:
+                <li class="listaContenido">Atención de los clientes interesados en las propiedades que están bajo nuestra administración.</li>
+                <li class="listaContenido">Análisis de los interesados en arrendar las propiedades: solicitud de arrendamiento, estudio socioeconómico y contrato notariado.</li>
+                <li class="listaContenido">Recolección de rentas mensuales y generación de facturas.</li>
+                <li class="listaContenido">Reparación de desperfectos del inmueble que no sean responsabilidad del arrendatario.</li>
+                <li class="listaContenido">Dinero garantizado en caso de que el arrendatario no pueda cubrir la renta del inmueble en el corriente mes.</li>
+                <div class="botones2">
+                    <button id="btnOffServicio1" class="boton">MENOS INFORMACIÓN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row contenedorServ">
+        <div class="col-xs-12 col-lg-7">
+            <div class="contenedorServImgInfo">
+                <img id="imgServicio2" src="img/casasLogo.jpg" height="200px" width="300">
+            </div>
+            <div id="infoServicio2" class="jumbotron" style="display: none;">
+                La tasación es el informe que se encarga de determinar objetivamente el valor de un inmueble. Para hacerlo, el profesional presta atención a factores que influyen en la valoración final, como:
+                <li class="listaContenido">La ubicación.</li>
+                <li class="listaContenido">La proximidad a espacios verdes, centros educativos, centros de salud, zonas céntricas, etc.</li>
+                <li class="listaContenido">La superficie en metros cuadrados.</li>
+                <li class="listaContenido">La calidad de los materiales de construcción.</li>
+                <li class="listaContenido">La antigüedad.</li>
+                <li class="listaContenido">La situación del inmueble dentro del terreno: orientación, planta baja/plata alta, etc.</li>
+                Si querés vender tu propiedad, ¡Primero hay que tasarla!
+                <div class="botones2">
+                    <button id="btnOffServicio2" class="boton">MENOS INFORMACIÓN</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-lg-5">
+            <h3>Tasaciones</h3>
+            <div class="botones">
+                <button id="btnServicio2" class="boton">MÁS INFORMACIÓN</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row contenedorServ">
+        <div class="col-xs-12 col-lg-5">
+            <h3>Asesoramiento de inversión</h3>
+            <div class="botones">
+                <button id="btnServicio3" class="boton">MÁS INFORMACIÓN</button>
+            </div>
+        </div>
+        <div class="col-xs-12 col-lg-7">
+            <div class="contenedorServImgInfo">
+                <img id="imgServicio3" src="img/casasLogo.jpg" height="200px" width="300">
+            </div>
+            <div id="infoServicio3" class="jumbotron" style="display: none;">
+                Nosotros estamos para:
+                <li class="listaContenido">Analizar con vos las ofertas del mercado, según tus necesidades y posibilidades.</li>
+                <li class="listaContenido">Acompañarte en la compra o venta del inmueble.</li>
+                <li class="listaContenido">Tomar juntos la mejor decisión con relación a la moneda y a las formas de pago.</li>
+                Además de cuándo, es importante saber cómo invertir, y en eso te asesoramos.
+                <div class="botones2">
+                    <button id="btnOffServicio3" class="boton">MENOS INFORMACIÓN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row contenedorServ">
+        <div class="col-xs-12 col-lg-7">
+            <div class="contenedorServImgInfo">
+                <img id="imgServicio4" src="img/casasLogo.jpg" height="200px" width="300">
+            </div>
+            <div id="infoServicio4" class="jumbotron" style="display: none;">
+                Si estás pensando en alquilar un inmueble de manera independiente, es conveniente que acudas al estudio y solicites la redacción de un contrato particular. Te explicamos dos motivos:
+                <li class="listaContenido">Redactar los contratos de forma adecuada es esencial. A mayor claridad y precisión, menos espacio quedará para interpretaciones libres y arbitrarias.</li>
+                <li class="listaContenido">A partir de marzo 2021, por disposición de AFIP ha entrado en vigor el Régimen de Registración de Contratos de Locación, previsto en la ley 27551.</li>
+                Importante: La registración obligatoria de contratos de locación alcanza a todos los contratos celebrados entre un locador (propietario) y un locatario (inquilino). La no intermediación de un corredor inmobiliario no te exime de la obligación ante AFIP.
+                <div class="botones2">
+                    <button id="btnOffServicio4" class="boton">MENOS INFORMACIÓN</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-lg-5">
+            <h3>Redacción de contratos particulares</h3>
+            <div class="botones">
+                <button id="btnServicio4" class="boton">MÁS INFORMACIÓN</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Cierre de section -->
 
@@ -81,8 +255,16 @@
     <!-- Cierre de footer -->
 
     <!-- Link JS de Bootstrap v.4.0 - Bundle -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <!-- Importación del código JS -->
+    <script src="../js/funciones.js"></script>
+    <script src="../js/index.js"> </script>
 
 </body>
 </html>

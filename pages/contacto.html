@@ -24,7 +24,7 @@
     
     <!-- Apertura de nav -->
     <div class="contenedor">
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light"> 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -32,19 +32,61 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Inicio</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn"><a href="../index.html"><p class="btnSubtitle">Página principal</p></a></button>
+                            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../index.html">Nuestros servicios</a>
+                                <a class="dropdown-item" href="../index.html">Blog de noticias</a>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="quienesSomos.html">Quienes somos</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn"><a href="quienesSomos.html"><p class="btnSubtitle">Quiénes somos</p></a></button>
+                            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="quienesSomos.html">Nuestros profesionales</a>
+                                <a class="dropdown-item" href="quienesSomos.html">Por qué elegirnos</a>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="nuestrosServicios.html">Nuestros servicios</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn"><a href="propiedades.html"><p class="btnSubtitle">Encontrá tu propiedad</p></a></button>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="propiedades.html">Propiedades</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn"><a href="infoInteres.html"><p class="btnSubtitle">Información de interés</p></a></button>
+                            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="infoInteres.html">Ley de alquileres 27.551</a>
+                                <a class="dropdown-item" href="infoInteres.html">Cálculo de honorarios</a>
+                                <a class="dropdown-item" href="infoInteres.html">Cálculo de aumentos</a>
+                                <a class="dropdown-item" href="infoInteres.html">Trámites de servicios</a>
+                                <a class="dropdown-item" href="infoInteres.html">Reparaciones</a>
+                            </div>
+                        </div>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="contacto.html">Contacto<span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <div class="btn-group btn-active">
+                            <button type="button" class="btn"><a href="contacto.html"><p class="btnSubtitle">Medios de contacto</p></a></button>
+                            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="contacto.html">Formulario de contacto</a>
+                                <a class="dropdown-item" href="contacto.html">Redes sociales</a>
+                                <a class="dropdown-item" href="contacto.html">Dónde estamos</a>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>

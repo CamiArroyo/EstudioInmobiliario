@@ -18,6 +18,27 @@ html, body{
             display: flex;
             flex-direction: row;
             justify-content: center;
+
+            .btn-group {
+                margin: 2px;
+                transition: 0.5s;
+            }
+
+            .btn-group:hover {
+                background-color: $amarilloOpaco;
+            }
+            
+            .btn-active {
+                background-color: $amarilloOpaco;
+            }
+            
+            .btnSubtitle {
+                color: $negro;
+            }
+
+            .dropdown-menu {
+                background-color: $amarilloBrillante;
+            }
         }
     }
 }
@@ -48,7 +69,6 @@ html, body{
             background-color: $grisClaro;
             color: $negro;
             font-size: $large;
-            font-family: 'Pompiere', cursive;
         }
     }
 }
@@ -72,11 +92,41 @@ p {@include etiquetas($negro, $xsmall, justify, 400, 10px);
     font-family: 'Roboto', sans-serif;}
 p {text-indent: 15px;}
 
+
+@mixin listas ($color, $grosor, $estiloLista, $margin, $padding){
+    color: $color;
+    font-weight: $grosor;
+    list-style-type: $estiloLista;
+    margin: $margin;
+    padding: $padding;
+}
+.listaSubtitulo {@include listas($negro, 550, none, 5px 0px, 0px);}
+.listaContenido { @include listas($negro, 400, none, 5px 0px, 0px);}
+
+.listaSubtitulo::before {
+    content: "\27A2";
+    color: $amarilloBrillante;
+    padding-right: 5px;
+}
+
+.listaContenido::before {
+    content: "\276F";
+    color: $amarilloBrillante;
+    padding-right: 5px;
+}
+
 .botones {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 20px;
+}
+
+.botones2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 15px;
 }
 
 .boton {
@@ -99,6 +149,24 @@ p {text-indent: 15px;}
 
 .bodyIndex {
     background-color: $fondo;
+}
+
+.contenedorServ {
+    margin: 50px 30px;
+}
+
+.contenedorServImgInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.jumbotron {
+    padding: 20px 15px;
+    font-size: $xxsmall;
+    background-color: $grisClaro;
+    color: $negro;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Sección propiedades.html */

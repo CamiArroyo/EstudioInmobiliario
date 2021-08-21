@@ -14,6 +14,17 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: center; }
+    .contenedor .navbar .navbar-collapse .btn-group {
+      margin: 2px;
+      transition: 0.5s; }
+    .contenedor .navbar .navbar-collapse .btn-group:hover {
+      background-color: #56ACDA; }
+    .contenedor .navbar .navbar-collapse .btn-active {
+      background-color: #56ACDA; }
+    .contenedor .navbar .navbar-collapse .btnSubtitle {
+      color: black; }
+    .contenedor .navbar .navbar-collapse .dropdown-menu {
+      background-color: #80C5FF; }
 
 /* Imágen parallax */
 .parallax {
@@ -34,8 +45,7 @@ html, body {
     .parallax .parallax__tituloSeccion .parallax__tituloSeccion--titulo {
       background-color: #CFE3E2;
       color: black;
-      font-size: 40px;
-      font-family: 'Pompiere', cursive; }
+      font-size: 40px; }
 
 /* Configuración general */
 h1 {
@@ -73,11 +83,41 @@ p {
 p {
   text-indent: 15px; }
 
+.listaSubtitulo {
+  color: black;
+  font-weight: 550;
+  list-style-type: none;
+  margin: 5px 0px;
+  padding: 0px; }
+
+.listaContenido {
+  color: black;
+  font-weight: 400;
+  list-style-type: none;
+  margin: 5px 0px;
+  padding: 0px; }
+
+.listaSubtitulo::before {
+  content: "\27A2";
+  color: #80C5FF;
+  padding-right: 5px; }
+
+.listaContenido::before {
+  content: "\276F";
+  color: #80C5FF;
+  padding-right: 5px; }
+
 .botones {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin: 20px; }
+
+.botones2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 15px; }
 
 .boton {
   font-size: 18px;
@@ -96,6 +136,21 @@ p {
 /* Sección index.html */
 .bodyIndex {
   background-color: #FFFFFF; }
+
+.contenedorServ {
+  margin: 50px 30px; }
+
+.contenedorServImgInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.jumbotron {
+  padding: 20px 15px;
+  font-size: 14px;
+  background-color: #CFE3E2;
+  color: black;
+  font-family: 'Roboto', sans-serif; }
 
 /* Sección propiedades.html */
 .tituloPropiedad {
