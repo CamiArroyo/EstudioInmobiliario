@@ -92,6 +92,11 @@ p {@include etiquetas($negro, $xsmall, justify, 400, 10px);
     font-family: 'Roboto', sans-serif;}
 p {text-indent: 15px;}
 
+ol {
+    padding: 0px;
+    margin: 0px;
+    margin-left: 20px;
+}
 
 @mixin listas ($color, $grosor, $estiloLista, $margin, $padding){
     color: $color;
@@ -100,19 +105,17 @@ p {text-indent: 15px;}
     margin: $margin;
     padding: $padding;
 }
-.listaSubtitulo {@include listas($negro, 550, none, 5px 0px, 0px);}
-.listaContenido { @include listas($negro, 400, none, 5px 0px, 0px);}
-
-.listaSubtitulo::before {
-    content: "\27A2";
-    color: $amarilloBrillante;
-    padding-right: 5px;
-}
+.listaContenido { @include listas($negro, 400, none, 10px 0px, 0px);}
+.listaContenido2 { @include listas($negro, 400, none, 10px 0px, 0px);}
 
 .listaContenido::before {
     content: "\276F";
     color: $amarilloBrillante;
-    padding-right: 5px;
+    padding-right: 10px;
+}
+
+.listaContenido2 {
+    text-indent: 15px;
 }
 
 .botones {
@@ -152,7 +155,10 @@ p {text-indent: 15px;}
 }
 
 .contenedorServ {
-    margin: 50px 30px;
+    background-color: $grisClaro;
+    border-radius: 10px;
+    margin: 0px 70px 50px 70px;
+    padding: 0px;
 }
 
 .contenedorServImgInfo {
@@ -162,9 +168,11 @@ p {text-indent: 15px;}
 }
 
 .jumbotron {
+    margin: 20px;
     padding: 20px 15px;
     font-size: $xxsmall;
-    background-color: $grisClaro;
+    background-color: $blanco;
+    border-radius: 10px;
     color: $negro;
     font-family: 'Roboto', sans-serif;
 }
@@ -214,6 +222,44 @@ p {text-indent: 15px;}
     padding: 10px;
     border: solid 1px $amarilloOpaco;
     border-radius: 5px;
+}
+
+/* Sección infoInteres.html */
+
+.card-deck {
+    margin: 0px 50px 30px 50px;
+}
+
+.card-body {
+    font-size: $xxsmall;
+    color: $negro;
+    font-family: 'Roboto', sans-serif;
+
+    .infoImportante {
+        margin: 0px 70px;
+        background-color: $grisClaro;
+        text-align: center;
+        text-indent: 0px;
+    }
+
+    .calculoCoef{
+        padding: 10px;
+        margin: 10px 30px 10px 10px;
+        border: solid 1px $grisClaro;
+        border-radius: 5px;
+        text-align: center;
+    }
+}
+
+.infoPrestador {
+    text-align: center;
+    margin-bottom: 20px;
+
+    .infoPrestadorComp{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
 }
 
 /* Sección contacto.html */
@@ -268,6 +314,19 @@ p {text-indent: 15px;}
     }
 }
 
-@media only screen and (max-width:768px) { 
+@media only screen and (max-width:768px) {
+
+    /* Sección infoPropiedades.html */
+
+    .card-deck {
+        margin: 0px 10px 30px 10px;
+    }
+
+    .card-body {
+        .infoImportante {
+            margin: 0px 20px;
+        }
+    }
+
 
 }

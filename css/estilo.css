@@ -83,29 +83,32 @@ p {
 p {
   text-indent: 15px; }
 
-.listaSubtitulo {
-  color: black;
-  font-weight: 550;
-  list-style-type: none;
-  margin: 5px 0px;
-  padding: 0px; }
+ol {
+  padding: 0px;
+  margin: 0px;
+  margin-left: 20px; }
 
 .listaContenido {
   color: black;
   font-weight: 400;
   list-style-type: none;
-  margin: 5px 0px;
+  margin: 10px 0px;
   padding: 0px; }
 
-.listaSubtitulo::before {
-  content: "\27A2";
-  color: #80C5FF;
-  padding-right: 5px; }
+.listaContenido2 {
+  color: black;
+  font-weight: 400;
+  list-style-type: none;
+  margin: 10px 0px;
+  padding: 0px; }
 
 .listaContenido::before {
   content: "\276F";
   color: #80C5FF;
-  padding-right: 5px; }
+  padding-right: 10px; }
+
+.listaContenido2 {
+  text-indent: 15px; }
 
 .botones {
   display: flex;
@@ -138,7 +141,10 @@ p {
   background-color: #FFFFFF; }
 
 .contenedorServ {
-  margin: 50px 30px; }
+  background-color: #CFE3E2;
+  border-radius: 10px;
+  margin: 0px 70px 50px 70px;
+  padding: 0px; }
 
 .contenedorServImgInfo {
   display: flex;
@@ -146,9 +152,11 @@ p {
   justify-content: center; }
 
 .jumbotron {
+  margin: 20px;
   padding: 20px 15px;
   font-size: 14px;
-  background-color: #CFE3E2;
+  background-color: #FFFFFF;
+  border-radius: 10px;
   color: black;
   font-family: 'Roboto', sans-serif; }
 
@@ -188,6 +196,34 @@ p {
   border: solid 1px #56ACDA;
   border-radius: 5px; }
 
+/* Sección infoInteres.html */
+.card-deck {
+  margin: 0px 50px 30px 50px; }
+
+.card-body {
+  font-size: 14px;
+  color: black;
+  font-family: 'Roboto', sans-serif; }
+  .card-body .infoImportante {
+    margin: 0px 70px;
+    background-color: #CFE3E2;
+    text-align: center;
+    text-indent: 0px; }
+  .card-body .calculoCoef {
+    padding: 10px;
+    margin: 10px 30px 10px 10px;
+    border: solid 1px #CFE3E2;
+    border-radius: 5px;
+    text-align: center; }
+
+.infoPrestador {
+  text-align: center;
+  margin-bottom: 20px; }
+  .infoPrestador .infoPrestadorComp {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+
 /* Sección contacto.html */
 #registroSolicitante {
   border: 1px solid #787878;
@@ -223,3 +259,10 @@ p {
   background-color: #80C5FF;
   color: black;
   font-family: 'Roboto', sans-serif; }
+
+@media only screen and (max-width: 768px) {
+  /* Sección infoPropiedades.html */
+  .card-deck {
+    margin: 0px 10px 30px 10px; }
+  .card-body .infoImportante {
+    margin: 0px 20px; } }

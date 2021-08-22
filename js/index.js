@@ -1,3 +1,4 @@
+//Servicio 1
 
 $("#btnServicio1").click(function (e) { 
     $("#imgServicio1").slideUp(600);
@@ -9,7 +10,7 @@ $("#btnOffServicio1").click(function (e) {
     $("#imgServicio1").slideDown(600);
 });
 
-
+//Servicio 2
 
 $("#btnServicio2").click(function (e) { 
     $("#imgServicio2").slideUp(600);
@@ -21,7 +22,7 @@ $("#btnOffServicio2").click(function (e) {
     $("#imgServicio2").slideDown(600);
 });
 
-
+//Servicio 3
 
 $("#btnServicio3").click(function (e) { 
     $("#imgServicio3").slideUp(600);
@@ -33,7 +34,7 @@ $("#btnOffServicio3").click(function (e) {
     $("#imgServicio3").slideDown(600);
 });
 
-
+//Servicio 4
 
 $("#btnServicio4").click(function (e) { 
     $("#imgServicio4").slideUp(600);
