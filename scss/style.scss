@@ -94,8 +94,8 @@ p {text-indent: 15px;}
 
 ol {
     padding: 0px;
-    margin: 0px;
-    margin-left: 20px;
+    margin: 10px 0px;
+    margin-left: 15px;
 }
 
 @mixin listas ($color, $grosor, $estiloLista, $margin, $padding){
@@ -132,6 +132,12 @@ ol {
     margin-right: 15px;
 }
 
+.botones3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .boton {
     font-size: $small;
     font-weight: 550;
@@ -146,6 +152,10 @@ ol {
 
 .boton:hover {
     transform: scale(1.1);
+}
+
+.subtituloSeccion {
+    margin-top: 80px;
 }
 
 /* Sección index.html */
@@ -175,6 +185,83 @@ ol {
     border-radius: 10px;
     color: $negro;
     font-family: 'Roboto', sans-serif;
+}
+
+.contenedorTituloServicios {
+    border: solid $amarilloBrillante 1px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px 0px;
+
+    .tituloServicio {
+        margin-top: 0px;
+    }
+}
+
+/* Sección quienesSomos.html */
+
+.contenedorInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .contenedorInfo__imgGrupo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .contenedorInfo__imgGrupo--img {
+            opacity: 0.6;
+        }
+
+        .contenedorInfo__imgGrupo--img2 {
+            border-radius: 10px;
+        }
+    }
+
+    .contenedorInfo__textos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contenedorInfo__contenedor {
+        border: solid 1px $amarilloBrillante;
+        border-radius: 10px;
+        margin: 0px 15px;
+        padding-bottom: 10px;
+    }
+
+    .contenedorInfo__lista {
+        text-align: center;
+    }
+
+    .contenedorInfo__lista::before {
+        content: "\276F";
+        color: $amarilloBrillante;
+        padding-right: 10px;
+    }
+
+    .contenedorInfo__dialogo {
+        font-style: oblique;
+    }
+
+    .contenedorInfo__firma {
+        margin-top: 0px;
+        font-weight: bold;
+        text-align: end;
+        color: $grisOscuro;
+    }
+}
+
+.contenedorInfoFondo {
+    background-color: $grisClaro;
+}
+
+.contenedorInfoPersonas {
+    margin-bottom: 40px;
 }
 
 /* Sección propiedades.html */
@@ -227,7 +314,7 @@ ol {
 /* Sección infoInteres.html */
 
 .card-deck {
-    margin: 0px 50px 30px 50px;
+    margin: 0px 50px 80px 50px;
 }
 
 .card-body {
@@ -260,6 +347,10 @@ ol {
         flex-direction: row;
         justify-content: center;
     }
+}
+
+.imgPrestador {
+    border-radius: 10px;
 }
 
 /* Sección contacto.html */
@@ -315,6 +406,14 @@ ol {
 }
 
 @media only screen and (max-width:768px) {
+
+    /* Sección quienesSomos.html */
+
+    .contenedorInfo {
+        .contenedorInfo__contenedor {
+            border: none;
+        }
+    }
 
     /* Sección infoPropiedades.html */
 

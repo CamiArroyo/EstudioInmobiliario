@@ -85,8 +85,8 @@ p {
 
 ol {
   padding: 0px;
-  margin: 0px;
-  margin-left: 20px; }
+  margin: 10px 0px;
+  margin-left: 15px; }
 
 .listaContenido {
   color: black;
@@ -122,6 +122,11 @@ ol {
   justify-content: flex-end;
   margin-right: 15px; }
 
+.botones3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
 .boton {
   font-size: 18px;
   font-weight: 550;
@@ -135,6 +140,9 @@ ol {
 
 .boton:hover {
   transform: scale(1.1); }
+
+.subtituloSeccion {
+  margin-top: 80px; }
 
 /* Sección index.html */
 .bodyIndex {
@@ -159,6 +167,58 @@ ol {
   border-radius: 10px;
   color: black;
   font-family: 'Roboto', sans-serif; }
+
+.contenedorTituloServicios {
+  border: solid #80C5FF 1px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px 0px; }
+  .contenedorTituloServicios .tituloServicio {
+    margin-top: 0px; }
+
+/* Sección quienesSomos.html */
+.contenedorInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  .contenedorInfo .contenedorInfo__imgGrupo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .contenedorInfo .contenedorInfo__imgGrupo .contenedorInfo__imgGrupo--img {
+      opacity: 0.6; }
+    .contenedorInfo .contenedorInfo__imgGrupo .contenedorInfo__imgGrupo--img2 {
+      border-radius: 10px; }
+  .contenedorInfo .contenedorInfo__textos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .contenedorInfo .contenedorInfo__contenedor {
+    border: solid 1px #80C5FF;
+    border-radius: 10px;
+    margin: 0px 15px;
+    padding-bottom: 10px; }
+  .contenedorInfo .contenedorInfo__lista {
+    text-align: center; }
+  .contenedorInfo .contenedorInfo__lista::before {
+    content: "\276F";
+    color: #80C5FF;
+    padding-right: 10px; }
+  .contenedorInfo .contenedorInfo__dialogo {
+    font-style: oblique; }
+  .contenedorInfo .contenedorInfo__firma {
+    margin-top: 0px;
+    font-weight: bold;
+    text-align: end;
+    color: #787878; }
+
+.contenedorInfoFondo {
+  background-color: #CFE3E2; }
+
+.contenedorInfoPersonas {
+  margin-bottom: 40px; }
 
 /* Sección propiedades.html */
 .tituloPropiedad {
@@ -198,7 +258,7 @@ ol {
 
 /* Sección infoInteres.html */
 .card-deck {
-  margin: 0px 50px 30px 50px; }
+  margin: 0px 50px 80px 50px; }
 
 .card-body {
   font-size: 14px;
@@ -223,6 +283,9 @@ ol {
     display: flex;
     flex-direction: row;
     justify-content: center; }
+
+.imgPrestador {
+  border-radius: 10px; }
 
 /* Sección contacto.html */
 #registroSolicitante {
@@ -261,6 +324,9 @@ ol {
   font-family: 'Roboto', sans-serif; }
 
 @media only screen and (max-width: 768px) {
+  /* Sección quienesSomos.html */
+  .contenedorInfo .contenedorInfo__contenedor {
+    border: none; }
   /* Sección infoPropiedades.html */
   .card-deck {
     margin: 0px 10px 30px 10px; }
