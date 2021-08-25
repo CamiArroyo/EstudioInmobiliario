@@ -22,70 +22,69 @@
 
     <!-- Apertura de nav -->
     <div class="contenedor">
-        <nav class="navbar navbar-expand-lg navbar-light"> 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <img src="img/logoEmpresaCorto.png" height="50px" width="50px">
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNavDropdown">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse listaNav" id="navbarNavDropdown">
+                <ul class="navbar-nav text-center">
                     <li class="nav-item">
+                        <div class="btn-group">
+                            <a href="index.html"><button type="button" class="btn"><p class="btnSubtitle">Página principal</p></button></a>
+                            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../index.html#nuestrosServicios"><p class="btnSubtitle">Nuestros servicios</p></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item btn-active">
                         <div class="btn-group btn-active">
-                            <button type="button" class="btn"><a href="index.html"><p class="btnSubtitle">Página principal</p></a></button>
+                            <a href="pages/quienesSomos.html"><button type="button" class="btn"><p class="btnSubtitle">Quiénes somos</p></button></a>
                             <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="index.html">Nuestros servicios</a>
-                                <a class="dropdown-item" href="index.html">Blog de noticias</a>
+                                <a class="dropdown-item" href="pages/quienesSomos.html#estudioInmobiliario"><p class="btnSubtitle">Estudio inmobiliario</p></a>
+                                <a class="dropdown-item" href="pages/quienesSomos.html#filosofia"><p class="btnSubtitle">Nuestra filosofía</p></a>
+                                <a class="dropdown-item" href="pages/quienesSomos.html#razones"><p class="btnSubtitle">Razones para elegirnos</p></a>
+                                <a class="dropdown-item" href="pages/quienesSomos.html#equipo"><p class="btnSubtitle">Equipo de trabajo</p></a>
                             </div>
                         </div>
                     </li>
                     <li class="nav-item">
                         <div class="btn-group">
-                            <button type="button" class="btn"><a href="pages/quienesSomos.html"><p class="btnSubtitle">Quiénes somos</p></a></button>
+                            <a href="pages/propiedades.html"><button type="button" class="btn"><p class="btnSubtitle">Encontrá tu propiedad</p></button></a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn-group">
+                            <a href="pages/infoInteres.html"><button type="button" class="btn"><p class="btnSubtitle">Información de interés</p></button></a>
                             <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="pages/quienesSomos.html#estudioInmobiliario">Estudio inmobiliario</a>
-                                <a class="dropdown-item" href="pages/quienesSomos.html#filosofia">Nuestra filosofía</a>
-                                <a class="dropdown-item" href="pages/quienesSomos.html#razones">Razones para elegirnos</a>
-                                <a class="dropdown-item" href="pages/quienesSomos.html#equipo">Equipo de trabajo</a>
+                                <a class="dropdown-item" href="pages/infoInteres.html#leyAlquileres"><p class="btnSubtitle">Ley de alquileres 27.551</p></a>
+                                <a class="dropdown-item" href="pages/infoInteres.html#calculoHonorarios"><p class="btnSubtitle">Cálculo de honorarios</p></a>
+                                <a class="dropdown-item" href="pages/infoInteres.html#calculoAumentos"><p class="btnSubtitle">Cálculo de aumentos</p></a>
+                                <a class="dropdown-item" href="pages/infoInteres.html#tramiteServicios"><p class="btnSubtitle">Servicios a tramitar</p></a>
+                                <a class="dropdown-item" href="pages/infoInteres.html#reparaciones"><p class="btnSubtitle">Reparaciones</p></a>
+                                <a class="dropdown-item" href="pages/infoInteres.html#cartillaProfesionales"><p class="btnSubtitle">Cartilla de profesionales</p></a>
                             </div>
                         </div>
                     </li>
                     <li class="nav-item">
                         <div class="btn-group">
-                            <button type="button" class="btn"><a href="pages/propiedades.html"><p class="btnSubtitle">Encontrá tu propiedad</p></a></button>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <div class="btn-group">
-                            <button type="button" class="btn"><a href="pages/infoInteres.html"><p class="btnSubtitle">Información de interés</p></a></button>
+                            <a href="pages/contacto.html"><button type="button" class="btn"><p class="btnSubtitle">Medios de contacto</p></button></a>
                             <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="pages/infoInteres.html#leyAlquileres">Ley de alquileres 27.551</a>
-                                <a class="dropdown-item" href="pages/infoInteres.html#calculoHonorarios">Cálculo de honorarios</a>
-                                <a class="dropdown-item" href="pages/infoInteres.html#calculoAumentos">Cálculo de aumentos</a>
-                                <a class="dropdown-item" href="pages/infoInteres.html#tramiteServicios">Servicios a tramitar</a>
-                                <a class="dropdown-item" href="pages/infoInteres.html#reparaciones">Reparaciones</a>
-                                <a class="dropdown-item" href="pages/infoInteres.html#cartillaProfesionales">Cartilla de profesionales</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <div class="btn-group">
-                            <button type="button" class="btn"><a href="pages/contacto.html"><p class="btnSubtitle">Medios de contacto</p></a></button>
-                            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="sr-only">Toggle Dropdown</span>
-                            </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="pages/contacto.html">Formulario de contacto</a>
-                                <a class="dropdown-item" href="pages/contacto.html">Redes sociales</a>
-                                <a class="dropdown-item" href="pages/contacto.html">Dónde estamos</a>
+                                <a class="dropdown-item" href="pages/contacto.html"><p class="btnSubtitle">Nuestra oficina</p></a>
+                                <a class="dropdown-item" href="pages/contacto.html"><p class="btnSubtitle">Redes sociales</p></a>
+                                <a class="dropdown-item" href="pages/contacto.html"><p class="btnSubtitle">Formulario de contacto</p></a>
                             </div>
                         </div>
                     </li>
@@ -97,9 +96,20 @@
 
     <!-- Apertura de section -->
 
-    <div class="row contenido">
-        <div class="col-xs-12 col-lg-12">
-            <h1 class="tituloIndex">ESTUDIO INMOBILIARIO RAICES</h1>
+    <div class="row">
+        <div class="col-xs-12 col-lg-6">
+            <div class="row">
+                <div class="col-xs-12 col-lg-12">
+                    <div class="subtituloSeccion">
+                        <h2>ESTUDIO INMOBILIARIO RAICES</h2>
+                        <img src="img/subrayado.png" height="20px" width="315px">
+                        <p>Somos un servicio personalizado que busca el inmueble ideal para cada uno de nuestros clientes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-lg-6">
+            <img src="img/logoEmpresaCorto.png" height="300px" width="300px">
         </div>
     </div>
 
@@ -109,16 +119,16 @@
                 <div class="parallax__tituloSeccion">
                     <div class="row">
                         <div class="col-xs-12 col-lg-3">
-                            <a href="pages/quienesSomos.html"><h2 class="parallax__tituloSeccion--titulo">QUIENES SOMOS</h2></a>
+                            <a href="pages/quienesSomos.html"><img src="img/logoQuienesSomos.png" height="150px" width="150px"><h2 class="parallax__tituloSeccion--titulo">QUIENES SOMOS</h2></a>
                         </div>
                         <div class="col-xs-12 col-lg-3">
-                            <a href="pages/propiedades.html"><h2 class="parallax__tituloSeccion--titulo">ENCONTRÁ TU PROPIEDAD</h2></a>
+                            <a href="pages/propiedades.html"><img src="img/logoPropiedades.png" height="150px" width="150px"><h2 class="parallax__tituloSeccion--titulo">ENCONTRÁ TU PROPIEDAD</h2></a>
                         </div>
                         <div class="col-xs-12 col-lg-3">
-                            <a href="pages/infoInteres.html"><h2 class="parallax__tituloSeccion--titulo">INFORMACIÓN DE INTERÉS</h2></a>
+                            <a href="pages/infoInteres.html"><img src="img/logoInfoInteres.png" height="150px" width="150px"><h2 class="parallax__tituloSeccion--titulo">INFORMACIÓN DE INTERÉS</h2></a>
                         </div>
                         <div class="col-xs-12 col-lg-3">
-                            <a href="pages/contacto.html"><h2 class="parallax__tituloSeccion--titulo">MEDIOS DE CONTACTO</h2></a>
+                            <a href="pages/contacto.html"><img src="img/logoContacto.png" height="150px" width="150px"><h2 class="parallax__tituloSeccion--titulo">MEDIOS DE CONTACTO</h2></a>
                         </div>
                     </div>
                 </div>
@@ -128,7 +138,10 @@
 
     <div class="row">
         <div class="col-xs-12 col-lg-12">
-            <h2>NUESTROS SERVICIOS</h2>
+            <div class="subtituloSeccion">
+                <h2 id="nuestrosServicios">NUESTROS SERVICIOS</h2>
+                <img src="img/subrayado.png" height="20px" width="315px">
+            </div>
         </div>
     </div>
 
@@ -236,24 +249,46 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-xs-12 col-lg-12">
+            <div class="subtituloSeccion">
+                <h2>CONTACTANOS</h2>
+                <img src="img/subrayado.png" height="20px" width="315px">
+            </div>
+        </div>
+    </div>
+    <!-- falta -->
+
     <!-- Cierre de section -->
 
     <!-- Apertura de footer -->
     <div class="container-fluid">
         <div class="row footerBootstrap">
-            <div class="col-xs-12 col-lg-4">
-                <p class="footerBootstrap__itemFooter">Llamadas y mail:</p>
-                <p class="footerBootstrap__contenido">(3564)328063</p>
-                <p class="footerBootstrap__contenido">camiarroyo98.1@gmail.com</p>
+            <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorImg">
+                <img src="../img/logoEmpresa.png" height="200px" width="201px">
             </div>
-            <div class="col-xs-12 col-lg-4">
-                <p class="footerBootstrap__itemFooter">Whatsapp y redes sociales:</p>
-                <a href="https://api.whatsapp.com/send?phone=3564328063&text=Hola!" target="_blank">Whatsapp</a>
-                <a href="https://www.instagram.com/cami.arroyo.010/" target="_blank">Instagram</a>
+            <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorTexto">
+                <p class="footerBootstrap__itemFooter">SECCIONES</p>
+                <a href="index.html"><p class="footerBootstrap__contenido footerBootstrap__enlace">Página principal</p></a>
+                <a href="pages/quienesSomos.html"><p class="footerBootstrap__contenido footerBootstrap__enlace">Quiénes somos</p></a>
+                <a href="pages/propiedades.html"><p class="footerBootstrap__contenido footerBootstrap__enlace">Encontrá tu propiedad</p></a>
+                <a href="pages/infoInteres.html"><p class="footerBootstrap__contenido footerBootstrap__enlace">Información de interés</p></a>
+                <a href="pages/contacto.html"><p class="footerBootstrap__contenido footerBootstrap__enlace">Medios de contacto</p></a>
             </div>
-            <div class="col-xs-12 col-lg-4">
-                <p class="footerBootstrap__itemFooter">Ubicación:</p> 
-                <p class="footerBootstrap__contenido">Perón 205 - Devoto, Córdoba</p> 
+            <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorTexto">
+                <p class="footerBootstrap__itemFooter">NUESTRA OFICINA</p>
+                <p class="footerBootstrap__contenido"><img src="../img/logoUbicacion.png" height="20px" width="20px" class="footerBootstrap__logo">Perón 205 Devoto, Córdoba</p>
+                <p class="footerBootstrap__contenido"><img src="../img/logoLlamada.png" height="20px" width="20px" class="footerBootstrap__logo">(03564)15328063</p>
+                <p class="footerBootstrap__contenido"><img src="../img/logoMail.png" height="20px" width="20px" class="footerBootstrap__logo">inmobiliaria_raices@gmail.com</p>
+                <p class="footerBootstrap__contenido"></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.1597695731916!2d-62.30840738485217!3d-31.40972388140632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cb33f900609bc9%3A0xce084b0def08eebe!2sEstudio%20Inmobiliario%20Raices!5e0!3m2!1ses-419!2sar!4v1629820296499!5m2!1ses-419!2sar" width="200" height="80" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorTexto">
+                <p class="footerBootstrap__itemFooter">REDES SOCIALES</p>
+                <a href="https://www.facebook.com/cami.arroyo.1" target="_blank"><img src="../img/facebook.png" height="70px" width="70px" class="footerBootstrap__img"></a>
+                <a href="https://www.instagram.com/cami.arroyo.010/" target="_blank"><img src="../img/instragram.png" height="70px" width="70px" class="footerBootstrap__img"></a>
+                <p class="footerBootstrap__itemFooter">FORMULARIO DE CONTACTO</p>
+                <a href="pages/contacto.html#formulario"><p class="footerBootstrap__contenido footerBootstrap__enlace">Ir al formulario</p></a>
             </div>
         </div>
     </div>

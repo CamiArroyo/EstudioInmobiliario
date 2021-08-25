@@ -8,38 +8,46 @@ html, body{
 
 /* Barra de navegación */
 
-.contenedor {
-    .navbar {
+.navbar {
+    background-color: $amarilloBrillante;
+    font-size: $xsmall;
+    font-family: 'Roboto', sans-serif;
+}
+
+.listaNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .dropdown-menu {
         background-color: $amarilloBrillante;
-        font-size: $xsmall;
-        font-family: 'Roboto', sans-serif;
+    }
 
-        .navbar-collapse{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
+    .btn-group {
+        margin: 2px;
+        transition: 0.1s;
+    }
 
-            .btn-group {
-                margin: 2px;
-                transition: 0.5s;
-            }
+    .btn-group:hover {
+        background-color: $amarilloOpaco;
+    }
 
-            .btn-group:hover {
-                background-color: $amarilloOpaco;
-            }
-            
-            .btn-active {
-                background-color: $amarilloOpaco;
-            }
-            
-            .btnSubtitle {
-                color: $negro;
-            }
+    .btn-active {
+        background-color: $amarilloOpaco;
+    }
+    
+    .btnSubtitle {
+        color: $negro;
+        margin: 5px 0px;
+    }
 
-            .dropdown-menu {
-                background-color: $amarilloBrillante;
-            }
-        }
+    .dropdown-item {
+        padding: 5px 15px 5px 0px;
+        transition: 0.1s;
+    }
+
+    .dropdown-item:hover {
+        background-color: $amarilloOpaco;
     }
 }
 
@@ -62,13 +70,16 @@ html, body{
     margin-bottom: 50px;
 
     .parallax__tituloSeccion {
-        padding-top: 15%;
+        padding-top: 10%;
+        padding-right: 20px;
+        padding-left: 20px;
         text-align: center;
 
         .parallax__tituloSeccion--titulo {
             background-color: $grisClaro;
             color: $negro;
-            font-size: $large;
+            font-size: $medium;
+            border: solid 1px $negro;
         }
     }
 }
@@ -84,11 +95,11 @@ html, body{
 }
 h1 {@include etiquetas($grisOscuro, $xlarge, center, 900, 20px 0px);
     font-family: 'Pompiere', cursive;}
-h2 {@include etiquetas($grisOscuro, $large, center, 600, 20px 0px);
+h2 {@include etiquetas($grisOscuro, $large, center, 600, 0px);
     font-family: 'Pompiere', cursive;}
 h3 {@include etiquetas($grisOscuro, $medium, center, 600, 20px 0px);
     font-family: 'Pompiere', cursive;}
-p {@include etiquetas($negro, $xsmall, justify, 400, 10px);
+p {@include etiquetas($negro, $xxsmall, justify, 400, 10px);
     font-family: 'Roboto', sans-serif;}
 p {text-indent: 15px;}
 
@@ -140,7 +151,7 @@ ol {
 
 .boton {
     font-size: $small;
-    font-weight: 550;
+    font-weight: 600;
     margin: 5px;
     color: $negro;
     background-color: $amarilloBrillante;
@@ -155,7 +166,26 @@ ol {
 }
 
 .subtituloSeccion {
-    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px 5px 30px 5px;
+}
+
+.imgCarousel {
+    opacity: 0.4;
+}
+
+.padreTituloSeccion {
+    position: relative;
+}
+
+.hijoTituloSeccion {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 3px 3px $blanco;
 }
 
 /* Sección index.html */
@@ -213,10 +243,6 @@ ol {
         justify-content: center;
 
         .contenedorInfo__imgGrupo--img {
-            opacity: 0.6;
-        }
-
-        .contenedorInfo__imgGrupo--img2 {
             border-radius: 10px;
         }
     }
@@ -378,18 +404,55 @@ ol {
 .container-fluid {
     .footerBootstrap {
         background-color: $grisClaro;
-        font-size: $xsmall;
         font-family: 'Roboto', sans-serif;
-        margin-top: 60px;
+        margin-top: 90px;
         padding-top: 30px;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
+
+        .footerBootstrap__contenedorImg {
+            display: flex;
+            flex: row;
+            justify-content: flex-start;
+            padding-left: 30px;
+        }
 
         .footerBootstrap__itemFooter {
+            margin: 0px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-family: 'Pompiere', cursive;
+            font-size: $small;
+            font-weight: 600;
+            color: $grisOscuro;
             text-indent: 0px;
-            font-weight: 550;
         }
         .footerBootstrap__contenido {
+            margin: 0px;
+            margin-top: 10px;
             text-indent: 0px;
+        }
+
+        .footerBootstrap__logo {
+            margin-right: 5px;
+        }
+
+        .footerBootstrap__enlace {
+            margin-right: 50%;
+            transition: 0.5s;
+        }
+
+        .footerBootstrap__enlace:hover {
+            transform: scale(1.1);
+            background-color: $amarilloOpaco;
+        }
+
+        .footerBootstrap__img {
+            margin-right: 10px;
+            transition: 1s;
+        }
+
+        .footerBootstrap__img:hover {
+            transform: scale(1.1);
         }
     }
 }
@@ -407,6 +470,20 @@ ol {
 
 @media only screen and (max-width:768px) {
 
+    .container-fluid {
+        .footerBootstrap {
+    
+            .footerBootstrap__contenedorTexto {
+                padding-left: 30px;
+            }
+
+            .footerBootstrap__contenedorImg {
+                display: flex;
+                flex: row;
+                justify-content: center;
+            }
+        }
+    }
     /* Sección quienesSomos.html */
 
     .contenedorInfo {
