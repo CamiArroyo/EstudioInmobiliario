@@ -55,7 +55,7 @@ html, body{
 
 .parallax {
     /* The image used */
-    background-image: url("../img/oficinaInterior21.jpg");
+    background-image: url("../img/paralaxHorizontal.jpg");
 
     /* Set a specific height */
     height: 500px;
@@ -66,20 +66,30 @@ html, body{
     background-repeat: no-repeat;
     background-size: cover;
 
-    /* box modeling */
-    margin-bottom: 50px;
-
     .parallax__tituloSeccion {
         padding-top: 10%;
         padding-right: 20px;
         padding-left: 20px;
         text-align: center;
+    }
 
-        .parallax__tituloSeccion--titulo {
+    .parallax__contenedor {
+
+        .parallax__contenedor--Item {
+            transition: 1s;
+        }
+
+        .parallax__contenedor--Item:hover {
+            transform: scale(1.1);
+        }
+
+        .parallax__contenedor--ItemTitulo {
             background-color: $grisClaro;
             color: $negro;
             font-size: $medium;
             border: solid 1px $negro;
+            border-radius: 10px;
+            padding: 1px 5px;
         }
     }
 }
@@ -98,6 +108,8 @@ h1 {@include etiquetas($grisOscuro, $xlarge, center, 900, 20px 0px);
 h2 {@include etiquetas($grisOscuro, $large, center, 600, 0px);
     font-family: 'Pompiere', cursive;}
 h3 {@include etiquetas($grisOscuro, $medium, center, 600, 20px 0px);
+    font-family: 'Pompiere', cursive;}
+h4 {@include etiquetas($grisOscuro, $small, center, 600, 20px 0px);
     font-family: 'Pompiere', cursive;}
 p {@include etiquetas($negro, $xxsmall, justify, 400, 10px);
     font-family: 'Roboto', sans-serif;}
@@ -190,6 +202,24 @@ ol {
 
 /* Sección index.html */
 
+.contenedorBienvenida {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+.contenedorBienvenida__subtituloSeccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px 5px 30px 5px;
+
+    .contenedorBienvenida__subtituloSeccion--parrafo {
+        text-align: center;
+    }
+}
+
 .bodyIndex {
     background-color: $fondo;
 }
@@ -199,6 +229,10 @@ ol {
     border-radius: 10px;
     margin: 0px 70px 50px 70px;
     padding: 0px;
+}
+
+.contenedorServUltimo {
+    margin: 0px 70px 0px 70px;
 }
 
 .contenedorServImgInfo {
@@ -414,6 +448,7 @@ ol {
             flex: row;
             justify-content: flex-start;
             padding-left: 30px;
+            padding-top: 20px;
         }
 
         .footerBootstrap__itemFooter {
@@ -426,6 +461,7 @@ ol {
             color: $grisOscuro;
             text-indent: 0px;
         }
+
         .footerBootstrap__contenido {
             margin: 0px;
             margin-top: 10px;
@@ -437,7 +473,7 @@ ol {
         }
 
         .footerBootstrap__enlace {
-            margin-right: 50%;
+            margin-top: 0px;
             transition: 0.5s;
         }
 
@@ -453,6 +489,14 @@ ol {
 
         .footerBootstrap__img:hover {
             transform: scale(1.1);
+        }
+
+        .btnFooter {
+            padding: 0px 0px 10px 0px;
+        }
+
+        .btnActive {
+            background-color: $amarilloOpaco;
         }
     }
 }
@@ -470,20 +514,59 @@ ol {
 
 @media only screen and (max-width:768px) {
 
-    .container-fluid {
-        .footerBootstrap {
-    
-            .footerBootstrap__contenedorTexto {
-                padding-left: 30px;
+    /* Imágen parallax */
+
+    .parallax {
+        /* The image used */
+        background-image: url("../img/paralaxVertical.jpg");
+
+        /* Set a specific height */
+        height: 700px;
+
+        .parallax__contenedor {
+            display: flex; 
+            flex-direction: column;
+
+            .parallax__contenedor--Item {
+                padding-bottom: 15px;
             }
 
-            .footerBootstrap__contenedorImg {
-                display: flex;
-                flex: row;
-                justify-content: center;
+            .parallax__contenedor--ItemImg {
+                height: 100px;
+                width: 100px;
+            }
+
+            .parallax__contenedor--ItemTitulo {
+                font-size: $small;
             }
         }
     }
+
+    h1 {
+        font-size: $large;
+    }
+
+    /* Seccion index.html */
+
+    .contenedorBienvenida {
+        margin-top: 20px;
+
+        .contenedorBienvenida__subtituloSeccion {
+            margin: 30px 0px 0px 0px;
+        }
+    }
+
+    .contenedorBienvenida__contenedorImg {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .contenedorBienvenida__contenedorImg--imgLogo {
+            height: 250px;
+            width: 251px;
+        }
+    }
+
     /* Sección quienesSomos.html */
 
     .contenedorInfo {
@@ -504,5 +587,22 @@ ol {
         }
     }
 
+    /* Footer de las secciones */
 
+    .container-fluid {
+        .footerBootstrap {
+    
+            .footerBootstrap__contenedorTexto {
+                padding-left: 30px;
+            }
+
+            .footerBootstrap__contenedorImg {
+                display: flex;
+                flex: row;
+                justify-content: center;
+                padding-top: 0px;
+            }
+        }
+    }
+    
 }

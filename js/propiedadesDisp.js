@@ -46,11 +46,13 @@ window.addEventListener("load", () => { //Todo esto ocurre una vez que fueron ca
     });
 })
 
-
-//---------------------------> CREO EL FILTRO POR TIPO DE ACTIVIDAD <---------------------------
-
 //1° generar select
 selectActUI(tipoActividad, "#filtroTipoActividad")
+
+//1° generar select
+selectCatUI(tipoPropiedad, "#filtroTipoPropiedad")
+
+//---------------------------> CREO EL FILTRO POR TIPO DE ACTIVIDAD <---------------------------
 
 //2° asociar el evento (podría ir en ready)
 $("#filtroTipoActividad").change(function (e) { 
@@ -73,9 +75,6 @@ $("#filtroTipoActividad").change(function (e) {
 });
 
 //---------------------------> CREO EL FILTRO POR CATEGORÍAS <---------------------------
-
-//1° generar select
-selectCatUI(tipoPropiedad, "#filtroTipoPropiedad")
 
 //2° asociar el evento (podría ir en ready)
 $("#filtroTipoPropiedad").change(function (e) { 
@@ -112,49 +111,3 @@ $(".inputPrecio").change(function (e) {
         propiedadesUIjQuery(encontrados, '#propiedadesContenedor');
     }
 });
-
-/*
-let conjuntoFiltradosUno = propiedades;
-let conjuntoFiltradosDos = [];
-let conjuntoFiltradosTres = [];
-let valueAct = "";
-let valueCat = "";
-let min = 8000;
-let max = 50000;
-
-selectActUI(tipoActividad, "#filtroTipoActividad");
-$("#filtroTipoActividad").change(function (e) {  //filtro los productos por tipo de actividad
-    valueAct = e.target.value.toUpperCase();
-});
-
-selectCatUI(tipoPropiedad, "#filtroTipoPropiedad");
-$("#filtroTipoPropiedad").change(function (e) {  //filtro los productos por categoría
-    valueCat = e.target.value.toUpperCase();
-});
-
-$(".inputPrecio").change(function (e) {
-    min = $("#minProducto").val();
-    max = $("#maxProducto").val();
-});
-
-$("#buttonFiltros").click(function() {
-
-    if(valueAct == "Todas las acciones".toUpperCase()) {
-        conjuntoFiltradosUno = propiedades;
-    } 
-    else {
-        conjuntoFiltradosUno = propiedades.filter(propiedad => propiedad.actividad.toUpperCase() == valueAct); 
-    }
-
-    if(valueCat == "Todas las propiedades".toUpperCase()) {
-        conjuntoFiltradosDos = conjuntoFiltradosUno;
-    } 
-    else {
-        conjuntoFiltradosDos = conjuntoFiltradosUno.filter(propiedad => propiedad.tipo.toUpperCase() == valueCat); 
-    }
-
-    conjuntoFiltradosTres = conjuntoFiltradosDos.filter(propiedad => propiedad.precio >= min && propiedad.precio <= max);
-
-    propiedadesUIjQuery(conjuntoFiltradosTres, '#propiedadesContenedor');
-})
-*/

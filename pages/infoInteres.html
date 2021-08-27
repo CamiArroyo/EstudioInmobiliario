@@ -42,8 +42,8 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item btn-active">
-                        <div class="btn-group btn-active">
+                    <li class="nav-item">
+                        <div class="btn-group">
                             <a href="quienesSomos.html"><button type="button" class="btn"><p class="btnSubtitle">Quiénes somos</p></button></a>
                             <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="sr-only">Toggle Dropdown</span>
@@ -61,8 +61,8 @@
                             <a href="propiedades.html"><button type="button" class="btn"><p class="btnSubtitle">Encontrá tu propiedad</p></button></a>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <div class="btn-group">
+                    <li class="nav-item btn-active">
+                        <div class="btn-group btn-active">
                             <a href="infoInteres.html"><button type="button" class="btn"><p class="btnSubtitle">Información de interés</p></button></a>
                             <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="sr-only">Toggle Dropdown</span>
@@ -224,7 +224,7 @@
                         <img src="../img/plomero.jpg" height="200px" width="223px" class="imgPrestador">
                     </div>
                     <div class="col-xs-12 col-lg-6">
-                        <h3>PLOMERO</h3>
+                        <h4>PLOMERO</h4>
                         <li class="listaContenido">Gustavo Lopez</li>
                         <li class="listaContenido">Dirección: Esteban Larco 570</li>
                         <li class="listaContenido">Teléfono: (03564) 15326895</li>
@@ -235,7 +235,7 @@
                         <img src="../img/albanil.jpg" height="200px" width="223px" class="imgPrestador">
                     </div>
                     <div class="col-xs-12 col-lg-6">
-                        <h3>ALBAÑIL</h3>
+                        <h4>ALBAÑIL</h4>
                         <li class="listaContenido">Santiago Martino</li>
                         <li class="listaContenido">Dirección: Santa Fé 35</li>
                         <li class="listaContenido">Teléfono: (03564) 15859612</li>
@@ -246,7 +246,7 @@
                         <img src="../img/electricista.jpg" height="200px" width="223px" class="imgPrestador">
                     </div>
                     <div class="col-xs-12 col-lg-6">
-                        <h3>ELECTRICISTA</h3>
+                        <h4>ELECTRICISTA</h4>
                         <li class="listaContenido">Mariano Santillán</li>
                         <li class="listaContenido">Dirección: Mariano Moreno 130</li>
                         <li class="listaContenido">Teléfono: (03564) 15225689</li>
@@ -257,7 +257,7 @@
                         <img src="../img/pintor.jpg" height="200px" width="223px" class="imgPrestador">
                     </div>
                     <div class="col-xs-12 col-lg-6">
-                        <h3>PINTOR</h3>
+                        <h4>PINTOR</h4>
                         <li class="listaContenido">Luis Villalba</li>
                         <li class="listaContenido">Dirección: Güemes 692</li>
                         <li class="listaContenido">Teléfono: (03564) 15962653</li>
@@ -277,11 +277,11 @@
             </div>
             <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorTexto">
                 <p class="footerBootstrap__itemFooter">SECCIONES</p>
-                <a href="../index.html"><p class="footerBootstrap__contenido footerBootstrap__enlace">Página principal</p></a>
-                <a href="quienesSomos.html"><p class="footerBootstrap__contenido footerBootstrap__enlace">Quiénes somos</p></a>
-                <a href="propiedades.html"><p class="footerBootstrap__contenido footerBootstrap__enlace">Encontrá tu propiedad</p></a>
-                <a href="infoInteres.html"><p class="footerBootstrap__contenido footerBootstrap__enlace">Información de interés</p></a>
-                <a href="contacto.html"><p class="footerBootstrap__contenido footerBootstrap__enlace">Medios de contacto</p></a>
+                <div><a href="../index.html"><button type="button" class="btn btnFooter"><p class="footerBootstrap__contenido footerBootstrap__enlace">Página principal</p></button></a></div>
+                <div><a href="quienesSomos.html"><button type="button" class="btn btnFooter"><p class="footerBootstrap__contenido footerBootstrap__enlace">Quiénes somos</p></button></a></div>
+                <div><a href="propiedades.html"><button type="button" class="btn btnFooter"><p class="footerBootstrap__contenido footerBootstrap__enlace">Encontrá tu propiedad</p></button></a></div>
+                <div><a href="infoInteres.html"><button type="button" class="btn btnFooter"><p class="footerBootstrap__contenido footerBootstrap__enlace btnActive">Información de interés</p></button></a></div>
+                <div><a href="contacto.html"><button type="button" class="btn btnFooter"><p class="footerBootstrap__contenido footerBootstrap__enlace">Medios de contacto</p></button></a></div>
             </div>
             <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorTexto">
                 <p class="footerBootstrap__itemFooter">NUESTRA OFICINA</p>
@@ -296,9 +296,12 @@
                 <a href="https://www.facebook.com/cami.arroyo.1" target="_blank"><img src="../img/facebook.png" height="70px" width="70px" class="footerBootstrap__img"></a>
                 <a href="https://www.instagram.com/cami.arroyo.010/" target="_blank"><img src="../img/instragram.png" height="70px" width="70px" class="footerBootstrap__img"></a>
                 <p class="footerBootstrap__itemFooter">FORMULARIO DE CONTACTO</p>
-                <a href="contacto.html#formulario"><p class="footerBootstrap__contenido footerBootstrap__enlace">Ir al formulario</p></a>
+                <div><a href="contacto.html#formulario"><button type="button" class="btn btnFooter"><p class="footerBootstrap__contenido footerBootstrap__enlace">Ir al formulario</p></button></a></div>
             </div>
         </div>
+    </div>
+    <div class="contenedor">
+        <div class="hechoPor">Hecho por: Camila Arroyo. 2021<div>
     </div>
     <div class="contenedor">
         <div class="hechoPor">Hecho por: Camila Arroyo. 2021<div>

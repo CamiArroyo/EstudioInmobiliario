@@ -36,26 +36,30 @@ html, body {
 /* Imágen parallax */
 .parallax {
   /* The image used */
-  background-image: url("../img/oficinaInterior21.jpg");
+  background-image: url("../img/paralaxHorizontal.jpg");
   /* Set a specific height */
   height: 500px;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  /* box modeling */
-  margin-bottom: 50px; }
+  background-size: cover; }
   .parallax .parallax__tituloSeccion {
     padding-top: 10%;
     padding-right: 20px;
     padding-left: 20px;
     text-align: center; }
-    .parallax .parallax__tituloSeccion .parallax__tituloSeccion--titulo {
-      background-color: #CFE3E2;
-      color: black;
-      font-size: 30px;
-      border: solid 1px black; }
+  .parallax .parallax__contenedor .parallax__contenedor--Item {
+    transition: 1s; }
+  .parallax .parallax__contenedor .parallax__contenedor--Item:hover {
+    transform: scale(1.1); }
+  .parallax .parallax__contenedor .parallax__contenedor--ItemTitulo {
+    background-color: #CFE3E2;
+    color: black;
+    font-size: 30px;
+    border: solid 1px black;
+    border-radius: 10px;
+    padding: 1px 5px; }
 
 /* Configuración general */
 h1 {
@@ -77,6 +81,14 @@ h2 {
 h3 {
   color: #787878;
   font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+  margin: 20px 0px;
+  font-family: 'Pompiere', cursive; }
+
+h4 {
+  color: #787878;
+  font-size: 24px;
   text-align: center;
   font-weight: 600;
   margin: 20px 0px;
@@ -138,7 +150,7 @@ ol {
   justify-content: center; }
 
 .boton {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
   margin: 5px;
   color: black;
@@ -171,6 +183,20 @@ ol {
   text-shadow: 3px 3px #FFFFFF; }
 
 /* Sección index.html */
+.contenedorBienvenida {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px 0px; }
+
+.contenedorBienvenida__subtituloSeccion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 80px 5px 30px 5px; }
+  .contenedorBienvenida__subtituloSeccion .contenedorBienvenida__subtituloSeccion--parrafo {
+    text-align: center; }
+
 .bodyIndex {
   background-color: #FFFFFF; }
 
@@ -179,6 +205,9 @@ ol {
   border-radius: 10px;
   margin: 0px 70px 50px 70px;
   padding: 0px; }
+
+.contenedorServUltimo {
+  margin: 0px 70px 0px 70px; }
 
 .contenedorServImgInfo {
   display: flex;
@@ -336,13 +365,14 @@ ol {
     display: flex;
     flex: row;
     justify-content: flex-start;
-    padding-left: 30px; }
+    padding-left: 30px;
+    padding-top: 20px; }
   .container-fluid .footerBootstrap .footerBootstrap__itemFooter {
     margin: 0px;
     margin-top: 20px;
     margin-bottom: 10px;
     font-family: 'Pompiere', cursive;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 600;
     color: #787878;
     text-indent: 0px; }
@@ -353,7 +383,7 @@ ol {
   .container-fluid .footerBootstrap .footerBootstrap__logo {
     margin-right: 5px; }
   .container-fluid .footerBootstrap .footerBootstrap__enlace {
-    margin-right: 50%;
+    margin-top: 0px;
     transition: 0.5s; }
   .container-fluid .footerBootstrap .footerBootstrap__enlace:hover {
     transform: scale(1.1);
@@ -363,6 +393,10 @@ ol {
     transition: 1s; }
   .container-fluid .footerBootstrap .footerBootstrap__img:hover {
     transform: scale(1.1); }
+  .container-fluid .footerBootstrap .btnFooter {
+    padding: 0px 0px 10px 0px; }
+  .container-fluid .footerBootstrap .btnActive {
+    background-color: #56ACDA; }
 
 .contenedor .hechoPor {
   padding: 10px;
@@ -373,12 +407,36 @@ ol {
   font-family: 'Roboto', sans-serif; }
 
 @media only screen and (max-width: 768px) {
-  .container-fluid .footerBootstrap .footerBootstrap__contenedorTexto {
-    padding-left: 30px; }
-  .container-fluid .footerBootstrap .footerBootstrap__contenedorImg {
+  /* Imágen parallax */
+  .parallax {
+    /* The image used */
+    background-image: url("../img/paralaxVertical.jpg");
+    /* Set a specific height */
+    height: 700px; }
+    .parallax .parallax__contenedor {
+      display: flex;
+      flex-direction: column; }
+      .parallax .parallax__contenedor .parallax__contenedor--Item {
+        padding-bottom: 15px; }
+      .parallax .parallax__contenedor .parallax__contenedor--ItemImg {
+        height: 100px;
+        width: 100px; }
+      .parallax .parallax__contenedor .parallax__contenedor--ItemTitulo {
+        font-size: 24px; }
+  h1 {
+    font-size: 40px; }
+  /* Seccion index.html */
+  .contenedorBienvenida {
+    margin-top: 20px; }
+    .contenedorBienvenida .contenedorBienvenida__subtituloSeccion {
+      margin: 30px 0px 0px 0px; }
+  .contenedorBienvenida__contenedorImg {
     display: flex;
-    flex: row;
+    flex-direction: row;
     justify-content: center; }
+    .contenedorBienvenida__contenedorImg .contenedorBienvenida__contenedorImg--imgLogo {
+      height: 250px;
+      width: 251px; }
   /* Sección quienesSomos.html */
   .contenedorInfo .contenedorInfo__contenedor {
     border: none; }
@@ -386,4 +444,12 @@ ol {
   .card-deck {
     margin: 0px 10px 30px 10px; }
   .card-body .infoImportante {
-    margin: 0px 20px; } }
+    margin: 0px 20px; }
+  /* Footer de las secciones */
+  .container-fluid .footerBootstrap .footerBootstrap__contenedorTexto {
+    padding-left: 30px; }
+  .container-fluid .footerBootstrap .footerBootstrap__contenedorImg {
+    display: flex;
+    flex: row;
+    justify-content: center;
+    padding-top: 0px; } }

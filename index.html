@@ -29,8 +29,8 @@
             </button>
             <div class="collapse navbar-collapse listaNav" id="navbarNavDropdown">
                 <ul class="navbar-nav text-center">
-                    <li class="nav-item">
-                        <div class="btn-group">
+                    <li class="nav-item btn-active">
+                        <div class="btn-group btn-active">
                             <a href="index.html"><button type="button" class="btn"><p class="btnSubtitle">Página principal</p></button></a>
                             <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="sr-only">Toggle Dropdown</span>
@@ -40,8 +40,8 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item btn-active">
-                        <div class="btn-group btn-active">
+                    <li class="nav-item">
+                        <div class="btn-group">
                             <a href="pages/quienesSomos.html"><button type="button" class="btn"><p class="btnSubtitle">Quiénes somos</p></button></a>
                             <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="sr-only">Toggle Dropdown</span>
@@ -96,20 +96,20 @@
 
     <!-- Apertura de section -->
 
-    <div class="row">
-        <div class="col-xs-12 col-lg-6">
+    <div class="row contenedorBienvenida">
+        <div class="col-xs-12 col-lg-4 contenedorBienvenida__contenedorImg">
+            <img src="img/logoEmpresa.png" height="350px" width="352px" class="contenedorBienvenida__contenedorImg--imgLogo">
+        </div>
+        <div class="col-xs-12 col-lg-4">
             <div class="row">
                 <div class="col-xs-12 col-lg-12">
-                    <div class="subtituloSeccion">
-                        <h2>ESTUDIO INMOBILIARIO RAICES</h2>
+                    <div class="contenedorBienvenida__subtituloSeccion">
+                        <h2>BIENVENIDOS</h2>
                         <img src="img/subrayado.png" height="20px" width="315px">
-                        <p>Somos un servicio personalizado que busca el inmueble ideal para cada uno de nuestros clientes.</p>
+                        <p class="contenedorBienvenida__subtituloSeccion--parrafo">Somos un servicio personalizado que busca el inmueble ideal para cada uno de nuestros clientes.</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-xs-12 col-lg-6">
-            <img src="img/logoEmpresaCorto.png" height="300px" width="300px">
         </div>
     </div>
 
@@ -117,18 +117,18 @@
         <div class="carousel-inner parallax">
             <div class="carousel-item active">
                 <div class="parallax__tituloSeccion">
-                    <div class="row">
-                        <div class="col-xs-12 col-lg-3">
-                            <a href="pages/quienesSomos.html"><img src="img/logoQuienesSomos.png" height="150px" width="150px"><h2 class="parallax__tituloSeccion--titulo">QUIENES SOMOS</h2></a>
+                    <div class="row parallax__contenedor">
+                        <div class="col-xs-12 col-lg-3 parallax__contenedor--Item">
+                            <a href="pages/quienesSomos.html"><button type="button" class="btn"><img src="img/logoQuienesSomos.png" height="150px" width="150px" class="parallax__contenedor--ItemImg"><h2 class="parallax__contenedor--ItemTitulo">QUÉNES SOMOS</h2></button></a>
                         </div>
-                        <div class="col-xs-12 col-lg-3">
-                            <a href="pages/propiedades.html"><img src="img/logoPropiedades.png" height="150px" width="150px"><h2 class="parallax__tituloSeccion--titulo">ENCONTRÁ TU PROPIEDAD</h2></a>
+                        <div class="col-xs-12 col-lg-3 parallax__contenedor--Item">
+                            <a href="pages/propiedades.html"><button type="button" class="btn"><img src="img/logoPropiedades.png" height="150px" width="150px" class="parallax__contenedor--ItemImg"><h2 class="parallax__contenedor--ItemTitulo">ENCONTRÁ TU PROPIEDAD</h2></button></a>
                         </div>
-                        <div class="col-xs-12 col-lg-3">
-                            <a href="pages/infoInteres.html"><img src="img/logoInfoInteres.png" height="150px" width="150px"><h2 class="parallax__tituloSeccion--titulo">INFORMACIÓN DE INTERÉS</h2></a>
+                        <div class="col-xs-12 col-lg-3 parallax__contenedor--Item">
+                            <a href="pages/infoInteres.html"><button type="button" class="btn"><img src="img/logoInfoInteres.png" height="150px" width="150px" class="parallax__contenedor--ItemImg"><h2 class="parallax__contenedor--ItemTitulo">INFORMACIÓN DE INTERÉS</h2></button></a>
                         </div>
-                        <div class="col-xs-12 col-lg-3">
-                            <a href="pages/contacto.html"><img src="img/logoContacto.png" height="150px" width="150px"><h2 class="parallax__tituloSeccion--titulo">MEDIOS DE CONTACTO</h2></a>
+                        <div class="col-xs-12 col-lg-3 parallax__contenedor--Item">
+                            <a href="pages/contacto.html"><button type="button" class="btn"><img src="img/logoContacto.png" height="150px" width="150px" class="parallax__contenedor--ItemImg"><h2 class="parallax__contenedor--ItemTitulo">MEDIOS DE CONTACTO</h2></button></a>
                         </div>
                     </div>
                 </div>
@@ -156,7 +156,7 @@
         </div>
         <div class="col-xs-12 col-lg-7">
             <div class="contenedorServImgInfo">
-                <img id="imgServicio1" src="img/administracion.jpg" height="300px" width="400">
+                <img id="imgServicio1" src="img/administracion.jpg" height="300px" width="450">
             </div>
             <div id="infoServicio1" class="jumbotron" style="display: none;">
                 Nos encargamos de:
@@ -172,9 +172,17 @@
         </div>
     </div>
     <div class="row contenedorServ">
+        <div class="col-xs-12 col-lg-1">
+        </div>
+        <div class="col-xs-12 col-lg-4 contenedorTituloServicios">
+            <h3>TASACIONES</h3>
+            <div class="botones3">
+                <button id="btnServicio2" class="boton">MÁS INFORMACIÓN</button>
+            </div>
+        </div>
         <div class="col-xs-12 col-lg-7">
             <div class="contenedorServImgInfo">
-                <img id="imgServicio2" src="img/tasacion.jpg" height="300px" width="400">
+                <img id="imgServicio2" src="img/tasaciones.jpg" height="300px" width="450">
             </div>
             <div id="infoServicio2" class="jumbotron" style="display: none;">
                 La tasación es el informe que se encarga de determinar objetivamente el valor de un inmueble. Para hacerlo, el profesional presta atención a factores que influyen en la valoración final, como:
@@ -190,14 +198,6 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-12 col-lg-4 contenedorTituloServicios">
-            <h3>TASACIONES</h3>
-            <div class="botones3">
-                <button id="btnServicio2" class="boton">MÁS INFORMACIÓN</button>
-            </div>
-        </div>
-        <div class="col-xs-12 col-lg-1">
-        </div>
     </div>
     <div class="row contenedorServ">
         <div class="col-xs-12 col-lg-1">
@@ -210,7 +210,7 @@
         </div>
         <div class="col-xs-12 col-lg-7">
             <div class="contenedorServImgInfo">
-                <img id="imgServicio3" src="img/asesoramiento.jpg" height="300px" width="400">
+                <img id="imgServicio3" src="img/asesoramiento.jpg" height="300px" width="450">
             </div>
             <div id="infoServicio3" class="jumbotron" style="display: none;">
                 Nosotros estamos para:
@@ -224,10 +224,18 @@
             </div>
         </div>
     </div>
-    <div class="row contenedorServ">
+    <div class="row contenedorServ contenedorServUltimo">
+        <div class="col-xs-12 col-lg-1">
+        </div>
+        <div class="col-xs-12 col-lg-4 contenedorTituloServicios">
+            <h3>REDACCIÓN DE CONTRATOS PARTICULARES</h3>
+            <div class="botones3">
+                <button id="btnServicio4" class="boton">MÁS INFORMACIÓN</button>
+            </div>
+        </div>
         <div class="col-xs-12 col-lg-7">
             <div class="contenedorServImgInfo">
-                <img id="imgServicio4" src="img/contratoParticular.jpg" height="300px" width="400">
+                <img id="imgServicio4" src="img/contratos.jpg" height="300px" width="450">
             </div>
             <div id="infoServicio4" class="jumbotron" style="display: none;">
                 Si estás pensando en alquilar un inmueble de manera independiente, es conveniente que acudas al estudio y solicites la redacción de un contrato particular. Te explicamos dos motivos:
@@ -238,14 +246,6 @@
                     <button id="btnOffServicio4" class="boton">MENOS INFORMACIÓN</button>
                 </div>
             </div>
-        </div>
-        <div class="col-xs-12 col-lg-4 contenedorTituloServicios">
-            <h3>REDACCIÓN DE CONTRATOS PARTICULARES</h3>
-            <div class="botones3">
-                <button id="btnServicio4" class="boton">MÁS INFORMACIÓN</button>
-            </div>
-        </div>
-        <div class="col-xs-12 col-lg-1">
         </div>
     </div>
 
@@ -269,11 +269,11 @@
             </div>
             <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorTexto">
                 <p class="footerBootstrap__itemFooter">SECCIONES</p>
-                <a href="index.html"><p class="footerBootstrap__contenido footerBootstrap__enlace">Página principal</p></a>
-                <a href="pages/quienesSomos.html"><p class="footerBootstrap__contenido footerBootstrap__enlace">Quiénes somos</p></a>
-                <a href="pages/propiedades.html"><p class="footerBootstrap__contenido footerBootstrap__enlace">Encontrá tu propiedad</p></a>
-                <a href="pages/infoInteres.html"><p class="footerBootstrap__contenido footerBootstrap__enlace">Información de interés</p></a>
-                <a href="pages/contacto.html"><p class="footerBootstrap__contenido footerBootstrap__enlace">Medios de contacto</p></a>
+                <div><a href="index.html"><button type="button" class="btn btnFooter"><p class="footerBootstrap__contenido footerBootstrap__enlace btnActive">Página principal</p></button></a></div>
+                <div><a href="pages/quienesSomos.html"><button type="button" class="btn btnFooter"><p class="footerBootstrap__contenido footerBootstrap__enlace">Quiénes somos</p></button></a></div>
+                <div><a href="pages/propiedades.html"><button type="button" class="btn btnFooter"><p class="footerBootstrap__contenido footerBootstrap__enlace">Encontrá tu propiedad</p></button></a></div>
+                <div><a href="pages/infoInteres.html"><button type="button" class="btn btnFooter"><p class="footerBootstrap__contenido footerBootstrap__enlace">Información de interés</p></button></a></div>
+                <div><a href="pages/contacto.html"><button type="button" class="btn btnFooter"><p class="footerBootstrap__contenido footerBootstrap__enlace">Medios de contacto</p></button></a></div>
             </div>
             <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorTexto">
                 <p class="footerBootstrap__itemFooter">NUESTRA OFICINA</p>
@@ -288,7 +288,7 @@
                 <a href="https://www.facebook.com/cami.arroyo.1" target="_blank"><img src="../img/facebook.png" height="70px" width="70px" class="footerBootstrap__img"></a>
                 <a href="https://www.instagram.com/cami.arroyo.010/" target="_blank"><img src="../img/instragram.png" height="70px" width="70px" class="footerBootstrap__img"></a>
                 <p class="footerBootstrap__itemFooter">FORMULARIO DE CONTACTO</p>
-                <a href="pages/contacto.html#formulario"><p class="footerBootstrap__contenido footerBootstrap__enlace">Ir al formulario</p></a>
+                <div><a href="pages/contacto.html#formulario"><button type="button" class="btn btnFooter"><p class="footerBootstrap__contenido footerBootstrap__enlace">Ir al formulario</p></button></a></div>
             </div>
         </div>
     </div>
