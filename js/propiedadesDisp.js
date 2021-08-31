@@ -52,6 +52,7 @@ selectActUI(tipoActividad, "#filtroTipoActividad")
 //1° generar select
 selectCatUI(tipoPropiedad, "#filtroTipoPropiedad")
 
+/*
 //---------------------------> CREO EL FILTRO POR TIPO DE ACTIVIDAD <---------------------------
 
 //2° asociar el evento (podría ir en ready)
@@ -111,3 +112,42 @@ $(".inputPrecio").change(function (e) {
         propiedadesUIjQuery(encontrados, '#propiedadesContenedor');
     }
 });
+*/
+
+$("#buttonFiltros").click(function(e) {
+
+    actividad = $("#filtroTipoActividad").val().toUpperCase();
+    console.log(actividad);
+    tipo = $("#filtroTipoPropiedad").val().toUpperCase();
+    console.log(tipo);
+    min = $("#minProducto").val();
+    console.log(min);
+    max = $("#maxProducto").val();
+    console.log(max);
+    
+    $("#propiedadesContenedor").fadeOut(600, function() {
+
+        const filtrados = propiedades.filter(propiedad => propiedad.actividad.toUpperCase() == actividad && 
+                                            propiedad.precio >= min && propiedad.precio <= max && 
+                                            propiedad.tipo.toUpperCase() == tipo);
+        console.log(filtrados);
+
+        if (filtrados.length == 0) {
+            console.log("NO hay propiedades")
+            $("#propiedadesContenedorInfo").append(`<p>En este momento no hay propiedades disponibles de las características solicitadas.</p>`)
+        }
+        propiedadesUIjQuery(filtrados, "#propiedadesContenedor");
+        
+    }).fadeIn(600);
+}) 
+
+$("#buttonLimpiarFiltros").click(function(e) {
+    $("#propiedadesContenedor").fadeOut(600, function() {
+
+        const noHayFiltrados = propiedades;
+        console.log(noHayFiltrados);
+
+        propiedadesUIjQuery(noHayFiltrados, "#propiedadesContenedor");
+        
+    }).fadeIn(600);
+})

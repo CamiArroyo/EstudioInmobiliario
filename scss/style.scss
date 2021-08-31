@@ -109,11 +109,14 @@ h2 {@include etiquetas($grisOscuro, $large, center, 600, 0px);
     font-family: 'Pompiere', cursive;}
 h3 {@include etiquetas($grisOscuro, $medium, center, 600, 20px 0px);
     font-family: 'Pompiere', cursive;}
-h4 {@include etiquetas($grisOscuro, $small, center, 600, 20px 0px);
+h4 {@include etiquetas($grisOscuro, $small, center, 600, 10px 0px);
     font-family: 'Pompiere', cursive;}
 p {@include etiquetas($negro, $xxsmall, justify, 400, 10px);
     font-family: 'Roboto', sans-serif;}
 p {text-indent: 15px;}
+
+.p2 {@include etiquetas($negro, $xsmall, center, 400, 20px 10px);
+    font-family: 'Roboto', sans-serif;}
 
 ol {
     padding: 0px;
@@ -145,7 +148,7 @@ ol {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 20px;
+    margin: 10px;
 }
 
 .botones2 {
@@ -162,7 +165,7 @@ ol {
 }
 
 .boton {
-    font-size: $small;
+    font-size: $xsmall;
     font-weight: 600;
     margin: 5px;
     color: $negro;
@@ -214,10 +217,6 @@ ol {
     flex-direction: column;
     align-items: center;
     margin: 80px 5px 30px 5px;
-
-    .contenedorBienvenida__subtituloSeccion--parrafo {
-        text-align: center;
-    }
 }
 
 .bodyIndex {
@@ -228,22 +227,49 @@ ol {
     background-color: $grisClaro;
     border-radius: 10px;
     margin: 0px 70px 50px 70px;
-    padding: 0px;
+    padding: 0px 20px;
+
+    .contenedorServ__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.contenedorServ__item--img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .contenedorServUltimo {
     margin: 0px 70px 0px 70px;
 }
 
-.contenedorServImgInfo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.padreContTitulo {
+    position: relative;
+}
+
+.hijoContTitulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 3px 3px $blanco;
+}
+
+.imgContTitulo {
+    opacity: 0.7;
+    transition: 0.1s;
+}
+
+.imgContTitulo:hover {
+    opacity: 1;
 }
 
 .jumbotron {
-    margin: 20px;
-    padding: 20px 15px;
+    margin: 10px 0px;
+    padding: 20px;
     font-size: $xxsmall;
     background-color: $blanco;
     border-radius: 10px;
@@ -251,17 +277,19 @@ ol {
     font-family: 'Roboto', sans-serif;
 }
 
-.contenedorTituloServicios {
-    border: solid $amarilloBrillante 1px;
+form {
+    margin: 20px 170px 0px 170px;
+    border: solid 1px $grisClaro;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 30px 0px;
+    padding: 20px;
 
-    .tituloServicio {
-        margin-top: 0px;
+    .form-renglon1 {
+        margin-bottom: 20px;
     }
+}
+
+.parrafoCentrado {
+    text-align: center;
 }
 
 /* Sección quienesSomos.html */
@@ -326,23 +354,17 @@ ol {
 
 /* Sección propiedades.html */
 
-.tituloPropiedad {
-    text-transform: uppercase;
-}
-
 .propSeleccInfo {
-    text-transform: uppercase;
     background-color: $grisClaro;
 }
 
 .card {
     margin-bottom: 25px;
-
     .card-header {
         padding: 0px;
     }
-    
 }
+
 .propContenedor {
     display: flex;
     flex-direction: column;
@@ -361,14 +383,36 @@ ol {
 
 .input-group-text, .custom-select, .form-control, .dropdown-toggle {
     font-family: 'Roboto', sans-serif;
+    font-size: $xxsmall;
 }
 
 .contenedorFiltros {
     background-color: $grisClaro;
-    margin: 0px 20px 20px 20px;
+    margin-left: 20px;
     padding: 10px;
     border: solid 1px $amarilloOpaco;
-    border-radius: 5px;
+    border-radius: 10px;
+}
+
+.carritoCant {
+    font-size: $xsmall;
+}
+
+.tipoProp {
+    font-size: $small;
+    margin: 0px;
+}
+
+.botonSolicitar {
+    margin-left: 10px;
+}
+
+.botonX {
+    text-indent: 0px;
+}
+
+.input-group-text {
+    width: 90px;
 }
 
 /* Sección infoInteres.html */
@@ -548,6 +592,10 @@ ol {
 
     /* Seccion index.html */
 
+    .parrafoCentrado {
+        text-align: start;
+    }
+
     .contenedorBienvenida {
         margin-top: 20px;
 
@@ -565,6 +613,20 @@ ol {
             height: 250px;
             width: 251px;
         }
+    }
+
+    .contenedorServ {
+        margin: 0px 0px 40px 0px;
+        padding: 0px 5px;
+    }
+
+    .contenedorServUltimo {
+        margin: 0px;
+    }
+
+    form {
+        margin: 10px;
+        padding: 20px;
     }
 
     /* Sección quienesSomos.html */
@@ -585,6 +647,10 @@ ol {
         .infoImportante {
             margin: 0px 20px;
         }
+    }
+
+    .contenedorFiltros {
+        margin: 0px 20px 20px 20px;
     }
 
     /* Footer de las secciones */

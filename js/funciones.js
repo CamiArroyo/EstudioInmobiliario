@@ -55,15 +55,15 @@ function propiedadesUIjQuery(propiedades, id) {
                             </div>
 
                             <div class="card-body">
+                                <h3 class="badge badge-pill badge-secondary tipoProp">${propiedad.tipo}</h3>
                                 <h3 class="card-title tituloPropiedad">${propiedad.calle} ${propiedad.numero}</h3>
-                                <h3 class="card-subtitle">${propiedad.tipo}</h3>
-                                <p class="card-text">Valor: $${propiedad.precio}</p>
+                                <p class="card-text p2">VALOR: $${propiedad.precio}</p>
                                 <a id="${propiedad.id}" type="button" class="btn btn-primary btnSoli boton" data-toggle="modal" data-target="#exampleModal">SOLICITAR</a>
                                 <a id="${propiedad.id}" class="btn btn-secondary btnProp boton">VER INFORMACIÓN</a>
                             </div>
 
                             <div id="infoProp${propiedad.id}" style="display: none;">
-                                <h3 class="propSeleccInfo">Información de la propiedad: ${propiedad.calle} ${propiedad.numero}</h3>
+                                <h4 class="propSeleccInfo">INFORMACIÓN DE LA PROPIEDAD: ${propiedad.calle} ${propiedad.numero}</h4>
                                 <p>Descripción: ${propiedad.descripcion}</p>
                                 <p>El monto total de los honorarios a abonar es $${honorariosProp[0]}.</p>
                                 <p>Podrás abonar en 1 pago de $${honorariosProp[0]}, 
@@ -95,7 +95,6 @@ function propiedadesUIjQuery(propiedades, id) {
 
 function selectActUI(lista, selector) {
     $(selector).empty(); //lo vaciamos por las dudas
-    $(selector).append(`<option value="Todas las acciones">Todas las acciones</option>`)
     for (const element of lista) {
         $(selector).append(`<option value="${element}">${element}</option>`);
     }
@@ -105,7 +104,6 @@ function selectActUI(lista, selector) {
 
 function selectCatUI(lista, selector) {
     $(selector).empty(); //lo vaciamos por las dudas
-    $(selector).append(`<option value="Todas las propiedades">Todas las propiedades</option>`)
     for (const element of lista) {
         $(selector).append(`<option value="${element}">${element}</option>`);
     }
@@ -142,16 +140,16 @@ function solicitudPropiedad(e) {
 function mostrarResultado(bandera) {
     if(bandera == true) {
         $("#contenidoModal").empty();
-        $("#contenidoModal").append("Propiedad agregada con éxito");
+        $("#contenidoModal").append("<p>Propiedad agregada con éxito.</p>");
         
         $("#tituloModal").empty();
-        $("#tituloModal").append("Listo!")
+        $("#tituloModal").append("<h4>LISTO!</h4>")
     } else {
         $("#contenidoModal").empty();
-        $("#contenidoModal").append("Esta propiedad ya fue agregada");
+        $("#contenidoModal").append("<p>Esta propiedad ya fue agregada.</p>");
 
         $("#tituloModal").empty();
-        $("#tituloModal").append("Error!")
+        $("#tituloModal").append("<h4>ERROR!</h4>")
     }
 }
 
@@ -171,7 +169,7 @@ function carritoUI(carrito) {
 
 function componenteCarrito(propiedad) {
     return `<p>${propiedad.calle} ${propiedad.numero} - Valor del alquier: $${propiedad.precio}
-            <a id='${propiedad.id}' class="btn btn-delete boton">X</a>`
+            <a id="${propiedad.id}" class="btn btn-delete boton botonX">X</a></p>`
 }
 
 function eliminarCarrito(e) {

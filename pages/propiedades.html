@@ -141,32 +141,34 @@
                     </div>
                 </div>
                 <div>
-                    <p>Ingrese el rango de precio de compra o alquiler.</p>
+                    <p>Ingrese el rango de precio de alquiler (en pesos argentino) o de compra (en dólares).</p>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroup-sizing-default">Mínimo</span>
                         </div>
-                        <input id="minProducto" value="0" type="number" class="form-control inputPrecio" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <input id="minProducto" value="10000" type="number" class="form-control inputPrecio" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroup-sizing-default">Máximo</span>
                         </div>
-                        <input id="maxProducto" value="0" type="number" class="form-control inputPrecio" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <input id="maxProducto" value="50000" type="number" class="form-control inputPrecio" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                 </div>
-                <!--
+
                 <div class="botones">
                     <button id="buttonFiltros" class="btn btn-secondary boton">FILTRAR</button>
+                    <button id="buttonLimpiarFiltros" class="btn btn-secondary boton">LIMPIAR FILTROS</button>
                 </div>
-                -->
+
             </div>
         </div>
         <div class="col-xs-12 col-lg-8">
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    PROPIEDADES A SOLICITAR <span id="carritoCantidad" class="badge badge-light">0</span>
+                    PROPIEDADES A SOLICITAR <span id="carritoCantidad" class="badge badge-light carritoCant">0</span>
                 </button>
+                <button type="button" class="btn btn-secondary boton botonSolicitar">ENVIAR SOLICITUD</button>
                 <div id="carritoPropiedades" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <!-- Acá genero el carrito -->
                 </div>
@@ -191,7 +193,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
+                    <h5 id="exampleModalLabel">
                         <div id="tituloModal"></div>
                     </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -202,7 +204,7 @@
                     <div id="contenidoModal"></div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
+                    <button type="button" class="btn btn-secondary boton" data-dismiss="modal">ACEPTAR</button>
                 </div>
             </div>
         </div>

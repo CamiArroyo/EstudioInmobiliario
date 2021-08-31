@@ -91,7 +91,7 @@ h4 {
   font-size: 24px;
   text-align: center;
   font-weight: 600;
-  margin: 20px 0px;
+  margin: 10px 0px;
   font-family: 'Pompiere', cursive; }
 
 p {
@@ -104,6 +104,14 @@ p {
 
 p {
   text-indent: 15px; }
+
+.p2 {
+  color: black;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 400;
+  margin: 20px 10px;
+  font-family: 'Roboto', sans-serif; }
 
 ol {
   padding: 0px;
@@ -136,7 +144,7 @@ ol {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 20px; }
+  margin: 10px; }
 
 .botones2 {
   display: flex;
@@ -150,7 +158,7 @@ ol {
   justify-content: center; }
 
 .boton {
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 600;
   margin: 5px;
   color: black;
@@ -194,8 +202,6 @@ ol {
   flex-direction: column;
   align-items: center;
   margin: 80px 5px 30px 5px; }
-  .contenedorBienvenida__subtituloSeccion .contenedorBienvenida__subtituloSeccion--parrafo {
-    text-align: center; }
 
 .bodyIndex {
   background-color: #FFFFFF; }
@@ -204,34 +210,56 @@ ol {
   background-color: #CFE3E2;
   border-radius: 10px;
   margin: 0px 70px 50px 70px;
-  padding: 0px; }
+  padding: 0px 20px; }
+  .contenedorServ .contenedorServ__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
 
-.contenedorServUltimo {
-  margin: 0px 70px 0px 70px; }
-
-.contenedorServImgInfo {
+.contenedorServ__item--img {
   display: flex;
   flex-direction: row;
   justify-content: center; }
 
+.contenedorServUltimo {
+  margin: 0px 70px 0px 70px; }
+
+.padreContTitulo {
+  position: relative; }
+
+.hijoContTitulo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 3px 3px #FFFFFF; }
+
+.imgContTitulo {
+  opacity: 0.7;
+  transition: 0.1s; }
+
+.imgContTitulo:hover {
+  opacity: 1; }
+
 .jumbotron {
-  margin: 20px;
-  padding: 20px 15px;
+  margin: 10px 0px;
+  padding: 20px;
   font-size: 14px;
   background-color: #FFFFFF;
   border-radius: 10px;
   color: black;
   font-family: 'Roboto', sans-serif; }
 
-.contenedorTituloServicios {
-  border: solid #80C5FF 1px;
+form {
+  margin: 20px 170px 0px 170px;
+  border: solid 1px #CFE3E2;
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 30px 0px; }
-  .contenedorTituloServicios .tituloServicio {
-    margin-top: 0px; }
+  padding: 20px; }
+  form .form-renglon1 {
+    margin-bottom: 20px; }
+
+.parrafoCentrado {
+  text-align: center; }
 
 /* Sección quienesSomos.html */
 .contenedorInfo {
@@ -274,11 +302,7 @@ ol {
   margin-bottom: 40px; }
 
 /* Sección propiedades.html */
-.tituloPropiedad {
-  text-transform: uppercase; }
-
 .propSeleccInfo {
-  text-transform: uppercase;
   background-color: #CFE3E2; }
 
 .card {
@@ -300,14 +324,31 @@ ol {
   margin-bottom: 30px; }
 
 .input-group-text, .custom-select, .form-control, .dropdown-toggle {
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px; }
 
 .contenedorFiltros {
   background-color: #CFE3E2;
-  margin: 0px 20px 20px 20px;
+  margin-left: 20px;
   padding: 10px;
   border: solid 1px #56ACDA;
-  border-radius: 5px; }
+  border-radius: 10px; }
+
+.carritoCant {
+  font-size: 16px; }
+
+.tipoProp {
+  font-size: 24px;
+  margin: 0px; }
+
+.botonSolicitar {
+  margin-left: 10px; }
+
+.botonX {
+  text-indent: 0px; }
+
+.input-group-text {
+  width: 90px; }
 
 /* Sección infoInteres.html */
 .card-deck {
@@ -426,6 +467,8 @@ ol {
   h1 {
     font-size: 40px; }
   /* Seccion index.html */
+  .parrafoCentrado {
+    text-align: start; }
   .contenedorBienvenida {
     margin-top: 20px; }
     .contenedorBienvenida .contenedorBienvenida__subtituloSeccion {
@@ -437,6 +480,14 @@ ol {
     .contenedorBienvenida__contenedorImg .contenedorBienvenida__contenedorImg--imgLogo {
       height: 250px;
       width: 251px; }
+  .contenedorServ {
+    margin: 0px 0px 40px 0px;
+    padding: 0px 5px; }
+  .contenedorServUltimo {
+    margin: 0px; }
+  form {
+    margin: 10px;
+    padding: 20px; }
   /* Sección quienesSomos.html */
   .contenedorInfo .contenedorInfo__contenedor {
     border: none; }
@@ -445,6 +496,8 @@ ol {
     margin: 0px 10px 30px 10px; }
   .card-body .infoImportante {
     margin: 0px 20px; }
+  .contenedorFiltros {
+    margin: 0px 20px 20px 20px; }
   /* Footer de las secciones */
   .container-fluid .footerBootstrap .footerBootstrap__contenedorTexto {
     padding-left: 30px; }
