@@ -111,29 +111,67 @@
 
     <div class="row">
         <div class="col-xs-12 col-lg-6">
-            <h2 class="subtituloSeccion" id="formulario">FORMULARIO DE SOLICITUD</h2>
-            <p>Por favor, complete el siguiente formulario con sus datos. Nos comunicaremos a la brevedad.</p>
-            <form id="registroSolicitante">
-                <label for="name" class="itemForm"><p>Nombre y apellido:</p></label>
-                <input id="name" type="text" class="itemForm2" required>
-                <label for="DNI" class="itemForm"><p>Número de DNI:</p></label>
-                <input id="DNI" type="number" class="itemForm2" required>
-                <label for="fechaNac" class="itemForm"><p>Fecha de nacimiento:</p></label>
-                <input id="fechaNac" type="date" class="itemForm2" required>
-                <label for="ocupac" class="itemForm"><p>Ocupación:</p></label>
-                <input id="ocupac" type="text" class="itemForm2" required>
-                <label for="tel" class="itemForm"><p>Teléfono de contacto:</p></label>
-                <input id="tel" type="number" class="itemForm2" required>
-                <label for="correo" class="itemForm"><p>Correo electrónico:</p></label>
-                <input id="correo" type="mail" class="itemForm2">
-                <div class="itemForm botones">
-                    <button class="label-form btn btn-secondary boton" type="submit" value="Enviar">ENVIAR FORMULARIO</button>
-                    <button class="label-form btn btn-secondary boton" type="reset" value="Borrar">BORRAR FORMULARIO</button>
-                </div>
-            </form>
+            <div class="subtituloSeccion">
+                <h2 id="nuestraOficina">NUESTRA OFICINA</h2>
+                <img src="../img/subrayado.png" height="20px" width="315px">
+            </div>
+            <div class="oficinaCont oficinaContMobile">
+                <p class="listaContenido"><span class="contacto__subtitulo">DIRECCIÓN:</span> Perón 205 - Devoto, Córdoba</p>
+                <p class="listaContenido"><span class="contacto__subtitulo">LLAMADAS Y WHATSAPP:</span> (03564) 15328063</p>
+                <p class="listaContenido"><span class="contacto__subtitulo">CORREO ELECTRÓNICO:</span> inmobiliaria_raices@gmail.com</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.1597695731916!2d-62.30840738485217!3d-31.40972388140632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cb33f900609bc9%3A0xce084b0def08eebe!2sEstudio%20Inmobiliario%20Raices!5e0!3m2!1ses-419!2sar!4v1629820296499!5m2!1ses-419!2sar" width="100%" height="120" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
         </div>
         <div class="col-xs-12 col-lg-6">
-            <h2 class="subtituloSeccion" id="formulario">REDES SOCIALES</h2>
+            <div class="subtituloSeccion">
+                <h2 id="redesSociales">REDES SOCIALES</h2>
+                <img src="../img/subrayado.png" height="20px" width="315px">
+            </div>
+            <div class="row redesSocialesCont">
+                <div class="col-xs-6 col-lg-3">
+                    <p class="listaContenido"><span class="contacto__subtitulo">FACEBOOK</span></p>
+                    <a href="https://www.facebook.com/cami.arroyo.1" target="_blank"><img src="../img/facebook.png" height="120px" width="120px" class="redesSociales__img"></a>
+                </div>
+                <div class="col-xs-6 col-lg-3">
+                    <p class="listaContenido"><span class="contacto__subtitulo">INSTAGRAM</span></p>
+                    <a href="https://www.instagram.com/cami.arroyo.010/" target="_blank"><img src="../img/instragram.png" height="120px" width="120px" class="redesSociales__img"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-lg-12">
+            <div class="subtituloSeccion">
+                <h2 id="formContacto">FORMULARIO DE CONTACTO</h2>
+                <img src="../img/subrayado.png" height="20px" width="315px">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-lg-12">
+            <p>Completa el siguiente formulario indicando tus datos personales y un teléfono de contacto. Nos comunicaremos con vos a la brevedad.</p>
+            <form class="formIndex">
+                <div class="row">
+                    <div class="col-xs-12 col-lg-1"></div>
+                    <div class="col-xs-12 col-lg-5">
+                        <input type="text" class="form-control form-control-sm formIndex-renglon1" placeholder="Nombre y apellido">
+                    </div>
+                    <div class="col-xs-12 col-lg-5">
+                        <input type="text" class="form-control form-control-sm formIndex-renglon1" placeholder="Teléfono">
+                    </div>
+                    <div class="col-xs-12 col-lg-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-lg-1"></div>
+                    <div class="col-xs-12 col-lg-8">
+                        <textarea class="form-control form-control-sm" rows="3" placeholder="Indica sobre qué estás interesado, tipo de propiedad, rango de precios, o qué información te gustaría recibir"></textarea>
+                    </div>
+                    <div class="col-xs-12 col-lg-2 botones">
+                        <button class="label-form btn btn-secondary boton" type="submit" value="Enviar">ENVIAR</button>
+                    </div>
+                    <div class="col-xs-12 col-lg-1"></div>
+                </div>
+            </form>
         </div>
     </div>
 
@@ -175,15 +213,20 @@
     </div>
     <!-- Cierre de footer -->
 
-    <!-- Link JS de Bootstrap v.4.0 - Bundle -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <!-- Link JS de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
 
     <!-- Importación del código JS -->
-    <script src="../js/inquilino.js"> </script>
+    <script src="../js/globales.js"> </script>
+    <script src="../js/funciones.js"></script>
     <script src="../js/propiedad.js"> </script>
+    <script src="../js/inquilino.js"> </script>
     <script src="../js/propiedadesDisp.js"> </script>
-    <script src="../js/contacto.js"> </script>
 
 </body>
 </html>

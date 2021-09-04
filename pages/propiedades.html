@@ -141,7 +141,7 @@
                     </div>
                 </div>
                 <div>
-                    <p>Ingrese el rango de precio de alquiler (en pesos argentino) o de compra (en dólares).</p>
+                    <p>Ingrese el rango de precio de alquiler (en pesos argentinos) o de compra (en dólares).</p>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroup-sizing-default">Mínimo</span>
@@ -168,10 +168,10 @@
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     PROPIEDADES A SOLICITAR <span id="carritoCantidad" class="badge badge-light carritoCant">0</span>
                 </button>
-                <button type="button" class="btn btn-secondary boton botonSolicitar">ENVIAR SOLICITUD</button>
                 <div id="carritoPropiedades" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <!-- Acá genero el carrito -->
                 </div>
+                <button type="button" id="buttonEnviarSoli" class="btn btn-secondary boton botonSolicitar" data-toggle="modal" data-target="#exampleModal2">ENVIAR SOLICITUD</button>
             </div>
 
             <div id="indicadorCarga" class="spinner-border" role="status">
@@ -188,7 +188,7 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Apertura de modal: informa si una propiedad se agrega o no al carrito -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -209,6 +209,48 @@
             </div>
         </div>
     </div>
+    <!-- Cierre de modal -->
+
+    <!-- Apertura de modal: formulario de solicitud de propiedades-->
+    <div class="modal fade" id="exampleModal2" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 id="exampleModal2Label">
+                        <h4>FORMULARIO DE SOLICITUD DE PROPIEDADES</h4>
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="listaPropiedadesSoli"></div>
+                    <form id="registroSolicitante" style="display: none;">
+                        <label for="name" class="itemForm"><p>Nombre y apellido:</p></label>
+                        <input id="name" type="text" class="itemForm2" required>
+                        <label for="DNI" class="itemForm"><p>Número de DNI:</p></label>
+                        <input id="DNI" type="number" class="itemForm2" required>
+                        <label for="fechaNac" class="itemForm"><p>Fecha de nacimiento:</p></label>
+                        <input id="fechaNac" type="date" class="itemForm2" required>
+                        <label for="ocupac" class="itemForm"><p>Ocupación:</p></label>
+                        <input id="ocupac" type="text" class="itemForm2" required>
+                        <label for="tel" class="itemForm"><p>Teléfono de contacto:</p></label>
+                        <input id="tel" type="number" class="itemForm2" required>
+                        <label for="correo" class="itemForm"><p>Correo electrónico:</p></label>
+                        <input id="correo" type="mail" class="itemForm2">
+                        <div class="itemForm botones">
+                            <button class="label-form btn btn-secondary boton" type="submit" value="Enviar">ENVIAR FORMULARIO</button>
+                            <button class="label-form btn btn-secondary boton" type="reset" value="Borrar">VACIAR FORMULARIO</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary boton" data-dismiss="modal">CERRAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Cierre de modal -->
 
     <!-- Cierre de section -->
 
@@ -248,7 +290,7 @@
     </div>
     <!-- Cierre de footer -->
 
-    <!-- Link JS de Bootstrap minified -->
+    <!-- Link JS de Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
         crossorigin="anonymous"></script>

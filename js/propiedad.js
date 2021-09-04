@@ -20,6 +20,31 @@ class Propiedad {
                 "\nAlquiler inicial: $" + this.precio
     }
 
+    mostrarValor() {
+        if (this.actividad == "COMPRAR") {
+            return this.precio + "USD" ;
+        }
+        if (this.actividad == "ALQUILAR") {
+            return "$" + this.precio ;
+        }
+    }
+
+    mostrarHonorarios() {
+        if (this.actividad == "COMPRAR") {
+            return "Comunicate con nosotros para conocer plazos de pago y medios de financiación." ;
+        }
+        if (this.actividad == "ALQUILAR") {
+            let porcentaje = (this.precio * 36 * 0.05);
+            let honorarios = 
+            "El monto total de los honorarios a abonar es: $" + porcentaje + "." +
+            "\nPodrás abonar en 1 pago de $" + porcentaje + "." +
+            "\nEn dos cuotas de $" + (porcentaje / 2) + "." +
+            "\nEn tres cuotas de $" + (porcentaje / 3) + "." +
+            "\nO en cuatro cuotas de $" + (porcentaje / 4) + "."
+            return honorarios;
+        }
+    }
+
     montoHonorarios() {
         //corresponde al 5% del total del contrato
         return "El monto de los honorarios a abonar es: $" + this.precio * 36 * 0.05 ;

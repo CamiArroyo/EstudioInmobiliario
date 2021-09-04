@@ -190,6 +190,14 @@ ol {
   transform: translate(-50%, -50%);
   text-shadow: 3px 3px #FFFFFF; }
 
+.formIndex {
+  margin: 20px 170px 0px 170px;
+  border: solid 1px #CFE3E2;
+  border-radius: 10px;
+  padding: 20px; }
+  .formIndex .formIndex-renglon1 {
+    margin-bottom: 20px; }
+
 /* Sección index.html */
 .contenedorBienvenida {
   display: flex;
@@ -250,14 +258,6 @@ ol {
   color: black;
   font-family: 'Roboto', sans-serif; }
 
-form {
-  margin: 20px 170px 0px 170px;
-  border: solid 1px #CFE3E2;
-  border-radius: 10px;
-  padding: 20px; }
-  form .form-renglon1 {
-    margin-bottom: 20px; }
-
 .parrafoCentrado {
   text-align: center; }
 
@@ -306,7 +306,7 @@ form {
   background-color: #CFE3E2; }
 
 .card {
-  margin-bottom: 25px; }
+  margin: 0px 30px 50px 30px; }
   .card .card-header {
     padding: 0px; }
 
@@ -350,6 +350,12 @@ form {
 .input-group-text {
   width: 90px; }
 
+.modalListo {
+  color: green; }
+
+.modalError {
+  color: red; }
+
 /* Sección infoInteres.html */
 .card-deck {
   margin: 0px 50px 80px 50px; }
@@ -383,17 +389,33 @@ form {
 
 /* Sección contacto.html */
 #registroSolicitante {
-  border: 1px solid #787878;
-  border-radius: 5px;
-  background-color: #FFFFFF;
   font-size: 16px;
-  margin: 0px 20px; }
+  margin: 10px; }
   #registroSolicitante .itemForm {
     margin-bottom: 5px;
     width: 100%; }
   #registroSolicitante .itemForm2 {
     width: 80%;
     margin-left: 40px; }
+
+.contacto__subtitulo {
+  color: #787878;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0px;
+  font-family: 'Pompiere', cursive; }
+
+.redesSocialesCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.redesSociales__img {
+  transition: 0.5s; }
+
+.redesSociales__img:hover {
+  transform: scale(1.1); }
 
 /* Footer de las secciones */
 .container-fluid .footerBootstrap {
@@ -466,6 +488,9 @@ form {
         font-size: 24px; }
   h1 {
     font-size: 40px; }
+  .formIndex {
+    margin: 10px;
+    padding: 20px; }
   /* Seccion index.html */
   .parrafoCentrado {
     text-align: start; }
@@ -485,19 +510,19 @@ form {
     padding: 0px 5px; }
   .contenedorServUltimo {
     margin: 0px; }
-  form {
-    margin: 10px;
-    padding: 20px; }
   /* Sección quienesSomos.html */
   .contenedorInfo .contenedorInfo__contenedor {
     border: none; }
   /* Sección infoPropiedades.html */
+  .card {
+    margin: 0px 5px 20px 5px; }
   .card-deck {
     margin: 0px 10px 30px 10px; }
   .card-body .infoImportante {
     margin: 0px 20px; }
   .contenedorFiltros {
     margin: 0px 20px 20px 20px; }
+  /* Sección contacto.html */
   /* Footer de las secciones */
   .container-fluid .footerBootstrap .footerBootstrap__contenedorTexto {
     padding-left: 30px; }

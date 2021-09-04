@@ -203,6 +203,17 @@ ol {
     text-shadow: 3px 3px $blanco;
 }
 
+.formIndex {
+    margin: 20px 170px 0px 170px;
+    border: solid 1px $grisClaro;
+    border-radius: 10px;
+    padding: 20px;
+
+    .formIndex-renglon1 {
+        margin-bottom: 20px;
+    }
+}
+
 /* Sección index.html */
 
 .contenedorBienvenida {
@@ -277,17 +288,6 @@ ol {
     font-family: 'Roboto', sans-serif;
 }
 
-form {
-    margin: 20px 170px 0px 170px;
-    border: solid 1px $grisClaro;
-    border-radius: 10px;
-    padding: 20px;
-
-    .form-renglon1 {
-        margin-bottom: 20px;
-    }
-}
-
 .parrafoCentrado {
     text-align: center;
 }
@@ -359,7 +359,7 @@ form {
 }
 
 .card {
-    margin-bottom: 25px;
+    margin: 0px 30px 50px 30px;
     .card-header {
         padding: 0px;
     }
@@ -415,6 +415,14 @@ form {
     width: 90px;
 }
 
+.modalListo {
+    color: green;
+}
+
+.modalError {
+    color: red;
+}
+
 /* Sección infoInteres.html */
 
 .card-deck {
@@ -460,11 +468,8 @@ form {
 /* Sección contacto.html */
 
 #registroSolicitante {
-    border: 1px solid $grisOscuro;
-    border-radius: 5px;
-    background-color: $fondo;
     font-size: $xsmall;
-    margin: 0px 20px;
+    margin: 10px;
 
     .itemForm {
         margin-bottom: 5px;
@@ -475,6 +480,25 @@ form {
         width: 80%;
         margin-left: 40px;
     }
+}
+
+.contacto__subtitulo {
+    @include etiquetas($grisOscuro, $xsmall, center, 600, 10px 0px);
+    font-family: 'Pompiere', cursive;
+}
+
+.redesSocialesCont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.redesSociales__img {
+    transition: 0.5s;
+}
+
+.redesSociales__img:hover {
+    transform: scale(1.1);
 }
 
 /* Footer de las secciones */
@@ -590,6 +614,11 @@ form {
         font-size: $large;
     }
 
+    .formIndex {
+        margin: 10px;
+        padding: 20px;
+    }
+
     /* Seccion index.html */
 
     .parrafoCentrado {
@@ -624,11 +653,6 @@ form {
         margin: 0px;
     }
 
-    form {
-        margin: 10px;
-        padding: 20px;
-    }
-
     /* Sección quienesSomos.html */
 
     .contenedorInfo {
@@ -638,6 +662,10 @@ form {
     }
 
     /* Sección infoPropiedades.html */
+
+    .card {
+        margin: 0px 5px 20px 5px;
+    }
 
     .card-deck {
         margin: 0px 10px 30px 10px;
@@ -652,6 +680,9 @@ form {
     .contenedorFiltros {
         margin: 0px 20px 20px 20px;
     }
+
+    /* Sección contacto.html */
+
 
     /* Footer de las secciones */
 

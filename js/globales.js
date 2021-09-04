@@ -2,6 +2,6 @@ const propiedades = [];
 
 const carrito = [];
 
-const tipoPropiedad = ["Departamento", "Casa", "Local comercial", "Galpón", "Cochera"];
+const tipoPropiedad = ["Departamento", "Casa", "Oficina", "Galpón", "Cochera"];
 
 const tipoActividad = ["Alquilar", "Comprar"];

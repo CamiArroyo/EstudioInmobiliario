@@ -21,34 +21,40 @@ function propiedadesUIjQuery(propiedades, id) {
     for (const propiedad of propiedades) {
         //1° genero la interfaz de los productos
         let honorariosProp = propiedad.montoHonorariosValor();
-        $(id).append(`<div class="card text-center" style="width: 40rem;">
+        let montoValor = propiedad.mostrarValor();
+        let infoHonorarios = propiedad.mostrarHonorarios();
+        $(id).append(`<div class="card text-center" >
 
                             <div class="card-header">
                                 <h3>${propiedad.actividad}</h3>
                             </div>
 
-                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <div id="carouselExampleIndicators${propiedad.id}" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                    <li data-target="#carouselExampleIndicators${propiedad.id}" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators${propiedad.id}" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators${propiedad.id}" data-slide-to="2"></li>
+                                    <li data-target="#carouselExampleIndicators${propiedad.id}" data-slide-to="3"></li>
                                 </ol>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="../img/casa1.jpg" class="d-block w-100" alt="...">
+                                        <img src="../img/propiedad${propiedad.id}/img1.jpeg" class="d-block w-100" alt="img1">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="../img/casa2.jpg" class="d-block w-100" alt="...">
+                                        <img src="../img/propiedad${propiedad.id}/img2.jpeg" class="d-block w-100" alt="img2">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="../img/edificio1.jpg" class="d-block w-100" alt="...">
+                                        <img src="../img/propiedad${propiedad.id}/img3.jpeg" class="d-block w-100" alt="img3">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/propiedad${propiedad.id}/img4.jpeg" class="d-block w-100" alt="img4">
                                     </div>
                                 </div>
-                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators${propiedad.id}" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Previous</span>
                                 </a>
-                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <a class="carousel-control-next" href="#carouselExampleIndicators${propiedad.id}" role="button" data-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Next</span>
                                 </a>
@@ -57,19 +63,15 @@ function propiedadesUIjQuery(propiedades, id) {
                             <div class="card-body">
                                 <h3 class="badge badge-pill badge-secondary tipoProp">${propiedad.tipo}</h3>
                                 <h3 class="card-title tituloPropiedad">${propiedad.calle} ${propiedad.numero}</h3>
-                                <p class="card-text p2">VALOR: $${propiedad.precio}</p>
-                                <a id="${propiedad.id}" type="button" class="btn btn-primary btnSoli boton" data-toggle="modal" data-target="#exampleModal">SOLICITAR</a>
+                                <p class="card-text p2">VALOR: ${montoValor}</p>
+                                <a id="${propiedad.id}" type="button" class="btn btn-secondary btnSoli boton" data-toggle="modal" data-target="#exampleModal">SOLICITAR</a>
                                 <a id="${propiedad.id}" class="btn btn-secondary btnProp boton">VER INFORMACIÓN</a>
                             </div>
 
                             <div id="infoProp${propiedad.id}" style="display: none;">
                                 <h4 class="propSeleccInfo">INFORMACIÓN DE LA PROPIEDAD: ${propiedad.calle} ${propiedad.numero}</h4>
                                 <p>Descripción: ${propiedad.descripcion}</p>
-                                <p>El monto total de los honorarios a abonar es $${honorariosProp[0]}.</p>
-                                <p>Podrás abonar en 1 pago de $${honorariosProp[0]}, 
-                                    en 2 cuotas de $${honorariosProp[1]}, 
-                                    en 3 cuotas de $${honorariosProp[2]} o
-                                    en 4 cuotas de $${honorariosProp[3]}.</p>
+                                <p>${infoHonorarios}</p>
                                 <a id="${propiedad.id}" class="btn btn-secondary btnPropMenos boton">OCULTAR INFORMACIÓN</a>
                             </div>
 
@@ -143,16 +145,15 @@ function mostrarResultado(bandera) {
         $("#contenidoModal").append("<p>Propiedad agregada con éxito.</p>");
         
         $("#tituloModal").empty();
-        $("#tituloModal").append("<h4>LISTO!</h4>")
+        $("#tituloModal").append(`<h4 class="modalListo">LISTO!</h4>`)
     } else {
         $("#contenidoModal").empty();
         $("#contenidoModal").append("<p>Esta propiedad ya fue agregada.</p>");
 
         $("#tituloModal").empty();
-        $("#tituloModal").append("<h4>ERROR!</h4>")
+        $("#tituloModal").append(`<h4 class="modalError">ERROR!</h4>`)
     }
 }
-
 
 function carritoUI(carrito) {
     //Modifico la cantidad
@@ -167,8 +168,19 @@ function carritoUI(carrito) {
     $(".btn-delete").on("click", eliminarCarrito);
 }
 
+function datosValor(propiedad) {
+    let valor = propiedad.mostrarValor();
+    if (propiedad.actividad == "ALQUILAR") {
+        return "Valor de alquiler: " + valor
+    } else {
+        return "Valor de compra: " + valor
+    }
+}
+
 function componenteCarrito(propiedad) {
-    return `<p>${propiedad.calle} ${propiedad.numero} - Valor del alquier: $${propiedad.precio}
+    let valorProp = datosValor(propiedad);
+
+    return `<p>${propiedad.calle} ${propiedad.numero} - ${valorProp}
             <a id="${propiedad.id}" class="btn btn-delete boton botonX">X</a></p>`
 }
 
@@ -183,4 +195,24 @@ function eliminarCarrito(e) {
 
     //Guardamos el carrito modificado en el storage
     localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+
+function envioFormularioSolicitud() {
+
+    if (carrito.length == 0) {
+        $("#registroSolicitante").hide();
+        $("#listaPropiedadesSoli").append(`<p>No ha seleccionado ninguna propiedad.</p>`)
+    } else {
+        $("#registroSolicitante").show();
+        $("#listaPropiedadesSoli").append(`<p>Seleccionaste las siguientes propiedades:</p>`)
+    }
+
+    for (const propiedad of carrito) {
+        $("#listaPropiedadesSoli").append(componenteCarritoForm(propiedad));
+    }
+}
+
+function componenteCarritoForm(propiedad) {
+    let valorProp = datosValor(propiedad);
+    return `<p>${propiedad.calle} ${propiedad.numero} - ${valorProp}</p>`
 }

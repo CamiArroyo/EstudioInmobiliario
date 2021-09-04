@@ -46,76 +46,16 @@ window.addEventListener("load", () => { //Todo esto ocurre una vez que fueron ca
     });
 })
 
+//---------------------------> FILTROS <---------------------------
+
 //1° generar select
 selectActUI(tipoActividad, "#filtroTipoActividad")
 
 //1° generar select
 selectCatUI(tipoPropiedad, "#filtroTipoPropiedad")
 
-/*
-//---------------------------> CREO EL FILTRO POR TIPO DE ACTIVIDAD <---------------------------
-
-//2° asociar el evento (podría ir en ready)
-$("#filtroTipoActividad").change(function (e) { 
-    $("#propiedadesContenedorInfo").empty();
-    $("#propiedadesContenedor").fadeOut(600, function() {
-        const value = e.target.value.toUpperCase();
-        console.log(value); //hacemos esto para ver si funciona
-        if(value === "Todas las acciones".toUpperCase()) {
-            propiedadesUIjQuery(propiedades, "#propiedadesContenedor");
-        } 
-        else {
-            const filtrados = propiedades.filter(propiedad => propiedad.actividad.toUpperCase() == value); //filtro los productos por tipo de actividad
-            if (filtrados.length == 0) {
-                console.log("NO hay propiedades") //hacemos esto para ver si funciona
-                $("#propiedadesContenedorInfo").append(`<p>En este momento no hay propiedades disponibles para ${value}.</p>`);
-            }
-            propiedadesUIjQuery(filtrados, "#propiedadesContenedor"); //genero la interfaz
-        }
-    }).fadeIn(600);
-});
-
-//---------------------------> CREO EL FILTRO POR CATEGORÍAS <---------------------------
-
-//2° asociar el evento (podría ir en ready)
-$("#filtroTipoPropiedad").change(function (e) { 
-    $("#propiedadesContenedorInfo").empty();
-    $("#propiedadesContenedor").fadeOut(600, function() {
-        const value = e.target.value.toUpperCase();
-        console.log(value); //hacemos esto para ver si funciona
-        if(value === "Todas las propiedades".toUpperCase()) {
-            propiedadesUIjQuery(propiedades, "#propiedadesContenedor");
-        } 
-        else {
-            const filtrados = propiedades.filter(propiedad => propiedad.tipo.toUpperCase() == value); //filtro los productos por categoría
-            if (filtrados.length == 0) {
-                console.log("NO hay propiedades") //hacemos esto para ver si funciona
-                $("#propiedadesContenedorInfo").append(`<p>En este momento no hay propiedades disponibles de la categoría ${value}.</p>`);
-            }
-            propiedadesUIjQuery(filtrados, "#propiedadesContenedor"); //genero la interfaz
-        }
-    }).fadeIn(600);
-});
-
-//---------------------------> CREO EL FILTRO POR RANGO DE PRECIO <---------------------------
-
-$(".inputPrecio").change(function (e) {
-    $("#propiedadesContenedorInfo").empty(); 
-    const min = $("#minProducto").val();
-    const max = $("#maxProducto").val();
-    if((min > 0) && (max > 0)){ //el resulado de esto es verdadero
-        const encontrados = propiedades.filter(propiedad => propiedad.precio >= min && propiedad.precio <= max);
-        if (encontrados.length == 0) {
-            console.log("NO hay propiedades") //hacemos esto para ver si funciona
-            $("#propiedadesContenedorInfo").append(`<p>En este momento no hay propiedades disponibles entre $${min} y $${max}.</p>`)
-        }
-        propiedadesUIjQuery(encontrados, '#propiedadesContenedor');
-    }
-});
-*/
 
 $("#buttonFiltros").click(function(e) {
-
     actividad = $("#filtroTipoActividad").val().toUpperCase();
     console.log(actividad);
     tipo = $("#filtroTipoPropiedad").val().toUpperCase();
@@ -126,6 +66,7 @@ $("#buttonFiltros").click(function(e) {
     console.log(max);
     
     $("#propiedadesContenedor").fadeOut(600, function() {
+        $("#propiedadesContenedorInfo").empty();
 
         const filtrados = propiedades.filter(propiedad => propiedad.actividad.toUpperCase() == actividad && 
                                             propiedad.precio >= min && propiedad.precio <= max && 
@@ -142,6 +83,7 @@ $("#buttonFiltros").click(function(e) {
 }) 
 
 $("#buttonLimpiarFiltros").click(function(e) {
+    $("#propiedadesContenedorInfo").empty();
     $("#propiedadesContenedor").fadeOut(600, function() {
 
         const noHayFiltrados = propiedades;
@@ -150,4 +92,11 @@ $("#buttonLimpiarFiltros").click(function(e) {
         propiedadesUIjQuery(noHayFiltrados, "#propiedadesContenedor");
         
     }).fadeIn(600);
+})
+
+//---------------------------> ENVÍO DE FORMULARIO DE SOLICITUD CON SELECCIÓN DE PROPIEDADES <---------------------------
+
+$("#buttonEnviarSoli").click(function(e) {
+    $("#listaPropiedadesSoli").empty();
+    envioFormularioSolicitud();
 })
