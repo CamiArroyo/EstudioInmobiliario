@@ -17,6 +17,8 @@
     <script src="main.js"> </script>
     <!-- Link CSS de Bootstrap v.4.0 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Importación de AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Importación del archivo CSS -->
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
@@ -25,7 +27,7 @@
     <!-- Apertura de nav -->
     <div class="contenedor">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <img src="../img/logoEmpresaCorto.png" height="50px" width="50px">
+            <img src="../img/logoEmpresaCorto.png" height="50px" width="50px" data-aos="flip-right" data-aos-duration="1000">
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNavDropdown">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -97,7 +99,7 @@
     <!-- Cierre de nav -->
 
     <!-- Apertura de carousel -->
-    <div id="carouselExampleSlidesOnly" class="carousel slide padretituloSeccion" data-ride="carousel">
+    <div id="carouselExampleSlidesOnly" class="carousel slide padretituloSeccion" data-ride="carousel" data-aos="flip-right" data-aos-duration="1000">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="../img/casas3.jpg" class="d-block w-100 imgCarousel" alt="...">
@@ -111,35 +113,36 @@
 
     <div class="row">
         <div class="col-xs-12 col-lg-6">
-            <div class="subtituloSeccion">
+            <div class="subtituloSeccion" data-aos="fade-down" data-aos-duration="800">
                 <h2 id="nuestraOficina">NUESTRA OFICINA</h2>
                 <img src="../img/subrayado.png" height="20px" width="315px">
             </div>
-            <div class="oficinaCont oficinaContMobile">
+            <div class="oficinaCont" data-aos="fade-up" data-aos-duration="700">
                 <p class="listaContenido"><span class="contacto__subtitulo">DIRECCIÓN:</span> Perón 205 - Devoto, Córdoba</p>
                 <p class="listaContenido"><span class="contacto__subtitulo">LLAMADAS Y WHATSAPP:</span> (03564) 15328063</p>
                 <p class="listaContenido"><span class="contacto__subtitulo">CORREO ELECTRÓNICO:</span> inmobiliaria_raices@gmail.com</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.1597695731916!2d-62.30840738485217!3d-31.40972388140632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cb33f900609bc9%3A0xce084b0def08eebe!2sEstudio%20Inmobiliario%20Raices!5e0!3m2!1ses-419!2sar!4v1629820296499!5m2!1ses-419!2sar" width="100%" height="120" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <div class="oficinaCont__mapa"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.1597695731916!2d-62.30840738485217!3d-31.40972388140632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cb33f900609bc9%3A0xce084b0def08eebe!2sEstudio%20Inmobiliario%20Raices!5e0!3m2!1ses-419!2sar!4v1629820296499!5m2!1ses-419!2sar" width="100%" height="120" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
             </div>
         </div>
         <div class="col-xs-12 col-lg-6">
-            <div class="subtituloSeccion">
+            <div class="subtituloSeccion" data-aos="fade-down" data-aos-duration="800">
                 <h2 id="redesSociales">REDES SOCIALES</h2>
                 <img src="../img/subrayado.png" height="20px" width="315px">
             </div>
-            <div class="row redesSocialesCont">
-                <div class="col-xs-6 col-lg-3">
+            <div class="row redesSocialesCont" data-aos="fade-up" data-aos-duration="700">
+                <p>Te invitamos a conocer nuestras redes sociales. Allí publicamos a diario novedades e información importante para nuestros inquilinos. Además podés escribirnos por mensaje directo con la consulta que tengas. Te responderemos de inmediato.</p>
+                <div class="col-xs-12 col-lg-4">
                     <p class="listaContenido"><span class="contacto__subtitulo">FACEBOOK</span></p>
                     <a href="https://www.facebook.com/cami.arroyo.1" target="_blank"><img src="../img/facebook.png" height="120px" width="120px" class="redesSociales__img"></a>
                 </div>
-                <div class="col-xs-6 col-lg-3">
+                <div class="col-xs-12 col-lg-4">
                     <p class="listaContenido"><span class="contacto__subtitulo">INSTAGRAM</span></p>
                     <a href="https://www.instagram.com/cami.arroyo.010/" target="_blank"><img src="../img/instragram.png" height="120px" width="120px" class="redesSociales__img"></a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row" data-aos="fade-down" data-aos-duration="800">
         <div class="col-xs-12 col-lg-12">
             <div class="subtituloSeccion">
                 <h2 id="formContacto">FORMULARIO DE CONTACTO</h2>
@@ -147,17 +150,17 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row" data-aos="fade-up" data-aos-duration="700">
         <div class="col-xs-12 col-lg-12">
-            <p>Completa el siguiente formulario indicando tus datos personales y un teléfono de contacto. Nos comunicaremos con vos a la brevedad.</p>
-            <form class="formIndex">
+            <p class="center">Completa el siguiente formulario indicando tus datos personales y un teléfono de contacto. Nos comunicaremos con vos a la brevedad.</p>
+            <form class="formContacto">
                 <div class="row">
                     <div class="col-xs-12 col-lg-1"></div>
                     <div class="col-xs-12 col-lg-5">
-                        <input type="text" class="form-control form-control-sm formIndex-renglon1" placeholder="Nombre y apellido">
+                        <input type="text" class="form-control form-control-sm formContacto-renglon1" placeholder="Nombre y apellido">
                     </div>
                     <div class="col-xs-12 col-lg-5">
-                        <input type="text" class="form-control form-control-sm formIndex-renglon1" placeholder="Teléfono">
+                        <input type="text" class="form-control form-control-sm formContacto-renglon1" placeholder="Teléfono">
                     </div>
                     <div class="col-xs-12 col-lg-1"></div>
                 </div>
@@ -181,7 +184,7 @@
     <div class="container-fluid">
         <div class="row footerBootstrap">
             <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorImg">
-                <img src="../img/logoEmpresa.png" height="200px" width="201px">
+                <img src="../img/logoEmpresa.png" height="200px" width="201px" data-aos="flip-right" data-aos-duration="1000">
             </div>
             <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorTexto">
                 <p class="footerBootstrap__itemFooter">SECCIONES</p>
@@ -213,7 +216,7 @@
     </div>
     <!-- Cierre de footer -->
 
-    <!-- Link JS de Bootstrap -->
+    <!-- Link JS de Bootstrap v.4.0 - Bundle -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
         crossorigin="anonymous"></script>
@@ -221,12 +224,11 @@
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
 
-    <!-- Importación del código JS -->
-    <script src="../js/globales.js"> </script>
-    <script src="../js/funciones.js"></script>
-    <script src="../js/propiedad.js"> </script>
-    <script src="../js/inquilino.js"> </script>
-    <script src="../js/propiedadesDisp.js"> </script>
+    <!-- Importación del script AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 </html>

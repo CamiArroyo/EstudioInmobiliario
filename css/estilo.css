@@ -33,34 +33,6 @@ html, body {
   .listaNav .dropdown-item:hover {
     background-color: #56ACDA; }
 
-/* Imágen parallax */
-.parallax {
-  /* The image used */
-  background-image: url("../img/paralaxHorizontal.jpg");
-  /* Set a specific height */
-  height: 500px;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-  .parallax .parallax__tituloSeccion {
-    padding-top: 10%;
-    padding-right: 20px;
-    padding-left: 20px;
-    text-align: center; }
-  .parallax .parallax__contenedor .parallax__contenedor--Item {
-    transition: 1s; }
-  .parallax .parallax__contenedor .parallax__contenedor--Item:hover {
-    transform: scale(1.1); }
-  .parallax .parallax__contenedor .parallax__contenedor--ItemTitulo {
-    background-color: #CFE3E2;
-    color: black;
-    font-size: 30px;
-    border: solid 1px black;
-    border-radius: 10px;
-    padding: 1px 5px; }
-
 /* Configuración general */
 h1 {
   color: #787878;
@@ -68,6 +40,7 @@ h1 {
   text-align: center;
   font-weight: 900;
   margin: 20px 0px;
+  padding: 0px;
   font-family: 'Pompiere', cursive; }
 
 h2 {
@@ -76,6 +49,7 @@ h2 {
   text-align: center;
   font-weight: 600;
   margin: 0px;
+  padding: 0px;
   font-family: 'Pompiere', cursive; }
 
 h3 {
@@ -84,6 +58,7 @@ h3 {
   text-align: center;
   font-weight: 600;
   margin: 20px 0px;
+  padding: 0px;
   font-family: 'Pompiere', cursive; }
 
 h4 {
@@ -92,6 +67,7 @@ h4 {
   text-align: center;
   font-weight: 600;
   margin: 10px 0px;
+  padding: 0px;
   font-family: 'Pompiere', cursive; }
 
 p {
@@ -99,37 +75,29 @@ p {
   font-size: 14px;
   text-align: justify;
   font-weight: 400;
-  margin: 10px;
+  margin: 5px;
+  padding: 0px;
   font-family: 'Roboto', sans-serif; }
 
 p {
   text-indent: 15px; }
 
-.p2 {
-  color: black;
-  font-size: 16px;
-  text-align: center;
-  font-weight: 400;
-  margin: 20px 10px;
-  font-family: 'Roboto', sans-serif; }
+.bold {
+  font-weight: 600; }
+
+.center {
+  text-align: center; }
 
 ol {
   padding: 0px;
-  margin: 10px 0px;
+  margin: 5px 0px;
   margin-left: 15px; }
 
 .listaContenido {
   color: black;
   font-weight: 400;
   list-style-type: none;
-  margin: 10px 0px;
-  padding: 0px; }
-
-.listaContenido2 {
-  color: black;
-  font-weight: 400;
-  list-style-type: none;
-  margin: 10px 0px;
+  margin: 5px;
   padding: 0px; }
 
 .listaContenido::before {
@@ -137,8 +105,12 @@ ol {
   color: #80C5FF;
   padding-right: 10px; }
 
-.listaContenido2 {
-  text-indent: 15px; }
+.listaContenidoEnum {
+  color: black;
+  font-weight: 400;
+  list-style-type: decimal;
+  margin: 5px;
+  padding: 0px; }
 
 .botones {
   display: flex;
@@ -190,26 +162,70 @@ ol {
   transform: translate(-50%, -50%);
   text-shadow: 3px 3px #FFFFFF; }
 
-.formIndex {
-  margin: 20px 170px 0px 170px;
+.formContacto {
+  margin: 20px 70px 0px 70px;
   border: solid 1px #CFE3E2;
   border-radius: 10px;
   padding: 20px; }
-  .formIndex .formIndex-renglon1 {
+  .formContacto .formContacto-renglon1 {
     margin-bottom: 20px; }
 
+.imgOpacity {
+  opacity: 0.7;
+  transition: 0.1s; }
+
+.imgOpacity:hover {
+  opacity: 1; }
+
+.imgOpacity2 {
+  opacity: 1;
+  transition: 0.1s; }
+
+.imgOpacity2:hover {
+  opacity: 0.7; }
+
 /* Sección index.html */
+.parallax {
+  /* The image used */
+  background-image: url("../img/paralaxHorizontal.jpg");
+  /* Set a specific height */
+  height: 500px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .parallax .parallax__tituloSeccion {
+    padding-top: 10%;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center; }
+  .parallax .parallax__contenedor .parallax__contenedor--Item {
+    transition: 1s; }
+  .parallax .parallax__contenedor .parallax__contenedor--Item:hover {
+    transform: scale(1.1); }
+  .parallax .parallax__contenedor .parallax__contenedor--ItemTitulo {
+    background-color: #CFE3E2;
+    color: black;
+    font-size: 30px;
+    border: solid 1px black;
+    border-radius: 10px;
+    padding: 1px 5px; }
+
 .contenedorBienvenida {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin: 20px 0px; }
-
-.contenedorBienvenida__subtituloSeccion {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 80px 5px 30px 5px; }
+  .contenedorBienvenida .contenedorBienvenida__subtituloSeccion {
+    margin: 80px 5px 30px 5px; }
+    .contenedorBienvenida .contenedorBienvenida__subtituloSeccion .contenedorBienvenida__subtituloSeccion--bienv {
+      font-size: 70px; }
+    .contenedorBienvenida .contenedorBienvenida__subtituloSeccion .contenedorBienvenida__subtituloSeccion--sub {
+      border: solid 1px #80C5FF;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 40px; }
 
 .bodyIndex {
   background-color: #FFFFFF; }
@@ -223,13 +239,12 @@ ol {
     display: flex;
     flex-direction: column;
     justify-content: center; }
+    .contenedorServ .contenedorServ__item .contenedorServ__item--img {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
 
-.contenedorServ__item--img {
-  display: flex;
-  flex-direction: row;
-  justify-content: center; }
-
-.contenedorServUltimo {
+.contenedorServ-ultimo {
   margin: 0px 70px 0px 70px; }
 
 .padreContTitulo {
@@ -242,13 +257,6 @@ ol {
   transform: translate(-50%, -50%);
   text-shadow: 3px 3px #FFFFFF; }
 
-.imgContTitulo {
-  opacity: 0.7;
-  transition: 0.1s; }
-
-.imgContTitulo:hover {
-  opacity: 1; }
-
 .jumbotron {
   margin: 10px 0px;
   padding: 20px;
@@ -258,8 +266,20 @@ ol {
   color: black;
   font-family: 'Roboto', sans-serif; }
 
-.parrafoCentrado {
-  text-align: center; }
+.formModal {
+  background-color: #CFE3E2;
+  border-radius: 10px;
+  padding: 20px 0px 10px 0px;
+  margin: 10px 40px; }
+  .formModal .form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+  .formModal .formModal__item {
+    width: 200px; }
+  .formModal .form-control-sm {
+    border: solid 1px #80C5FF;
+    border-radius: 5px; }
 
 /* Sección quienesSomos.html */
 .contenedorInfo {
@@ -272,15 +292,15 @@ ol {
     justify-content: center; }
     .contenedorInfo .contenedorInfo__imgGrupo .contenedorInfo__imgGrupo--img {
       border-radius: 10px; }
-  .contenedorInfo .contenedorInfo__textos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
   .contenedorInfo .contenedorInfo__contenedor {
     border: solid 1px #80C5FF;
     border-radius: 10px;
     margin: 0px 15px;
     padding-bottom: 10px; }
+  .contenedorInfo .contenedorInfo__textos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
   .contenedorInfo .contenedorInfo__lista {
     text-align: center; }
   .contenedorInfo .contenedorInfo__lista::before {
@@ -301,6 +321,9 @@ ol {
 .contenedorInfoPersonas {
   margin-bottom: 40px; }
 
+.contenedorInfoPersonas-ultimo {
+  margin-bottom: 0px; }
+
 /* Sección propiedades.html */
 .propSeleccInfo {
   background-color: #CFE3E2; }
@@ -309,6 +332,9 @@ ol {
   margin: 0px 30px 50px 30px; }
   .card .card-header {
     padding: 0px; }
+
+.cardNro13 {
+  margin: 0px 30px 0px 30px; }
 
 .propContenedor {
   display: flex;
@@ -331,7 +357,6 @@ ol {
   background-color: #CFE3E2;
   margin-left: 20px;
   padding: 10px;
-  border: solid 1px #56ACDA;
   border-radius: 10px; }
 
 .carritoCant {
@@ -358,14 +383,18 @@ ol {
 
 /* Sección infoInteres.html */
 .card-deck {
-  margin: 0px 50px 80px 50px; }
+  margin: 0px 55px 50px 55px; }
+
+.card-deck-ultimo {
+  margin: 0px 55px 0px 55px; }
 
 .card-body {
   font-size: 14px;
   color: black;
   font-family: 'Roboto', sans-serif; }
   .card-body .infoImportante {
-    margin: 0px 70px;
+    padding: 10px 5px;
+    margin: 10px 40px;
     background-color: #CFE3E2;
     text-align: center;
     text-indent: 0px; }
@@ -378,41 +407,34 @@ ol {
 
 .infoPrestador {
   text-align: center;
-  margin-bottom: 20px; }
-  .infoPrestador .infoPrestadorComp {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
-
-.imgPrestador {
-  border-radius: 10px; }
+  margin: 20px 0px; }
+  .infoPrestador .infoPrestador__img {
+    border-radius: 10px; }
 
 /* Sección contacto.html */
-#registroSolicitante {
-  font-size: 16px;
-  margin: 10px; }
-  #registroSolicitante .itemForm {
-    margin-bottom: 5px;
-    width: 100%; }
-  #registroSolicitante .itemForm2 {
-    width: 80%;
-    margin-left: 40px; }
-
 .contacto__subtitulo {
   color: #787878;
-  font-size: 16px;
+  font-size: 24px;
   text-align: center;
   font-weight: 600;
   margin: 10px 0px;
+  padding: 0px;
   font-family: 'Pompiere', cursive; }
+
+.oficinaCont {
+  margin-left: 70px; }
+  .oficinaCont .oficinaCont__mapa {
+    margin-top: 10px; }
 
 .redesSocialesCont {
   display: flex;
   flex-direction: row;
-  justify-content: center; }
+  justify-content: center;
+  margin-right: 70px; }
 
 .redesSociales__img {
-  transition: 0.5s; }
+  margin-left: 20px;
+  transition: 1s; }
 
 .redesSociales__img:hover {
   transform: scale(1.1); }
@@ -487,8 +509,19 @@ ol {
       .parallax .parallax__contenedor .parallax__contenedor--ItemTitulo {
         font-size: 24px; }
   h1 {
+    margin: 20px 10px;
     font-size: 40px; }
-  .formIndex {
+  h2 {
+    margin: 0px 10px; }
+  h3 {
+    margin: 20px 10px; }
+  h4 {
+    margin: 10px 10px; }
+  p {
+    margin: 5px 10px; }
+  .center {
+    text-align: start; }
+  .formContacto {
     margin: 10px;
     padding: 20px; }
   /* Seccion index.html */
@@ -498,6 +531,8 @@ ol {
     margin-top: 20px; }
     .contenedorBienvenida .contenedorBienvenida__subtituloSeccion {
       margin: 30px 0px 0px 0px; }
+      .contenedorBienvenida .contenedorBienvenida__subtituloSeccion .contenedorBienvenida__subtituloSeccion--sub {
+        margin-top: 20px; }
   .contenedorBienvenida__contenedorImg {
     display: flex;
     flex-direction: row;
@@ -518,10 +553,11 @@ ol {
     margin: 0px 5px 20px 5px; }
   .card-deck {
     margin: 0px 10px 30px 10px; }
-  .card-body .infoImportante {
-    margin: 0px 20px; }
   .contenedorFiltros {
     margin: 0px 20px 20px 20px; }
+  /* Sección infoInteres.html */
+  .card-body .infoImportante {
+    margin: 10px 5px; }
   /* Sección contacto.html */
   /* Footer de las secciones */
   .container-fluid .footerBootstrap .footerBootstrap__contenedorTexto {

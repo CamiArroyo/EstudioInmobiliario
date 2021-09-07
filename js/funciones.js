@@ -23,7 +23,7 @@ function propiedadesUIjQuery(propiedades, id) {
         let honorariosProp = propiedad.montoHonorariosValor();
         let montoValor = propiedad.mostrarValor();
         let infoHonorarios = propiedad.mostrarHonorarios();
-        $(id).append(`<div class="card text-center" >
+        $(id).append(`<div class="card cardNro${propiedad.id} text-center">
 
                             <div class="card-header">
                                 <h3>${propiedad.actividad}</h3>
@@ -198,7 +198,6 @@ function eliminarCarrito(e) {
 }
 
 function envioFormularioSolicitud() {
-
     if (carrito.length == 0) {
         $("#registroSolicitante").hide();
         $("#listaPropiedadesSoli").append(`<p>No ha seleccionado ninguna propiedad.</p>`)
@@ -214,5 +213,5 @@ function envioFormularioSolicitud() {
 
 function componenteCarritoForm(propiedad) {
     let valorProp = datosValor(propiedad);
-    return `<p>${propiedad.calle} ${propiedad.numero} - ${valorProp}</p>`
+    return `<p class="listaContenido">${propiedad.calle} ${propiedad.numero} - ${valorProp}</p>`
 }

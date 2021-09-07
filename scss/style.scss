@@ -51,76 +51,39 @@ html, body{
     }
 }
 
-/* Imágen parallax */
-
-.parallax {
-    /* The image used */
-    background-image: url("../img/paralaxHorizontal.jpg");
-
-    /* Set a specific height */
-    height: 500px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    .parallax__tituloSeccion {
-        padding-top: 10%;
-        padding-right: 20px;
-        padding-left: 20px;
-        text-align: center;
-    }
-
-    .parallax__contenedor {
-
-        .parallax__contenedor--Item {
-            transition: 1s;
-        }
-
-        .parallax__contenedor--Item:hover {
-            transform: scale(1.1);
-        }
-
-        .parallax__contenedor--ItemTitulo {
-            background-color: $grisClaro;
-            color: $negro;
-            font-size: $medium;
-            border: solid 1px $negro;
-            border-radius: 10px;
-            padding: 1px 5px;
-        }
-    }
-}
-
 /* Configuración general */
 
-@mixin etiquetas ($color, $tamanio, $alineacion, $grosor, $margin){
+@mixin etiquetas ($color, $tamanio, $alineacion, $grosor, $margin, $padding){
     color: $color;
     font-size: $tamanio;
     text-align: $alineacion;
     font-weight: $grosor;
     margin: $margin;
+    padding: $padding;
 }
-h1 {@include etiquetas($grisOscuro, $xlarge, center, 900, 20px 0px);
+h1 {@include etiquetas($grisOscuro, $xlarge, center, 900, 20px 0px, 0px);
     font-family: 'Pompiere', cursive;}
-h2 {@include etiquetas($grisOscuro, $large, center, 600, 0px);
+h2 {@include etiquetas($grisOscuro, $large, center, 600, 0px, 0px);
     font-family: 'Pompiere', cursive;}
-h3 {@include etiquetas($grisOscuro, $medium, center, 600, 20px 0px);
+h3 {@include etiquetas($grisOscuro, $medium, center, 600, 20px 0px, 0px);
     font-family: 'Pompiere', cursive;}
-h4 {@include etiquetas($grisOscuro, $small, center, 600, 10px 0px);
+h4 {@include etiquetas($grisOscuro, $small, center, 600, 10px 0px, 0px);
     font-family: 'Pompiere', cursive;}
-p {@include etiquetas($negro, $xxsmall, justify, 400, 10px);
+p {@include etiquetas($negro, $xxsmall, justify, 400, 5px, 0px);
     font-family: 'Roboto', sans-serif;}
 p {text-indent: 15px;}
 
-.p2 {@include etiquetas($negro, $xsmall, center, 400, 20px 10px);
-    font-family: 'Roboto', sans-serif;}
+.bold {
+    font-weight: 600;
+}
+
+.center {
+    text-align: center;
+}
 
 ol {
     padding: 0px;
-    margin: 10px 0px;
+    margin: 5px 0px;
     margin-left: 15px;
 }
 
@@ -131,8 +94,7 @@ ol {
     margin: $margin;
     padding: $padding;
 }
-.listaContenido { @include listas($negro, 400, none, 10px 0px, 0px);}
-.listaContenido2 { @include listas($negro, 400, none, 10px 0px, 0px);}
+.listaContenido { @include listas($negro, 400, none, 5px, 0px);}
 
 .listaContenido::before {
     content: "\276F";
@@ -140,9 +102,7 @@ ol {
     padding-right: 10px;
 }
 
-.listaContenido2 {
-    text-indent: 15px;
-}
+.listaContenidoEnum { @include listas($negro, 400, decimal, 5px, 0px);}
 
 .botones {
     display: flex;
@@ -203,31 +163,98 @@ ol {
     text-shadow: 3px 3px $blanco;
 }
 
-.formIndex {
-    margin: 20px 170px 0px 170px;
+.formContacto {
+    margin: 20px 70px 0px 70px;
     border: solid 1px $grisClaro;
     border-radius: 10px;
     padding: 20px;
 
-    .formIndex-renglon1 {
+    .formContacto-renglon1 {
         margin-bottom: 20px;
     }
 }
 
+.imgOpacity {
+    opacity: 0.7;
+    transition: 0.1s;
+}
+
+.imgOpacity:hover {
+    opacity: 1;
+}
+
+.imgOpacity2 {
+    opacity: 1;
+    transition: 0.1s;
+}
+
+.imgOpacity2:hover {
+    opacity: 0.7;
+}
+
 /* Sección index.html */
+
+.parallax {
+    /* The image used */
+    background-image: url("../img/paralaxHorizontal.jpg");
+
+    /* Set a specific height */
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .parallax__tituloSeccion {
+        padding-top: 10%;
+        padding-right: 20px;
+        padding-left: 20px;
+        text-align: center;
+    }
+
+    .parallax__contenedor {
+
+        .parallax__contenedor--Item {
+            transition: 1s;
+        }
+
+        .parallax__contenedor--Item:hover {
+            transform: scale(1.1);
+        }
+
+        .parallax__contenedor--ItemTitulo {
+            background-color: $grisClaro;
+            color: $negro;
+            font-size: $medium;
+            border: solid 1px $negro;
+            border-radius: 10px;
+            padding: 1px 5px;
+        }
+    }
+}
 
 .contenedorBienvenida {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 20px 0px;
-}
 
-.contenedorBienvenida__subtituloSeccion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 80px 5px 30px 5px;
+    .contenedorBienvenida__subtituloSeccion {
+        margin: 80px 5px 30px 5px;
+
+        .contenedorBienvenida__subtituloSeccion--bienv {
+            font-size: $xlarge;
+        }
+    
+        .contenedorBienvenida__subtituloSeccion--sub {
+            border: solid 1px $amarilloBrillante;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    }
 }
 
 .bodyIndex {
@@ -244,16 +271,16 @@ ol {
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        .contenedorServ__item--img {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
     }
 }
 
-.contenedorServ__item--img {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.contenedorServUltimo {
+.contenedorServ-ultimo {
     margin: 0px 70px 0px 70px;
 }
 
@@ -269,15 +296,6 @@ ol {
     text-shadow: 3px 3px $blanco;
 }
 
-.imgContTitulo {
-    opacity: 0.7;
-    transition: 0.1s;
-}
-
-.imgContTitulo:hover {
-    opacity: 1;
-}
-
 .jumbotron {
     margin: 10px 0px;
     padding: 20px;
@@ -288,8 +306,26 @@ ol {
     font-family: 'Roboto', sans-serif;
 }
 
-.parrafoCentrado {
-    text-align: center;
+.formModal {
+    background-color: $grisClaro;
+    border-radius: 10px;
+    padding: 20px 0px 10px 0px;
+    margin: 10px 40px;
+
+    .form-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .formModal__item {
+        width: 200px;
+    }
+
+    .form-control-sm {
+        border: solid 1px $amarilloBrillante;
+        border-radius: 5px;
+    }
 }
 
 /* Sección quienesSomos.html */
@@ -309,17 +345,17 @@ ol {
         }
     }
 
-    .contenedorInfo__textos {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
     .contenedorInfo__contenedor {
         border: solid 1px $amarilloBrillante;
         border-radius: 10px;
         margin: 0px 15px;
         padding-bottom: 10px;
+    }
+
+    .contenedorInfo__textos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .contenedorInfo__lista {
@@ -352,6 +388,10 @@ ol {
     margin-bottom: 40px;
 }
 
+.contenedorInfoPersonas-ultimo {
+    margin-bottom: 0px;
+}
+
 /* Sección propiedades.html */
 
 .propSeleccInfo {
@@ -363,6 +403,10 @@ ol {
     .card-header {
         padding: 0px;
     }
+}
+
+.cardNro13 {
+    margin: 0px 30px 0px 30px;
 }
 
 .propContenedor {
@@ -390,7 +434,6 @@ ol {
     background-color: $grisClaro;
     margin-left: 20px;
     padding: 10px;
-    border: solid 1px $amarilloOpaco;
     border-radius: 10px;
 }
 
@@ -426,7 +469,11 @@ ol {
 /* Sección infoInteres.html */
 
 .card-deck {
-    margin: 0px 50px 80px 50px;
+    margin: 0px 55px 50px 55px;
+}
+
+.card-deck-ultimo {
+    margin: 0px 55px 0px 55px;
 }
 
 .card-body {
@@ -435,7 +482,8 @@ ol {
     font-family: 'Roboto', sans-serif;
 
     .infoImportante {
-        margin: 0px 70px;
+        padding: 10px 5px;
+        margin: 10px 40px;
         background-color: $grisClaro;
         text-align: center;
         text-indent: 0px;
@@ -452,49 +500,38 @@ ol {
 
 .infoPrestador {
     text-align: center;
-    margin-bottom: 20px;
+    margin: 20px 0px;
 
-    .infoPrestadorComp{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+    .infoPrestador__img {
+        border-radius: 10px;
     }
-}
-
-.imgPrestador {
-    border-radius: 10px;
 }
 
 /* Sección contacto.html */
 
-#registroSolicitante {
-    font-size: $xsmall;
-    margin: 10px;
-
-    .itemForm {
-        margin-bottom: 5px;
-        width: 100%;
-    }
-
-    .itemForm2 {
-        width: 80%;
-        margin-left: 40px;
-    }
+.contacto__subtitulo {
+    @include etiquetas($grisOscuro, $small, center, 600, 10px 0px, 0px);
+    font-family: 'Pompiere', cursive;
 }
 
-.contacto__subtitulo {
-    @include etiquetas($grisOscuro, $xsmall, center, 600, 10px 0px);
-    font-family: 'Pompiere', cursive;
+.oficinaCont {
+    margin-left: 70px;
+
+    .oficinaCont__mapa {
+        margin-top: 10px;
+    }
 }
 
 .redesSocialesCont {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-right: 70px;
 }
 
 .redesSociales__img {
-    transition: 0.5s;
+    margin-left: 20px;
+    transition: 1s;
 }
 
 .redesSociales__img:hover {
@@ -610,11 +647,24 @@ ol {
         }
     }
 
-    h1 {
+    h1 { 
+        margin: 20px 10px;
         font-size: $large;
     }
 
-    .formIndex {
+    h2 { margin: 0px 10px }
+
+    h3 { margin: 20px 10px }
+
+    h4 { margin: 10px 10px }
+
+    p { margin: 5px 10px }
+
+    .center {
+        text-align: start;
+    }
+
+    .formContacto {
         margin: 10px;
         padding: 20px;
     }
@@ -630,6 +680,10 @@ ol {
 
         .contenedorBienvenida__subtituloSeccion {
             margin: 30px 0px 0px 0px;
+
+            .contenedorBienvenida__subtituloSeccion--sub {
+                margin-top: 20px;
+            }
         }
     }
 
@@ -671,14 +725,16 @@ ol {
         margin: 0px 10px 30px 10px;
     }
 
-    .card-body {
-        .infoImportante {
-            margin: 0px 20px;
-        }
-    }
-
     .contenedorFiltros {
         margin: 0px 20px 20px 20px;
+    }
+
+    /* Sección infoInteres.html */
+
+    .card-body {
+        .infoImportante {
+            margin: 10px 5px;
+        }
     }
 
     /* Sección contacto.html */

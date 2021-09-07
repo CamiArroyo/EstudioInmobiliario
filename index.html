@@ -15,6 +15,8 @@
     <title>Estudio inmobiliario Raices</title>
     <!-- Link CSS de Bootstrap v.4.0 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Importación de AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Importación del archivo CSS -->
     <link rel="stylesheet" href="css/estilo.css">
 </head>
@@ -23,7 +25,7 @@
     <!-- Apertura de nav -->
     <div class="contenedor">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <img src="img/logoEmpresaCorto.png" height="50px" width="50px">
+            <img src="img/logoEmpresaCorto.png" height="50px" width="50px" data-aos="flip-right" data-aos-duration="1000">
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNavDropdown">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -96,17 +98,17 @@
 
     <!-- Apertura de section -->
 
-    <div class="row contenedorBienvenida">
+    <div class="row contenedorBienvenida" data-aos="flip-right" data-aos-duration="1000">
         <div class="col-xs-12 col-lg-4 contenedorBienvenida__contenedorImg">
             <img src="img/logoEmpresa.png" height="350px" width="352px" class="contenedorBienvenida__contenedorImg--imgLogo">
         </div>
         <div class="col-xs-12 col-lg-4">
             <div class="row">
                 <div class="col-xs-12 col-lg-12">
-                    <div class="contenedorBienvenida__subtituloSeccion">
-                        <h2>BIENVENIDOS</h2>
+                    <div class="subtituloSeccion contenedorBienvenida__subtituloSeccion">
+                        <h2 class="contenedorBienvenida__subtituloSeccion--bienv">BIENVENIDOS</h2>
                         <img src="img/subrayado.png" height="20px" width="315px">
-                        <p class="p2">Somos un servicio personalizado que busca el inmueble ideal para cada uno de nuestros clientes.</p>
+                        <h4 class="contenedorBienvenida__subtituloSeccion--sub">SOMOS UN SERVICIO PERSONALIZADO QUE BUSCA EL INMUEBLE IDEAL PARA CADA UNO DE NUESTROS CLIENTES.</h4>
                     </div>
                 </div>
             </div>
@@ -118,17 +120,17 @@
             <div class="carousel-item active">
                 <div class="parallax__tituloSeccion">
                     <div class="row parallax__contenedor">
-                        <div class="col-xs-12 col-lg-3 parallax__contenedor--Item">
-                            <a href="pages/quienesSomos.html"><button type="button" class="btn"><img src="img/logoQuienesSomos.png" height="150px" width="150px" class="parallax__contenedor--ItemImg"><h2 class="parallax__contenedor--ItemTitulo">QUÉNES SOMOS</h2></button></a>
+                        <div class="col-xs-12 col-lg-3 parallax__contenedor--Item" data-aos="flip-right">
+                            <a href="pages/quienesSomos.html"><button type="button" class="btn"><img src="img/logoQuienesSomos.png" alt="logoQuienesSomos" height="140px" width="140px" class="parallax__contenedor--ItemImg"><h2 class="parallax__contenedor--ItemTitulo">QUÉNES SOMOS</h2></button></a>
                         </div>
-                        <div class="col-xs-12 col-lg-3 parallax__contenedor--Item">
-                            <a href="pages/propiedades.html"><button type="button" class="btn"><img src="img/logoPropiedades.png" height="150px" width="150px" class="parallax__contenedor--ItemImg"><h2 class="parallax__contenedor--ItemTitulo">ENCONTRÁ TU PROPIEDAD</h2></button></a>
+                        <div class="col-xs-12 col-lg-3 parallax__contenedor--Item" data-aos="flip-right">
+                            <a href="pages/propiedades.html"><button type="button" class="btn"><img src="img/logoPropiedades.png" alt="logoPropiedades" height="140px" width="140px" class="parallax__contenedor--ItemImg"><h2 class="parallax__contenedor--ItemTitulo">ENCONTRÁ TU PROPIEDAD</h2></button></a>
                         </div>
-                        <div class="col-xs-12 col-lg-3 parallax__contenedor--Item">
-                            <a href="pages/infoInteres.html"><button type="button" class="btn"><img src="img/logoInfoInteres.png" height="150px" width="150px" class="parallax__contenedor--ItemImg"><h2 class="parallax__contenedor--ItemTitulo">INFORMACIÓN DE INTERÉS</h2></button></a>
+                        <div class="col-xs-12 col-lg-3 parallax__contenedor--Item" data-aos="flip-right">
+                            <a href="pages/infoInteres.html"><button type="button" class="btn"><img src="img/logoInfoInteres.png" alt="logoInfoInteres" hight="140px" width="140px" class="parallax__contenedor--ItemImg"><h2 class="parallax__contenedor--ItemTitulo">INFORMACIÓN DE INTERÉS</h2></button></a>
                         </div>
-                        <div class="col-xs-12 col-lg-3 parallax__contenedor--Item">
-                            <a href="pages/contacto.html"><button type="button" class="btn"><img src="img/logoContacto.png" height="150px" width="150px" class="parallax__contenedor--ItemImg"><h2 class="parallax__contenedor--ItemTitulo">MEDIOS DE CONTACTO</h2></button></a>
+                        <div class="col-xs-12 col-lg-3 parallax__contenedor--Item" data-aos="flip-right">
+                            <a href="pages/contacto.html"><button type="button" class="btn"><img src="img/logoContacto.png" alt="logoContacto" height="140px" width="140px" class="parallax__contenedor--ItemImg"><h2 class="parallax__contenedor--ItemTitulo">MEDIOS DE CONTACTO</h2></button></a>
                         </div>
                     </div>
                 </div>
@@ -136,7 +138,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" data-aos="fade-down" data-aos-duration="800">
         <div class="col-xs-12 col-lg-12">
             <div class="subtituloSeccion">
                 <h2 id="nuestrosServicios">NUESTROS SERVICIOS</h2>
@@ -145,77 +147,77 @@
         </div>
     </div>
 
-    <div class="row contenedorServ">
+    <div class="row contenedorServ" data-aos="fade-up" data-aos-duration="700">
         <div class="col-xs-12 col-lg-5 contenedorServ__item padreContTitulo">
             <div class="contenedorServ__item--img">
-                <img id="imgServicio1" class="imgContTitulo" src="img/administracion.jpg" height="300px" width="450">
+                <img id="imgServicio1" class="imgOpacity" src="img/administracion.jpg" height="300px" width="450">
             </div>
             <h3 class="hijoContTitulo">ADMINISTRACIÓN INMOBILIARIA</h3>
         </div>
         <div class="col-xs-12 col-lg-7 contenedorServ__item">
             <div id="infoServicio1" class="jumbotron">
-                Nos encargamos de:
-                <li class="listaContenido">Atención de los clientes interesados en las propiedades que están bajo nuestra administración.</li>
-                <li class="listaContenido">Análisis de los interesados en arrendar las propiedades: solicitud de arrendamiento, estudio socioeconómico y contrato notariado.</li>
-                <li class="listaContenido">Recolección de rentas mensuales y generación de facturas.</li>
-                <li class="listaContenido">Reparación de desperfectos del inmueble que no sean responsabilidad del arrendatario.</li>
-                <li class="listaContenido">Dinero garantizado si el arrendatario no puede cubrir la renta del inmueble a tiempo.</li>
+                <p>Nos encargamos de:</p>
+                <li class="listaContenido"><span class="bold">Atención de los clientes</span> interesados en las propiedades que están bajo nuestra administración.</li>
+                <li class="listaContenido">Análisis de los interesados en arrendar las propiedades: solicitud de arrendamiento, estudio socioeconómico y <span class="bold">contrato notariado</span>.</li>
+                <li class="listaContenido">Recolección de <span class="bold">rentas mensuales</span> y generación de facturas.</li>
+                <li class="listaContenido"><span class="bold">Reparación de desperfectos del inmueble</span> que no sean responsabilidad del arrendatario.</li>
+                <li class="listaContenido"><span class="bold">Dinero garantizado</span> si el arrendatario no puede cubrir la renta del inmueble a tiempo.</li>
             </div>
         </div>
     </div>
-    <div class="row contenedorServ">
+    <div class="row contenedorServ" data-aos="fade-up" data-aos-duration="700">
         <div class="col-xs-12 col-lg-5 contenedorServ__item padreContTitulo">
             <div class="contenedorServ__item--img">
-                <img id="imgServicio1" class="imgContTitulo" src="img/tasaciones.jpg" height="300px" width="450">
+                <img id="imgServicio1" class="imgOpacity" src="img/tasaciones.jpg" height="300px" width="450">
             </div>
             <h3 class="hijoContTitulo">TASACIONES</h3>
         </div>
         <div class="col-xs-12 col-lg-7 contenedorServ__item">
             <div id="infoServicio1" class="jumbotron">
-                La tasación es el informe que se encarga de determinar objetivamente el valor de un inmueble. Para hacerlo, el profesional presta atención a factores que influyen en la valoración final, como:
+                <p>La tasación es el informe que se encarga de <span class="bold">determinar objetivamente el valor de un inmueble</span>. Para hacerlo, el profesional presta atención a factores, como:</p>
                 <li class="listaContenido">La ubicación.</li>
                 <li class="listaContenido">La proximidad a espacios verdes, centros educativos, centros de salud, zonas céntricas, etc.</li>
                 <li class="listaContenido">La superficie en metros cuadrados.</li>
                 <li class="listaContenido">La antigüedad y la calidad de los materiales de construcción.</li>
-                Si querés vender tu propiedad, ¡Primero hay que tasarla!
+                <p>Si querés vender tu propiedad, ¡Primero hay que tasarla!</p>
             </div>
         </div>
     </div>
-    <div class="row contenedorServ">
+    <div class="row contenedorServ" data-aos="fade-up" data-aos-duration="700">
         <div class="col-xs-12 col-lg-5 contenedorServ__item padreContTitulo">
             <div class="contenedorServ__item--img">
-                <img id="imgServicio1" class="imgContTitulo" src="img/asesoramiento.jpg" height="300px" width="450">
+                <img id="imgServicio1" class="imgOpacity" src="img/asesoramiento.jpg" height="300px" width="450">
             </div>
             <h3 class="hijoContTitulo">ASESORAMIENTO DE INVERSIÓN</h3>
         </div>
         <div class="col-xs-12 col-lg-7 contenedorServ__item">
             <div id="infoServicio1" class="jumbotron">
-                Nosotros estamos para:
-                <li class="listaContenido">Analizar con vos las ofertas del mercado, según tus necesidades y posibilidades.</li>
+                <p>Nosotros estamos para:</p>
+                <li class="listaContenido">Analizar con vos las <span class="bold">ofertas del mercado</span>, acorde a tus necesidades y posibilidades.</li>
                 <li class="listaContenido">Acompañarte en la compra o venta del inmueble.</li>
-                <li class="listaContenido">Tomar juntos la mejor decisión con relación a la moneda y a las formas de pago.</li>
-                Además de cuándo, es importante saber cómo invertir, y en eso te asesoramos.
+                <li class="listaContenido"><span class="bold">Tomar juntos la mejor decisión</span> en relación a la moneda y a las formas de pago.</li>
+                <p>Además de cuándo, es importante saber cómo invertir, y en eso te asesoramos.</p>
             </div>
         </div>
     </div>
-    <div class="row contenedorServ contenedorServUltimo">
+    <div class="row contenedorServ contenedorServ-ultimo" data-aos="fade-up" data-aos-duration="700">
         <div class="col-xs-12 col-lg-5 contenedorServ__item padreContTitulo">
             <div class="contenedorServ__item--img">
-                <img id="imgServicio1" class="imgContTitulo" src="img/contratos.jpg" height="300px" width="450">
+                <img id="imgServicio1" class="imgOpacity" src="img/contratos.jpg" height="300px" width="450">
             </div>
             <h3 class="hijoContTitulo">REDACCIÓN DE CONTRATOS PARTICULARES</h3>
         </div>
         <div class="col-xs-12 col-lg-7 contenedorServ__item">
             <div id="infoServicio1" class="jumbotron">
-                Si estás pensando en alquilar un inmueble de manera independiente, es conveniente que acudas al estudio y solicites la redacción de un contrato particular. Te explicamos dos motivos:
-                <li class="listaContenido">Redactar los contratos de forma adecuada es esencial. A mayor claridad y precisión, menos espacio quedará para interpretaciones libres y arbitrarias.</li>
-                <li class="listaContenido">A partir de marzo 2021, por disposición de AFIP ha entrado en vigor el Régimen de Registración de Contratos de Locación, previsto en la ley 27551.</li>
-                Importante: La registración obligatoria de contratos de locación alcanza a todos los contratos celebrados entre un locador (propietario) y un locatario (inquilino). La no intermediación de un corredor inmobiliario no te exime de la obligación ante AFIP.
+                <p>Si estás pensando en alquilar un inmueble de manera independiente, es conveniente que solicites la redacción de un contrato particular. Te explicamos dos motivos:</p>
+                <li class="listaContenido">Redactar los contratos de forma adecuada es esencial. A mayor <span class="bold">claridad y precisión</span>, menos espacio a interpretaciones libres y arbitrarias.</li>
+                <li class="listaContenido">A partir de marzo 2021, por disposición de AFIP ha entrado en vigor el <span class="bold">Régimen de Registración de Contratos de Locación</span>, previsto en la ley 27551.</li>
+                <p>Importante: La registración obligatoria de contratos de locación alcanza a todos los contratos celebrados entre un locador (propietario) y un locatario (inquilino). La no intermediación de un corredor inmobiliario no te exime de la obligación ante AFIP.</p>
             </div>
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" data-aos="fade-down" data-aos-duration="800">
         <div class="col-xs-12 col-lg-12">
             <div class="subtituloSeccion">
                 <h2>CONTACTANOS</h2>
@@ -223,17 +225,17 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row" data-aos="fade-up" data-aos-duration="700">
         <div class="col-xs-12 col-lg-12">
-            <p class="parrafoCentrado">Completa el siguiente formulario indicando tus datos personales y un teléfono de contacto. Nos comunicaremos con vos a la brevedad.</p>
-            <form class="formIndex">
+            <p class="center">Completa el siguiente formulario indicando tus datos personales y un teléfono de contacto. Nos comunicaremos con vos a la brevedad.</p>
+            <form class="formContacto">
                 <div class="row">
                     <div class="col-xs-12 col-lg-1"></div>
                     <div class="col-xs-12 col-lg-5">
-                        <input type="text" class="form-control form-control-sm formIndex-renglon1" placeholder="Nombre y apellido">
+                        <input type="text" class="form-control form-control-sm formContacto-renglon1" placeholder="Nombre y apellido">
                     </div>
                     <div class="col-xs-12 col-lg-5">
-                        <input type="text" class="form-control form-control-sm formIndex-renglon1" placeholder="Teléfono">
+                        <input type="text" class="form-control form-control-sm formContacto-renglon1" placeholder="Teléfono">
                     </div>
                     <div class="col-xs-12 col-lg-1"></div>
                 </div>
@@ -251,14 +253,13 @@
         </div>
     </div>
 
-
     <!-- Cierre de section -->
 
     <!-- Apertura de footer -->
     <div class="container-fluid">
         <div class="row footerBootstrap">
             <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorImg">
-                <img src="../img/logoEmpresa.png" height="200px" width="201px">
+                <img src="img/logoEmpresa.png" height="200px" width="201px" data-aos="flip-right" data-aos-duration="1000">
             </div>
             <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorTexto">
                 <p class="footerBootstrap__itemFooter">SECCIONES</p>
@@ -270,16 +271,16 @@
             </div>
             <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorTexto">
                 <p class="footerBootstrap__itemFooter">NUESTRA OFICINA</p>
-                <p class="footerBootstrap__contenido"><img src="../img/logoUbicacion.png" height="20px" width="20px" class="footerBootstrap__logo">Perón 205 Devoto, Córdoba</p>
-                <p class="footerBootstrap__contenido"><img src="../img/logoLlamada.png" height="20px" width="20px" class="footerBootstrap__logo">(03564)15328063</p>
-                <p class="footerBootstrap__contenido"><img src="../img/logoMail.png" height="20px" width="20px" class="footerBootstrap__logo">inmobiliaria_raices@gmail.com</p>
+                <p class="footerBootstrap__contenido"><img src="img/logoUbicacion.png" height="20px" width="20px" class="footerBootstrap__logo">Perón 205 Devoto, Córdoba</p>
+                <p class="footerBootstrap__contenido"><img src="img/logoLlamada.png" height="20px" width="20px" class="footerBootstrap__logo">(03564)15328063</p>
+                <p class="footerBootstrap__contenido"><img src="img/logoMail.png" height="20px" width="20px" class="footerBootstrap__logo">inmobiliaria_raices@gmail.com</p>
                 <p class="footerBootstrap__contenido"></p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.1597695731916!2d-62.30840738485217!3d-31.40972388140632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cb33f900609bc9%3A0xce084b0def08eebe!2sEstudio%20Inmobiliario%20Raices!5e0!3m2!1ses-419!2sar!4v1629820296499!5m2!1ses-419!2sar" width="200" height="80" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorTexto">
                 <p class="footerBootstrap__itemFooter">REDES SOCIALES</p>
-                <a href="https://www.facebook.com/cami.arroyo.1" target="_blank"><img src="../img/facebook.png" height="70px" width="70px" class="footerBootstrap__img"></a>
-                <a href="https://www.instagram.com/cami.arroyo.010/" target="_blank"><img src="../img/instragram.png" height="70px" width="70px" class="footerBootstrap__img"></a>
+                <a href="https://www.facebook.com/cami.arroyo.1" target="_blank"><img src="img/facebook.png" height="70px" width="70px" class="footerBootstrap__img"></a>
+                <a href="https://www.instagram.com/cami.arroyo.010/" target="_blank"><img src="img/instragram.png" height="70px" width="70px" class="footerBootstrap__img"></a>
                 <p class="footerBootstrap__itemFooter">FORMULARIO DE CONTACTO</p>
                 <div><a href="pages/contacto.html#formulario"><button type="button" class="btn btnFooter"><p class="footerBootstrap__contenido footerBootstrap__enlace">Ir al formulario</p></button></a></div>
             </div>
@@ -298,9 +299,11 @@
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
 
-    <!-- Importación del código JS -->
-    <script src="../js/funciones.js"></script>
-    <script src="../js/index.js"> </script>
+    <!-- Importación del script AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 </html>

@@ -17,6 +17,8 @@
     <script src="main.js"> </script>
     <!-- Link CSS de Bootstrap v.4.0 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Importación de AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Importación del archivo CSS -->
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
@@ -25,7 +27,7 @@
     <!-- Apertura de nav -->
     <div class="contenedor">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <img src="../img/logoEmpresaCorto.png" height="50px" width="50px">
+            <img src="../img/logoEmpresaCorto.png" height="50px" width="50px" data-aos="flip-right" data-aos-duration="1000">
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNavDropdown">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -97,7 +99,7 @@
     <!-- Cierre de nav -->
 
     <!-- Apertura de carousel -->
-    <div id="carouselExampleSlidesOnly" class="carousel slide padretituloSeccion" data-ride="carousel">
+    <div id="carouselExampleSlidesOnly" class="carousel slide padretituloSeccion" data-ride="carousel" data-aos="flip-right" data-aos-duration="1000">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="../img/casas3.jpg" class="d-block w-100 imgCarousel" alt="...">
@@ -109,7 +111,7 @@
 
     <!-- Apertura de section -->
     
-    <div class="row">
+    <div class="row" data-aos="fade-down" data-aos-duration="800">
         <div class="col-xs-12 col-lg-12">
             <div class="subtituloSeccion">
                 <h2 id="estudioInmobiliario">ESTUDIO INMOBILIARIO</h2>
@@ -117,19 +119,19 @@
             </div>
         </div>
     </div>
-    <div class="row contenedorInfo contenedorInfoFondo">
+    <div class="row contenedorInfo contenedorInfoFondo" data-aos="fade-up" data-aos-duration="700">
         <div class="col-xs-12 col-lg-5 contenedorInfo__textos">
-            <p>Somos una empresa inmobiliaria que nació en Enero de 2009 y continúa creciendo de la mano de nuestros clientes.</p>
-            <p>Actualmente administramos más de 80 propiedades en la localidad y en la provincia.</p>
-            <p>El equipo de trabajo está formado por tres mujeres que nacimos y crecimos en Devoto, y de la mano de los más de 11 años de experiencia en el rubro, conocemos qué necesita un devotense para tener un hogar seguro y cómodo, adaptado a sus necesidades.</p>
-            <p>Propiedades para vivir, pero también propiedades para vacacionar en nuestras sierras de Córdoba. ¡Te acompañamos durante todo el año!</p>
+            <p>Somos una <span class="bold">empresa inmobiliaria</span> que nació en Enero de 2009 y continúa creciendo de la mano de nuestros clientes.</p>
+            <p>Actualmente administramos <span class="bold">más de 80 propiedades</span> en la localidad y en la provincia.</p>
+            <p>El equipo de trabajo está formado por tres mujeres que nacimos y crecimos en Devoto, y de la mano de los más de 11 años de experiencia en el rubro, conocemos qué necesita un devotense para tener <span class="bold">un hogar seguro y cómodo</span>, adaptado a sus necesidades.</p>
+            <p><span class="bold">Propiedades para vivir, pero también propiedades para vacacionar</span> en nuestras sierras de Córdoba. ¡Te acompañamos durante todo el año!</p>
         </div>
         <div class="col-xs-12 col-lg-6 contenedorInfo__imgGrupo">
-            <img src="../img/grupoparadas.jpg" height="426px" width="521px">
+            <img src="../img/grupoparadas.jpg" class="imgOpacity2" height="426px" width="521px">
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" data-aos="fade-down" data-aos-duration="800">
         <div class="col-xs-12 col-lg-12">
             <div class="subtituloSeccion">
                 <h2 id="filosofia">NUESTRA FILOSOFÍA</h2>
@@ -137,14 +139,14 @@
             </div>
         </div>
     </div>
-    <div class="row contenedorInfo">
+    <div class="row contenedorInfo" data-aos="fade-up" data-aos-duration="700">
         <div class="col-xs-12 col-lg-3 contenedorInfo__contenedor">
             <h3>MISIÓN</h3>
-            <p class="contenedorInfo__lista">Crear soluciones inmobiliarias, que se adecuen a las necesidades del inquilino, el comprador y el vendedor, beneficiando a todas las partes.</p>
+            <p class="contenedorInfo__lista"><span class="bold">Crear soluciones inmobiliarias</span>, que se adecúen a las necesidades del inquilino, el comprador y el vendedor, beneficiando de igual manera a todas las partes.</p>
         </div>
         <div class="col-xs-12 col-lg-3 contenedorInfo__contenedor">
             <h3>VISIÓN</h3>
-            <p class="contenedorInfo__lista">Ser el Estudio Inmobiliario de confianza para nuestros clientes, creando reconocimiento en la localidad de Devoto y la provincia de Córdoba.</p>
+            <p class="contenedorInfo__lista"><span class="bold">Ser el Estudio Inmobiliario de confianza</span> para nuestros clientes, creando reconocimiento en la localidad de Devoto y la provincia de Córdoba.</p>
         </div>
         <div class="col-xs-12 col-lg-3 contenedorInfo__contenedor">
             <h3>VALORES</h3>
@@ -155,7 +157,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" data-aos="fade-down" data-aos-duration="800">
         <div class="col-xs-12 col-lg-12">
             <div class="subtituloSeccion">
                 <h2 id="razones">RAZONES PARA ELEGIRNOS</h2>
@@ -163,21 +165,21 @@
             </div>
         </div>
     </div>
-    <div class="row contenedorInfo contenedorInfoFondo">
+    <div class="row contenedorInfo contenedorInfoFondo" data-aos="fade-up" data-aos-duration="700">
         <div class="col-xs-12 col-lg-4 contenedorInfo__imgGrupo">
-            <img src="../img/gruporazones1.jpg" height="300px" width="450px">
+            <img src="../img/gruporazones1.jpg" class="imgOpacity2" height="300px" width="450px">
         </div>
         <div class="col-xs-12 col-lg-4 contenedorInfo__textos">
-            <p>Accesibilidad y confianza: Mantenemos la cercanía a nuestros clientes, escuchando sus requisitos y acatando sus necesidades de manera ágil y concisa.</p>
-            <p>Seguridad: Sabemos que es tu patrimonio lo que está sobre la mesa, por eso garantizamos que todas las operaciones sean realizadas bajo los procesos debidos.</p>
-            <p>Asesoramiento y solución: Cada uno de nuestros clientes es único y busca inmuebles diferentes, es nuestro compromiso informarlos y brindarles la mejor solución.</p>
+            <p><span class="bold">Accesibilidad y confianza:</span> Mantenemos la cercanía a nuestros clientes, escuchando sus requisitos y acatando sus necesidades de manera ágil y concisa.</p>
+            <p><span class="bold">Seguridad:</span> Sabemos que es tu patrimonio lo que está sobre la mesa, por eso garantizamos que todas las operaciones sean realizadas bajo los procesos debidos.</p>
+            <p><span class="bold">Asesoramiento y solución:</span> Cada uno de nuestros clientes es único y busca inmuebles diferentes, es nuestro compromiso informarlos y brindarles la mejor solución.</p>
         </div>
         <div class="col-xs-12 col-lg-4 contenedorInfo__imgGrupo">
-            <img src="../img/gruporazones2.jpg" height="300px" width="450px">
+            <img src="../img/gruporazones2.jpg" class="imgOpacity2" height="300px" width="450px">
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" data-aos="fade-down" data-aos-duration="800">
         <div class="col-xs-12 col-lg-12">
             <div class="subtituloSeccion">
                 <h2 id="equipo">EQUIPO DE TRABAJO</h2>
@@ -185,39 +187,39 @@
             </div>
         </div>
     </div>
-    <div class="row contenedorInfo contenedorInfoPersonas">
+    <div class="row contenedorInfo contenedorInfoPersonas" data-aos="fade-up" data-aos-duration="700">
         <div class="col-xs-12 col-lg-3 contenedorInfo__contenedor contenedorInfo__textos">
             <h3>MARICEL MARIANELLI</h3>
             <p class="contenedorInfo__lista">Martillera y corredora pública nacional.</p>
         </div>
         <div class="col-xs-12 col-lg-3 contenedorInfo__imgGrupo">
-            <img src="../img/empleada1.jpg" height="300px" width="269px" class="contenedorInfo__imgGrupo--img">
+            <img src="../img/empleada1.jpg" height="300px" width="269px" class="contenedorInfo__imgGrupo--img imgOpacity2">
         </div>
         <div class="col-xs-12 col-lg-3 contenedorInfo__contenedor contenedorInfo__textos">
             <p class="contenedorInfo__dialogo">"Mi objetivo personal es generar lazos de confianza con nuestros clientes. Ayudarlos a encontrar su propiedad ideal, y acompañarlos en la resolución de las necesidades cotidianas que puedan aparecer. Todos somos parte del mismo gran equipo."</p>
             <p class="contenedorInfo__firma">Maricel Marianelli.</p>
         </div>
     </div>
-    <div class="row contenedorInfo contenedorInfoPersonas">
+    <div class="row contenedorInfo contenedorInfoPersonas" data-aos="fade-up" data-aos-duration="700">
         <div class="col-xs-12 col-lg-3 contenedorInfo__contenedor contenedorInfo__textos">
             <h3>AGUSTINA CHINELLATO</h3>
             <p class="contenedorInfo__lista">Abogada.</p>
         </div>
         <div class="col-xs-12 col-lg-3 contenedorInfo__imgGrupo">
-            <img src="../img/empleada2.jpg" height="300px" width="269px" class="contenedorInfo__imgGrupo--img">
+            <img src="../img/empleada2.jpg" height="300px" width="269px" class="contenedorInfo__imgGrupo--img imgOpacity2">
         </div>
         <div class="col-xs-12 col-lg-3 contenedorInfo__contenedor contenedorInfo__textos">
             <p class="contenedorInfo__dialogo">"Trabajamos en base al principio general de seguir procesos claros, confiables y legalmente correctos. Estamos para explicarte lo que necesites y despejar todas tus dudas."</p>
             <p class="contenedorInfo__firma">Agustina Chinellato.</p>
         </div>
     </div>
-    <div class="row contenedorInfo contenedorInfoPersonas">
+    <div class="row contenedorInfo contenedorInfoPersonas-ultimo" data-aos="fade-up" data-aos-duration="700">
         <div class="col-xs-12 col-lg-3 contenedorInfo__contenedor contenedorInfo__textos">
             <h3>SOFÍA VAZQUEZ</h3>
             <p class="contenedorInfo__lista">Arquitecta y diseñadora de interiores.</p>
         </div>
         <div class="col-xs-12 col-lg-3 contenedorInfo__imgGrupo">
-            <img src="../img/empleada3.jpg" height="300px" width="269px" class="contenedorInfo__imgGrupo--img">
+            <img src="../img/empleada3.jpg" height="300px" width="269px" class="contenedorInfo__imgGrupo--img imgOpacity2">
         </div>
         <div class="col-xs-12 col-lg-3 contenedorInfo__contenedor contenedorInfo__textos">
             <p class="contenedorInfo__dialogo">"Sabemos la importancia de entregar propiedades que cumplan los requisitos de cada uno de nuestros clientes, pero además que tengan un estilo y una impronta que los represente. Un lugar para vivir o para trabajar. Pero que sea completo, cómodo y a gusto."</p>
@@ -231,7 +233,7 @@
     <div class="container-fluid">
         <div class="row footerBootstrap">
             <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorImg">
-                <img src="../img/logoEmpresa.png" height="200px" width="201px">
+                <img src="../img/logoEmpresa.png" height="200px" width="201px" data-aos="flip-right" data-aos-duration="1000">
             </div>
             <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorTexto">
                 <p class="footerBootstrap__itemFooter">SECCIONES</p>
@@ -264,8 +266,18 @@
     <!-- Cierre de footer -->
 
     <!-- Link JS de Bootstrap v.4.0 - Bundle -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <!-- Importación del script AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 </html>

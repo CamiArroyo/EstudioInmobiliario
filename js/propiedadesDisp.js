@@ -41,7 +41,7 @@ window.addEventListener("load", () => { //Todo esto ocurre una vez que fueron ca
     //Desaparece el spinner de carga
     $("#indicadorCarga").remove();
     //Aparecen las propiedades
-    $("#propiedadesContenedor").fadeIn(1000, () => {
+    $("#interfazPropiedadesDisp").fadeIn(1000, () => {
         console.log("Finalización de animación")
     });
 })

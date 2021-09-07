@@ -17,6 +17,8 @@
     <script src="main.js"> </script>
     <!-- Link CSS de Bootstrap v.4.0 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Importación de AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Importación del archivo CSS -->
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
@@ -25,7 +27,7 @@
     <!-- Apertura de nav -->
     <div class="contenedor">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <img src="../img/logoEmpresaCorto.png" height="50px" width="50px">
+            <img src="../img/logoEmpresaCorto.png" height="50px" width="50px" data-aos="flip-right" data-aos-duration="1000">
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNavDropdown">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -97,7 +99,7 @@
     <!-- Cierre de nav -->
 
     <!-- Apertura de carousel -->
-    <div id="carouselExampleSlidesOnly" class="carousel slide padretituloSeccion" data-ride="carousel">
+    <div id="carouselExampleSlidesOnly" class="carousel slide padretituloSeccion" data-ride="carousel" data-aos="flip-right" data-aos-duration="1000">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="../img/casas3.jpg" class="d-block w-100 imgCarousel" alt="...">
@@ -109,7 +111,7 @@
 
     <!-- Apertura de section -->
 
-    <div class="row">
+    <div class="row" data-aos="fade-down" data-aos-duration="800">
         <div class="col-xs-12 col-lg-12">
             <div class="subtituloSeccion">
                 <h2>PREGUNTAS FRECUENTES</h2>
@@ -119,146 +121,146 @@
     </div>
 
     <div class="card-deck">
-        <div class="card">
-            <img src="../img/leyalquileres.jpg" alt="...">
+        <div class="card" data-aos="fade-up" data-aos-duration="700">
+            <img src="../img/leyalquileres.jpg" class="imgOpacity2" alt="leyAlquileres">
             <div class="card-body">
                 <h3 id="leyAlquileres">QUÉ DEBO SABER SOBRE LA LEY DE ALQUILERES 27.551</h3>
-                <li class="listaContenido">Plazo mínimo de 3 años para los contratos de alquiler de inmueble cualquiera sea su destino, habitacional o comercial.</li>
+                <li class="listaContenido"><span class="bold">Plazo mínimo de 3 años</span> para los contratos de alquiler de inmueble cualquiera sea su destino, habitacional o comercial.</li>
                     <ol></ol>
-                <li class="listaContenido">El contrato puede ser rescindido por el locatario antes del cumplimiento del plazo.</li>
+                <li class="listaContenido">El contrato <span class="bold">puede ser rescindido</span> por el locatario antes del cumplimiento del plazo.</li>
                 <ol>
-                    <li>Si no ha transcurrido un año de la firma del contrato debe abonar una suma equivalente a 1 mes y medio de alquiler en concepto de indemnización.</li>
-                    <li>Si se rescinde después del primer año, debe abonar la suma de un mes.</li>
-                    <li>Existe la posibilidad, en las locaciones destinadas a vivienda, de no pagar la indemnización si la notificación se realiza con 3 meses o más de anticipación.</li>
+                    <li class="listaContenidoEnum">Si no ha transcurrido un año de la firma del contrato debe abonar una suma equivalente a <span class="bold">1 mes y medio de alquiler</span> en concepto de indemnización.</li>
+                    <li class="listaContenidoEnum">Si se rescinde después del primer año, debe abonar como indemnización la suma de <span class="bold">un mes de alquiler</span>.</li>
+                    <li class="listaContenidoEnum">Existe la posibilidad, en las locaciones destinadas a vivienda, de <span class="bold">no pagar la indemnización</span> si la notificación se realiza con 3 meses o más de anticipación.</li>
                 </ol>
-                <li class="listaContenido">El precio de alquiler será ajustado anualmente en base al índice elaborado y publicado mensualmente por el Banco Central de la República Argentina (BCRA), el cual está conformado en partes iguales por:</li>
+                <li class="listaContenido"><span class="bold">El precio de alquiler será ajustado anualmente</span> en base al índice elaborado y publicado mensualmente por el Banco Central de la República Argentina (BCRA), el cual está conformado en partes iguales por:</li>
                 <ol>
-                    <li>Las variaciones mensuales del índice de precios al consumidor (IPC), y </li>
-                    <li>La remuneración imponible promedio de los trabajadores estables (RIPTE).</li>
+                    <li class="listaContenidoEnum">Las variaciones mensuales del índice de precios al consumidor (IPC), y </li>
+                    <li class="listaContenidoEnum">La remuneración imponible promedio de los trabajadores estables (RIPTE).</li>
                 </ol>
-                <li class="listaContenido">Los contratos de locación de inmueble deben ser declarados por el locador ante la Administración Federal de Ingresos Públicos de la Nación (AFIP), dentro del plazo, en la forma y con los alcances que dicho organismo disponga.</li>
+                <li class="listaContenido"><span class="bold">Los contratos de locación de inmueble deben ser declarados</span> por el locador ante la Administración Federal de Ingresos Públicos de la Nación (AFIP), dentro del plazo, en la forma y con los alcances que dicho organismo disponga.</li>
             </div>
         </div>
-        <div class="card">
-            <img src="../img/honorarios.jpg" alt="...">
+        <div class="card" data-aos="fade-up" data-aos-duration="700">
+            <img src="../img/honorarios.jpg" class="imgOpacity2" alt="calculoHonorarios">
             <div class="card-body">
                 <h3 id="calculoHonorarios">QUÉ SON Y CÓMO CALCULO LOS HONORARIOS</h3>
-                <li class="listaContenido2">La comisión inmobiliaria es el monto que perciben los corredores inmobiliarios por la administración de las propiedades, durante el período de vigencia de los contratos de comodato.</li>
-                <li class="listaContenido2">Los honorarios se calculan sumando todos los meses de alquiler, dando así el monto total del contrato locativo. Luego, sobre ese valor se debe calcular el 5%.</li>
-                <li class="listaContenido2">Por ejemplo:</li>
-                <div class="listaContenido2 infoImportante">
-                    <li>Valor inicial de alquiler: $20.000</li>
-                    <li>Calculamos: $20.000 x 36 meses x 5%</li>
-                    <li>= $36.000 a abonar</li>
+                <p>La comisión inmobiliaria es el monto que perciben los corredores inmobiliarios por la administración de las propiedades, durante el período de vigencia de los contratos de comodato.</p>
+                <p>Los honorarios <span class="bold">se calculan sumando todos los meses de alquiler, dando así el monto total del contrato locativo. Luego, sobre ese valor se debe calcular el 5%</span>.</p>
+                <p>Por ejemplo:</p>
+                <div class="infoImportante">
+                    <li class="listaContenido">Valor inicial de alquiler: $20.000</li>
+                    <li class="listaContenido">Calculamos: $20.000 x 36 meses x 5%</li>
+                    <li class="listaContenido">= $36.000 a abonar</li>
                 </div>
-                <li class="listaContenido2">No dudes en consultarnos los plazos de pago y la cantidad de cuotas posibles para cancelar tus honorarios.</li>
+                <p>No dudes en consultarnos los medios de pago y la cantidad de cuotas posibles para cancelar tus honorarios.</p>
             </div>
         </div>
     </div>
     <div class="card-deck">
-        <div class="card">
-            <img src="../img/aumentos.jpg" alt="...">
+        <div class="card" data-aos="fade-up" data-aos-duration="700">
+            <img src="../img/aumentos.jpg" class="imgOpacity2" alt="calculoAumentos">
             <div class="card-body">
                 <h3 id="calculoAumentos">CÓMO CALCULO EL AUMENTO DE MI ALQUILER</h3>
-                <li class="listaContenido2">Recordando que los aumentos son anuales, si llegado el mes correspondiente querés saber cuánto abonarás, podés seguir los siguientes pasos:</li>
+                <p>Recordando que los aumentos son anuales, si llegado el mes correspondiente querés saber cuánto abonarás, podés seguir los siguientes pasos:</p>
                 <ol>
-                    <li>Ingresá al portal BCRA y seleccioná ICL – Ley 27551, o haz click <a href="http://www.bcra.gov.ar/publicacionesestadisticas/Principales_variables_datos.asp" target="blank">aquí</a>.</li>
-                    <li>Seleccioná las fechas de tu contrato. Primer día hábil del año contractual y último día hábil del año contractual.</li>
-                    <li>Obtendrás dos coeficientes, que dividirás así:</li>
-                    <div class="listaContenido2 calculoCoef">
-                        <li>COEFICIENTE FINAL</li>
+                    <li class="listaContenidoEnum">Ingresá al <span class="bold">portal BCRA</span> y seleccioná ICL – Ley 27551, o haz click <a href="http://www.bcra.gov.ar/publicacionesestadisticas/Principales_variables_datos.asp" target="blank">aquí</a>.</li>
+                    <li class="listaContenidoEnum">Seleccioná las <span class="bold">fechas de tu contrato</span>. Primer día hábil del año contractual y último día hábil del año contractual.</li>
+                    <li class="listaContenidoEnum">Obtendrás <span class="bold">dos coeficientes</span>, que dividirás así:</li>
+                    <div class="calculoCoef">
+                        <p class="center">COEFICIENTE FINAL</p>
                         <hr>
-                        <li>COEFICIENTE INICIAL</li>
+                        <p class="center">COEFICIENTE INICIAL</p>
                     </div>
-                    <li>Al índice obtenido lo multiplicarás por el valor de tu alquiler en curso.</li>
+                    <li class="listaContenidoEnum">Al índice obtenido <span class="bold">lo multiplicarás por el valor de tu alquiler en curso</span>.</li>
                 </ol>
-                <li class="listaContenido2 infoImportante">¡El resultado que obtenés es el valor de tu nuevo alquiler anual!</li>
+                <p class="infoImportante">¡El resultado que obtenés es el valor de tu nuevo alquiler anual!</p>
             </div>
         </div>
-        <div class="card">
-            <img src="../img/servicios.jpg" alt="...">
+        <div class="card" data-aos="fade-up" data-aos-duration="700">
+            <img src="../img/servicios.jpg" class="imgOpacity2" alt="serviciosBasicos">
             <div class="card-body">
                 <h3 id="tramiteServicios">CÓMO CONTRATO LOS SERVICIOS BÁSICOS</h3>
-                <li class="listaContenido2">Una vez firmado el contrato, hay trámites que tenés que hacer. Comenzá dando de alta de los servicios:</li>
-                <li class="listaContenido">Luz: Desde el sitio oficial de EPEC deberás registrar tu locación para que el medidor sea habilitado a tu nombre. Luego, deberás realizar el trámite de alta de servicio o cambio de titularidad según corresponda.</li>
-                <li class="listaContenido2">En ambos casos necesitás:</li>
+                <p>Una vez firmado el contrato, hay trámites que tenés que hacer. Comenzá dando de alta de los servicios:</p>
+                <li class="listaContenido"><span class="bold">Luz: Desde el sitio oficial de EPEC</span> deberás registrar tu locación para que el medidor sea habilitado a tu nombre. Luego, deberás realizar el trámite de alta de servicio o cambio de titularidad según corresponda.</li>
+                <p>En ambos casos necesitás:</p>
                 <ol>
-                    <li>Cuenta de EPEC nivel 3.</li>
-                    <li>Ciudadano digital nivel 2 o clave fiscal nivel 3 de AFIP.</li>
+                    <li class="listaContenidoEnum"><span class="bold">Cuenta de EPEC nivel 3</span>.</li>
+                    <li class="listaContenidoEnum"><span class="bold">Ciudadano Digital nivel 2 o Clave Fiscal nivel 3 de AFIP</span>.</li>
                 </ol>
-                <li class="listaContenido2 infoImportante">¡Nosotros podemos realizar este servicio por vos, <a href="contacto.html">contáctanos</a>!</li>
-                <li class="listaContenido2">Tené en cuenta que la habilitación puede demorar unos días. Por eso, procuramos que tu contrato se firme con antelación, para que, al momento de mudarte, tengas luz.</li>
-                <li class="listaContenido">Agua: Llevá tu contrato a las oficinas de la Cooperativa de Obras y Servicios Públicos. Habilitan el medidor a tu nombre, y ¡listo!</li>
+                <p class="infoImportante">¡Nosotros podemos realizar este servicio por vos, <a href="contacto.html">contáctanos</a>!</p>
+                <p>Tené en cuenta que la habilitación puede demorar unos días. Por eso, procuramos que tu contrato se firme con antelación, para que, al momento de mudarte, tengas luz.</p>
+                <li class="listaContenido"><span class="bold">Agua:</span> Llevá tu contrato a las <span class="bold">oficinas de la Cooperativa de Obras y Servicios Públicos</span>. Habilitarán el medidor a tu nombre, y ¡listo!</li>
             </div>
         </div>
     </div>
-    <div class="card-deck">
-        <div class="card">
-            <img src="../img/reparaciones.jpg" alt="...">
+    <div class="card-deck card-deck-ultimo">
+        <div class="card" data-aos="fade-up" data-aos-duration="700">
+            <img src="../img/reparaciones.jpg" class="imgOpacity2" alt="reparaciones">
             <div class="card-body">
                 <h3 id="reparaciones">QUÉ HAGO SI NECESITO UNA REPARACIÓN URGENTE</h3>
-                <li class="listaContenido2">Si se produce un daño o avería que pone en peligro la seguridad del inmueble o de la familia que vive en él, entonces el problema es urgente y requiere solución inmediata:</li>
+                <p>Si se produce un daño o avería que pone en peligro la seguridad del inmueble o de la familia, entonces el problema es urgente y requiere solución inmediata:</p>
                 <li class="listaContenido">Fugas de gas.</li>
                 <li class="listaContenido">Cortes de energía eléctrica.</li>
                 <li class="listaContenido">Roturas de caños de agua.</li>
                 <li class="listaContenido">Roturas de vidrios o aberturas.</li>
-                <li class="listaContenido2">Si se presenta un problema en tu casa, te explicamos aquí cómo proceder:</li>
+                <p class="infoImportante">Si se te presenta un problema, te explicamos aquí cómo proceder:</p>
                 <ol>
-                    <li>Llamá al número de contacto del Estudio.</li>
-                    <li>Chequeamos el problema de inmediato.</li>
-                    <li>Enviamos a un profesional especialista.</li>
-                    <li>¡Listo, problema resuelto!</li>
+                    <li class="listaContenidoEnum"><span class="bold">Llamá al número de contacto del Estudio.</span></li>
+                    <li class="listaContenidoEnum"><span class="bold">Chequeamos el problema de inmediato.</span></li>
+                    <li class="listaContenidoEnum"><span class="bold">Enviamos a un profesional especialista.</span></li>
+                    <li class="listaContenidoEnum"><span class="bold">¡Listo, problema resuelto!</span></li>
                 </ol>
-                <li class="listaContenido2 infoImportante">Importante: Si el problema ocurre durante el fin de semana y no puede esperar al lunes, debés comunicarte de inmediato con algún profesional en la materia que pueda visitarte. Mira nuestra cartilla de profesionales <a href="infoInteres.html#cartillaProfesionales">aquí</a>.</li>
-                <li class="listaContenido2">Buscamos darte una solución inmediata y definitiva. Pero en caso de que la resolución del problema requiera un gran trabajo, sugerimos una solución provisoria y segura. El lunes a primera hora, te comunicás con nosotros, y continuamos.</li>
-                <li class="listaContenido2 infoImportante">¡Estamos para ayudarte!</li>
+                <p class="infoImportante"><span class="bold">Importante:</span> Si el problema ocurre durante el fin de semana y no puede esperar, debés comunicarte de inmediato con algún profesional en la materia que pueda visitarte. Mira nuestra <span class="bold">cartilla de profesionales <a href="infoInteres.html#cartillaProfesionales">aquí</a></span>.</p>
+                <p>Buscamos darte una solución inmediata y definitiva. Pero en caso de que la resolución del problema requiera un gran trabajo, sugerimos una solución provisoria y segura. El lunes a primera hora te comunicás con nosotros y continuamos.</p>
+                <p class="infoImportante">¡Estamos para ayudarte!</p>
             </div>
         </div>
-        <div class="card">
-            <img src="../img/prestadores.jpg" alt="...">
+        <div class="card" data-aos="fade-up" data-aos-duration="700">
+            <img src="../img/prestadores.jpg" class="imgOpacity2" alt="prestadores">
             <div class="card-body">
                 <h3 id="cartillaProfesionales">CARTILLA DE PRESTADORES DE SERVICIOS</h3>
-                <li class="listaContenido2">Si tenés algún problema en la propiedad, podés comunicarte con los profesionales que trabajan junto a nosotros. Responsables, comprometidos y de suma confianza.</li>
+                <p>Si tenés algún problema en la propiedad, podés comunicarte con los profesionales que trabajan junto a nosotros. Responsables, comprometidos y de suma confianza.</p>
                 <div class="row infoPrestador">
                     <div class="col-xs-12 col-lg-6">
-                        <img src="../img/plomero.jpg" height="200px" width="223px" class="imgPrestador">
+                        <img src="../img/plomero.jpg" height="200px" width="223px" alt="plomeroLopez" class="infoPrestador__img">
                     </div>
                     <div class="col-xs-12 col-lg-6">
                         <h4>PLOMERO</h4>
-                        <li class="listaContenido">Gustavo Lopez</li>
+                        <li class="listaContenido"><span class="bold">Gustavo Lopez</span></li>
                         <li class="listaContenido">Dirección: Esteban Larco 570</li>
                         <li class="listaContenido">Teléfono: (03564) 15326895</li>
                     </div>
                 </div>
                 <div class="row infoPrestador">
                     <div class="col-xs-12 col-lg-6">
-                        <img src="../img/albanil.jpg" height="200px" width="223px" class="imgPrestador">
+                        <img src="../img/albanil.jpg" height="200px" width="223px" alt="albanilMartino" class="infoPrestador__img">
                     </div>
                     <div class="col-xs-12 col-lg-6">
                         <h4>ALBAÑIL</h4>
-                        <li class="listaContenido">Santiago Martino</li>
+                        <li class="listaContenido"><span class="bold">Santiago Martino</span></li>
                         <li class="listaContenido">Dirección: Santa Fé 35</li>
                         <li class="listaContenido">Teléfono: (03564) 15859612</li>
                     </div>
                 </div>
                 <div class="row infoPrestador">
                     <div class="col-xs-12 col-lg-6">
-                        <img src="../img/electricista.jpg" height="200px" width="223px" class="imgPrestador">
+                        <img src="../img/electricista.jpg" height="200px" width="223px" alt="electricistaSantillan" class="infoPrestador__img">
                     </div>
                     <div class="col-xs-12 col-lg-6">
                         <h4>ELECTRICISTA</h4>
-                        <li class="listaContenido">Mariano Santillán</li>
+                        <li class="listaContenido"><span class="bold">Mariano Santillán</span></li>
                         <li class="listaContenido">Dirección: Mariano Moreno 130</li>
                         <li class="listaContenido">Teléfono: (03564) 15225689</li>
                     </div>
                 </div>
                 <div class="row infoPrestador">
                     <div class="col-xs-12 col-lg-6">
-                        <img src="../img/pintor.jpg" height="200px" width="223px" class="imgPrestador">
+                        <img src="../img/pintor.jpg" height="200px" width="223px" alt="pintorVillalba" class="infoPrestador__img">
                     </div>
                     <div class="col-xs-12 col-lg-6">
                         <h4>PINTOR</h4>
-                        <li class="listaContenido">Luis Villalba</li>
+                        <li class="listaContenido"><span class="bold">Luis Villalba</span></li>
                         <li class="listaContenido">Dirección: Güemes 692</li>
                         <li class="listaContenido">Teléfono: (03564) 15962653</li>
                     </div>
@@ -273,7 +275,7 @@
     <div class="container-fluid">
         <div class="row footerBootstrap">
             <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorImg">
-                <img src="../img/logoEmpresa.png" height="200px" width="201px">
+                <img src="../img/logoEmpresa.png" height="200px" width="201px" data-aos="flip-right" data-aos-duration="1000">
             </div>
             <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorTexto">
                 <p class="footerBootstrap__itemFooter">SECCIONES</p>
@@ -303,14 +305,21 @@
     <div class="contenedor">
         <div class="hechoPor">Hecho por: Camila Arroyo. 2021<div>
     </div>
-    <div class="contenedor">
-        <div class="hechoPor">Hecho por: Camila Arroyo. 2021<div>
-    </div>
     <!-- Cierre de footer -->
 
     <!-- Link JS de Bootstrap v.4.0 - Bundle -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <!-- Importación del script AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 </html>
