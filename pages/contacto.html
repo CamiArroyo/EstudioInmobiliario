@@ -13,8 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Título -->
     <title>Medios de contacto</title>
-    <!-- Importación del código JS -->
-    <script src="main.js"> </script>
     <!-- Link CSS de Bootstrap v.4.0 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <!-- Importación de AOS -->
@@ -27,7 +25,7 @@
     <!-- Apertura de nav -->
     <div class="contenedor">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <img src="../img/logoEmpresaCorto.png" height="50px" width="50px" data-aos="flip-right" data-aos-duration="1000">
+            <img src="../img/logoEmpresaCorto.png" alt="logoEmpresaCorto" height="50px" width="50px" data-aos="flip-right" data-aos-duration="1000">
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNavDropdown">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -102,7 +100,7 @@
     <div id="carouselExampleSlidesOnly" class="carousel slide padretituloSeccion" data-ride="carousel" data-aos="flip-right" data-aos-duration="1000">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="../img/casas3.jpg" class="d-block w-100 imgCarousel" alt="...">
+                <img src="../img/casas3.jpg" alt="carrouselCasas" class="d-block w-100 imgCarousel">
             </div>
         </div>
         <h1 class="hijoTituloSeccion">MEDIOS DE CONTACTO</h1>
@@ -110,34 +108,33 @@
     <!-- Cierre de carousel -->
 
     <!-- Apertura de section -->
-
     <div class="row">
         <div class="col-xs-12 col-lg-6">
             <div class="subtituloSeccion" data-aos="fade-down" data-aos-duration="800">
                 <h2 id="nuestraOficina">NUESTRA OFICINA</h2>
-                <img src="../img/subrayado.png" height="20px" width="315px">
+                <img src="../img/subrayado.png" alt="subrayado" height="20px" width="315px">
             </div>
             <div class="oficinaCont" data-aos="fade-up" data-aos-duration="700">
-                <p class="listaContenido"><span class="contacto__subtitulo">DIRECCIÓN:</span> Perón 205 - Devoto, Córdoba</p>
-                <p class="listaContenido"><span class="contacto__subtitulo">LLAMADAS Y WHATSAPP:</span> (03564) 15328063</p>
-                <p class="listaContenido"><span class="contacto__subtitulo">CORREO ELECTRÓNICO:</span> inmobiliaria_raices@gmail.com</p>
+                <p class="listaContenido oficinaCont__item"><span class="contacto__subtitulo">DIRECCIÓN:</span> Perón 205 - Devoto, Córdoba</p>
+                <p class="listaContenido oficinaCont__item"><span class="contacto__subtitulo">TELÉFONO:</span> (03564) 15328063</p>
+                <p class="listaContenido oficinaCont__item"><span class="contacto__subtitulo">CORREO:</span> inmobiliaria_raices@gmail.com</p>
                 <div class="oficinaCont__mapa"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.1597695731916!2d-62.30840738485217!3d-31.40972388140632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cb33f900609bc9%3A0xce084b0def08eebe!2sEstudio%20Inmobiliario%20Raices!5e0!3m2!1ses-419!2sar!4v1629820296499!5m2!1ses-419!2sar" width="100%" height="120" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
             </div>
         </div>
         <div class="col-xs-12 col-lg-6">
             <div class="subtituloSeccion" data-aos="fade-down" data-aos-duration="800">
                 <h2 id="redesSociales">REDES SOCIALES</h2>
-                <img src="../img/subrayado.png" height="20px" width="315px">
+                <img src="../img/subrayado.png" alt="subrayado" height="20px" width="315px">
             </div>
             <div class="row redesSocialesCont" data-aos="fade-up" data-aos-duration="700">
                 <p>Te invitamos a conocer nuestras redes sociales. Allí publicamos a diario novedades e información importante para nuestros inquilinos. Además podés escribirnos por mensaje directo con la consulta que tengas. Te responderemos de inmediato.</p>
-                <div class="col-xs-12 col-lg-4">
+                <div class="col-xs-4 col-lg-4 redesSocialesCont__interno">
                     <p class="listaContenido"><span class="contacto__subtitulo">FACEBOOK</span></p>
-                    <a href="https://www.facebook.com/cami.arroyo.1" target="_blank"><img src="../img/facebook.png" height="120px" width="120px" class="redesSociales__img"></a>
+                    <a href="https://www.facebook.com/cami.arroyo.1" target="_blank"><img src="../img/facebook.png" alt="facebook" height="120px" width="120px" class="redesSociales__img"></a>
                 </div>
-                <div class="col-xs-12 col-lg-4">
+                <div class="col-xs-4 col-lg-4 redesSocialesCont__interno">
                     <p class="listaContenido"><span class="contacto__subtitulo">INSTAGRAM</span></p>
-                    <a href="https://www.instagram.com/cami.arroyo.010/" target="_blank"><img src="../img/instragram.png" height="120px" width="120px" class="redesSociales__img"></a>
+                    <a href="https://www.instagram.com/cami.arroyo.010/" target="_blank"><img src="../img/instragram.png" alt="instagram" height="120px" width="120px" class="redesSociales__img"></a>
                 </div>
             </div>
         </div>
@@ -146,13 +143,13 @@
         <div class="col-xs-12 col-lg-12">
             <div class="subtituloSeccion">
                 <h2 id="formContacto">FORMULARIO DE CONTACTO</h2>
-                <img src="../img/subrayado.png" height="20px" width="315px">
+                <img src="../img/subrayado.png" alt="subrayado" height="20px" width="315px">
             </div>
         </div>
     </div>
     <div class="row" data-aos="fade-up" data-aos-duration="700">
         <div class="col-xs-12 col-lg-12">
-            <p class="center">Completa el siguiente formulario indicando tus datos personales y un teléfono de contacto. Nos comunicaremos con vos a la brevedad.</p>
+            <p class="introFormContacto center">Completa el siguiente formulario indicando tus datos personales y un teléfono de contacto. Nos comunicaremos con vos a la brevedad.</p>
             <form class="formContacto">
                 <div class="row">
                     <div class="col-xs-12 col-lg-1"></div>
@@ -177,14 +174,13 @@
             </form>
         </div>
     </div>
-
     <!-- Cierre de section -->
 
     <!-- Apertura de footer -->
     <div class="container-fluid">
         <div class="row footerBootstrap">
             <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorImg">
-                <img src="../img/logoEmpresa.png" height="200px" width="201px" data-aos="flip-right" data-aos-duration="1000">
+                <img src="../img/logoEmpresa.png" alt="logoEmpresa" height="200px" width="201px" data-aos="flip-right" data-aos-duration="1000">
             </div>
             <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorTexto">
                 <p class="footerBootstrap__itemFooter">SECCIONES</p>
@@ -196,16 +192,16 @@
             </div>
             <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorTexto">
                 <p class="footerBootstrap__itemFooter">NUESTRA OFICINA</p>
-                <p class="footerBootstrap__contenido"><img src="../img/logoUbicacion.png" height="20px" width="20px" class="footerBootstrap__logo">Perón 205 Devoto, Córdoba</p>
-                <p class="footerBootstrap__contenido"><img src="../img/logoLlamada.png" height="20px" width="20px" class="footerBootstrap__logo">(03564)15328063</p>
-                <p class="footerBootstrap__contenido"><img src="../img/logoMail.png" height="20px" width="20px" class="footerBootstrap__logo">inmobiliaria_raices@gmail.com</p>
+                <p class="footerBootstrap__contenido"><img src="../img/logoUbicacion.png" alt="logoUbicacion" height="20px" width="20px" class="footerBootstrap__logo">Perón 205 Devoto, Córdoba</p>
+                <p class="footerBootstrap__contenido"><img src="../img/logoLlamada.png" alt="logoLlamada" height="20px" width="20px" class="footerBootstrap__logo">(03564)15328063</p>
+                <p class="footerBootstrap__contenido"><img src="../img/logoMail.png" alt="logoMail" height="20px" width="20px" class="footerBootstrap__logo">inmobiliaria_raices@gmail.com</p>
                 <p class="footerBootstrap__contenido"></p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.1597695731916!2d-62.30840738485217!3d-31.40972388140632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cb33f900609bc9%3A0xce084b0def08eebe!2sEstudio%20Inmobiliario%20Raices!5e0!3m2!1ses-419!2sar!4v1629820296499!5m2!1ses-419!2sar" width="200" height="80" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorTexto">
                 <p class="footerBootstrap__itemFooter">REDES SOCIALES</p>
-                <a href="https://www.facebook.com/cami.arroyo.1" target="_blank"><img src="../img/facebook.png" height="70px" width="70px" class="footerBootstrap__img"></a>
-                <a href="https://www.instagram.com/cami.arroyo.010/" target="_blank"><img src="../img/instragram.png" height="70px" width="70px" class="footerBootstrap__img"></a>
+                <a href="https://www.facebook.com/cami.arroyo.1" target="_blank"><img src="../img/facebook.png" alt="facebook" height="70px" width="70px" class="footerBootstrap__img"></a>
+                <a href="https://www.instagram.com/cami.arroyo.010/" target="_blank"><img src="../img/instragram.png" alt="instagram" height="70px" width="70px" class="footerBootstrap__img"></a>
                 <p class="footerBootstrap__itemFooter">FORMULARIO DE CONTACTO</p>
                 <div><a href="contacto.html#formulario"><button type="button" class="btn btnFooter"><p class="footerBootstrap__contenido footerBootstrap__enlace">Ir al formulario</p></button></a></div>
             </div>

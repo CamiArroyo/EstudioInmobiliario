@@ -9,7 +9,7 @@ html, body{
 /* Barra de navegación */
 
 .navbar {
-    background-color: $amarilloBrillante;
+    background-color: $azulBrillante;
     font-size: $xsmall;
     font-family: 'Roboto', sans-serif;
 }
@@ -20,7 +20,7 @@ html, body{
     justify-content: center;
 
     .dropdown-menu {
-        background-color: $amarilloBrillante;
+        background-color: $azulBrillante;
     }
 
     .btn-group {
@@ -29,11 +29,11 @@ html, body{
     }
 
     .btn-group:hover {
-        background-color: $amarilloOpaco;
+        background-color: $azulOpaco;
     }
 
     .btn-active {
-        background-color: $amarilloOpaco;
+        background-color: $azulOpaco;
     }
     
     .btnSubtitle {
@@ -47,7 +47,7 @@ html, body{
     }
 
     .dropdown-item:hover {
-        background-color: $amarilloOpaco;
+        background-color: $azulOpaco;
     }
 }
 
@@ -87,22 +87,24 @@ ol {
     margin-left: 15px;
 }
 
-@mixin listas ($color, $grosor, $estiloLista, $margin, $padding){
+@mixin listas ($color, $tamanio, $grosor, $estiloLista, $margin, $padding){
     color: $color;
+    font-size: $tamanio;
     font-weight: $grosor;
     list-style-type: $estiloLista;
     margin: $margin;
     padding: $padding;
 }
-.listaContenido { @include listas($negro, 400, none, 5px, 0px);}
+.listaContenido { @include listas($negro, $xxsmall, 400, none, 5px, 0px);
+    font-family: 'Roboto', sans-serif;}
+.listaContenidoEnum { @include listas($negro, $xxsmall, 400, decimal, 5px, 0px);
+    font-family: 'Roboto', sans-serif;}
 
 .listaContenido::before {
     content: "\276F";
-    color: $amarilloBrillante;
+    color: $azulBrillante;
     padding-right: 10px;
 }
-
-.listaContenidoEnum { @include listas($negro, 400, decimal, 5px, 0px);}
 
 .botones {
     display: flex;
@@ -129,7 +131,7 @@ ol {
     font-weight: 600;
     margin: 5px;
     color: $negro;
-    background-color: $amarilloBrillante;
+    background-color: $azulBrillante;
     font-family: 'Pompiere', cursive;
     border: none;
     border-radius: 5px;
@@ -194,6 +196,28 @@ ol {
 
 /* Sección index.html */
 
+.contenedorBienvenida {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 0px;
+
+    .contenedorBienvenida__subtituloSeccion {
+        margin: 80px 5px 30px 5px;
+
+        .contenedorBienvenida__subtituloSeccion--bienv {
+            font-size: $xlarge;
+        }
+    
+        .contenedorBienvenida__subtituloSeccion--sub {
+            border: solid 1px $azulBrillante;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    }
+}
+
 .parallax {
     /* The image used */
     background-image: url("../img/paralaxHorizontal.jpg");
@@ -233,32 +257,6 @@ ol {
             padding: 1px 5px;
         }
     }
-}
-
-.contenedorBienvenida {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 20px 0px;
-
-    .contenedorBienvenida__subtituloSeccion {
-        margin: 80px 5px 30px 5px;
-
-        .contenedorBienvenida__subtituloSeccion--bienv {
-            font-size: $xlarge;
-        }
-    
-        .contenedorBienvenida__subtituloSeccion--sub {
-            border: solid 1px $amarilloBrillante;
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 40px;
-        }
-    }
-}
-
-.bodyIndex {
-    background-color: $fondo;
 }
 
 .contenedorServ {
@@ -306,28 +304,6 @@ ol {
     font-family: 'Roboto', sans-serif;
 }
 
-.formModal {
-    background-color: $grisClaro;
-    border-radius: 10px;
-    padding: 20px 0px 10px 0px;
-    margin: 10px 40px;
-
-    .form-group {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .formModal__item {
-        width: 200px;
-    }
-
-    .form-control-sm {
-        border: solid 1px $amarilloBrillante;
-        border-radius: 5px;
-    }
-}
-
 /* Sección quienesSomos.html */
 
 .contenedorInfo {
@@ -346,7 +322,7 @@ ol {
     }
 
     .contenedorInfo__contenedor {
-        border: solid 1px $amarilloBrillante;
+        border: solid 1px $azulBrillante;
         border-radius: 10px;
         margin: 0px 15px;
         padding-bottom: 10px;
@@ -358,22 +334,12 @@ ol {
         justify-content: center;
     }
 
-    .contenedorInfo__lista {
-        text-align: center;
-    }
-
-    .contenedorInfo__lista::before {
-        content: "\276F";
-        color: $amarilloBrillante;
-        padding-right: 10px;
-    }
-
     .contenedorInfo__dialogo {
         font-style: oblique;
     }
 
     .contenedorInfo__firma {
-        margin-top: 0px;
+        margin-top: 10px;
         font-weight: bold;
         text-align: end;
         color: $grisOscuro;
@@ -394,8 +360,18 @@ ol {
 
 /* Sección propiedades.html */
 
-.propSeleccInfo {
+.contenedorExplicacion {
+    margin: 0px 70px 30px 70px;
+    border: solid 1px $azulBrillante;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.contenedorFiltros {
     background-color: $grisClaro;
+    margin-left: 40px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .card {
@@ -405,14 +381,18 @@ ol {
     }
 }
 
-.cardNro13 {
-    margin: 0px 30px 0px 30px;
-}
-
 .propContenedor {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.cardNro13 {
+    margin: 0px 30px 0px 30px;
+}
+
+.propSeleccInfo {
+    background-color: $grisClaro;
 }
 
 .dropdown, .card-text, .propContenedorInfoNoHay {
@@ -428,13 +408,6 @@ ol {
 .input-group-text, .custom-select, .form-control, .dropdown-toggle {
     font-family: 'Roboto', sans-serif;
     font-size: $xxsmall;
-}
-
-.contenedorFiltros {
-    background-color: $grisClaro;
-    margin-left: 20px;
-    padding: 10px;
-    border-radius: 10px;
 }
 
 .carritoCant {
@@ -458,12 +431,39 @@ ol {
     width: 90px;
 }
 
+.input-group-text, .input-group-item {
+    border: solid 1px $azulBrillante;
+    border-radius: 5px;
+}
+
 .modalListo {
     color: green;
 }
 
 .modalError {
     color: red;
+}
+
+.formModal {
+    background-color: $grisClaro;
+    border-radius: 10px;
+    padding: 20px 0px 10px 0px;
+    margin: 10px 40px;
+
+    .form-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .formModal__item {
+        width: 200px;
+    }
+
+    .form-control-sm {
+        border: solid 1px $azulBrillante;
+        border-radius: 5px;
+    }
 }
 
 /* Sección infoInteres.html */
@@ -476,30 +476,21 @@ ol {
     margin: 0px 55px 0px 55px;
 }
 
-.card-body {
-    font-size: $xxsmall;
-    color: $negro;
-    font-family: 'Roboto', sans-serif;
+.infoImportante {
+    padding: 10px 5px;
+    margin: 10px 40px;
+    background-color: $grisClaro;
+    text-indent: 0px;
+}
 
-    .infoImportante {
-        padding: 10px 5px;
-        margin: 10px 40px;
-        background-color: $grisClaro;
-        text-align: center;
-        text-indent: 0px;
-    }
-
-    .calculoCoef{
-        padding: 10px;
-        margin: 10px 30px 10px 10px;
-        border: solid 1px $grisClaro;
-        border-radius: 5px;
-        text-align: center;
-    }
+.calculoCoef {
+    padding: 10px;
+    margin: 10px 30px 10px 10px;
+    border: solid 1px $grisClaro;
+    border-radius: 5px;
 }
 
 .infoPrestador {
-    text-align: center;
     margin: 20px 0px;
 
     .infoPrestador__img {
@@ -584,7 +575,7 @@ ol {
 
         .footerBootstrap__enlace:hover {
             transform: scale(1.1);
-            background-color: $amarilloOpaco;
+            background-color: $azulOpaco;
         }
 
         .footerBootstrap__img {
@@ -601,7 +592,7 @@ ol {
         }
 
         .btnActive {
-            background-color: $amarilloOpaco;
+            background-color: $azulOpaco;
         }
     }
 }
@@ -611,7 +602,7 @@ ol {
         padding: 10px;
         font-size: $xxsmall;
         text-align: center;
-        background-color: $amarilloBrillante;
+        background-color: $azulBrillante;
         color: $negro;
         font-family: 'Roboto', sans-serif;
     }
@@ -619,7 +610,62 @@ ol {
 
 @media only screen and (max-width:768px) {
 
-    /* Imágen parallax */
+    /* Configuración general */
+
+    h1 { 
+        margin: 20px 10px;
+        font-size: $large;
+    }
+
+    h2 { margin: 0px 10px }
+
+    h3 { margin: 20px 10px }
+
+    h4 { margin: 10px 10px }
+
+    p { margin: 5px 10px }
+
+    .center {
+        text-align: justify;
+    }
+
+    .introFormContacto {
+        margin: 0px 20px;
+    }
+
+    .formContacto {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    /* Seccion index.html */
+
+    .contenedorBienvenida {
+        margin-top: 20px;
+
+        .contenedorBienvenida__contenedorImg {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+    
+            .contenedorBienvenida__contenedorImg--imgLogo {
+                height: 250px;
+                width: 251px;
+            }
+        }
+
+        .contenedorBienvenida__subtituloSeccion {
+            margin: 30px 0px 0px 0px;
+
+            .contenedorBienvenida__subtituloSeccion--bienv {
+                font-size: $large;
+            }
+
+            .contenedorBienvenida__subtituloSeccion--sub {
+                margin-top: 20px;
+            }
+        }
+    }
 
     .parallax {
         /* The image used */
@@ -647,57 +693,6 @@ ol {
         }
     }
 
-    h1 { 
-        margin: 20px 10px;
-        font-size: $large;
-    }
-
-    h2 { margin: 0px 10px }
-
-    h3 { margin: 20px 10px }
-
-    h4 { margin: 10px 10px }
-
-    p { margin: 5px 10px }
-
-    .center {
-        text-align: start;
-    }
-
-    .formContacto {
-        margin: 10px;
-        padding: 20px;
-    }
-
-    /* Seccion index.html */
-
-    .parrafoCentrado {
-        text-align: start;
-    }
-
-    .contenedorBienvenida {
-        margin-top: 20px;
-
-        .contenedorBienvenida__subtituloSeccion {
-            margin: 30px 0px 0px 0px;
-
-            .contenedorBienvenida__subtituloSeccion--sub {
-                margin-top: 20px;
-            }
-        }
-    }
-
-    .contenedorBienvenida__contenedorImg {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-
-        .contenedorBienvenida__contenedorImg--imgLogo {
-            height: 250px;
-            width: 251px;
-        }
-    }
-
     .contenedorServ {
         margin: 0px 0px 40px 0px;
         padding: 0px 5px;
@@ -710,6 +705,16 @@ ol {
     /* Sección quienesSomos.html */
 
     .contenedorInfo {
+
+        .contenedorInfo__textosMobile {
+            padding: 20px;
+        }
+
+        .contenedorInfo__dialogo {
+            margin-top: 20px;
+            font-style: oblique;
+        }
+
         .contenedorInfo__contenedor {
             border: none;
         }
@@ -731,14 +736,57 @@ ol {
 
     /* Sección infoInteres.html */
 
+    .card-deck {
+        margin: 0px;
+    }
+    
+    .card-deck-ultimo {
+        margin: 0px;
+    }
+
     .card-body {
-        .infoImportante {
-            margin: 10px 5px;
-        }
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .infoImportante {
+        margin: 10px 5px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .infoPrestador__contenedorImg {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 
     /* Sección contacto.html */
 
+    .oficinaCont {
+        margin: 0px 10px;
+
+        .oficinaCont__item {
+            text-align: start;
+        }
+    }
+    
+    .redesSocialesCont {
+        margin: 0px 10px;
+
+        .redesSocialesCont__interno {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+    }
+
+    .redesSociales__img {
+        margin-left: 0px;
+        height: 90px;
+        width: 90px;
+    }
 
     /* Footer de las secciones */
 

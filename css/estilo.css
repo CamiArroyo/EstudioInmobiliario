@@ -95,22 +95,26 @@ ol {
 
 .listaContenido {
   color: black;
+  font-size: 14px;
   font-weight: 400;
   list-style-type: none;
   margin: 5px;
-  padding: 0px; }
+  padding: 0px;
+  font-family: 'Roboto', sans-serif; }
+
+.listaContenidoEnum {
+  color: black;
+  font-size: 14px;
+  font-weight: 400;
+  list-style-type: decimal;
+  margin: 5px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif; }
 
 .listaContenido::before {
   content: "\276F";
   color: #80C5FF;
   padding-right: 10px; }
-
-.listaContenidoEnum {
-  color: black;
-  font-weight: 400;
-  list-style-type: decimal;
-  margin: 5px;
-  padding: 0px; }
 
 .botones {
   display: flex;
@@ -185,6 +189,21 @@ ol {
   opacity: 0.7; }
 
 /* Sección index.html */
+.contenedorBienvenida {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px 0px; }
+  .contenedorBienvenida .contenedorBienvenida__subtituloSeccion {
+    margin: 80px 5px 30px 5px; }
+    .contenedorBienvenida .contenedorBienvenida__subtituloSeccion .contenedorBienvenida__subtituloSeccion--bienv {
+      font-size: 70px; }
+    .contenedorBienvenida .contenedorBienvenida__subtituloSeccion .contenedorBienvenida__subtituloSeccion--sub {
+      border: solid 1px #80C5FF;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 40px; }
+
 .parallax {
   /* The image used */
   background-image: url("../img/paralaxHorizontal.jpg");
@@ -211,24 +230,6 @@ ol {
     border: solid 1px black;
     border-radius: 10px;
     padding: 1px 5px; }
-
-.contenedorBienvenida {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 20px 0px; }
-  .contenedorBienvenida .contenedorBienvenida__subtituloSeccion {
-    margin: 80px 5px 30px 5px; }
-    .contenedorBienvenida .contenedorBienvenida__subtituloSeccion .contenedorBienvenida__subtituloSeccion--bienv {
-      font-size: 70px; }
-    .contenedorBienvenida .contenedorBienvenida__subtituloSeccion .contenedorBienvenida__subtituloSeccion--sub {
-      border: solid 1px #80C5FF;
-      border-radius: 10px;
-      padding: 20px;
-      margin-top: 40px; }
-
-.bodyIndex {
-  background-color: #FFFFFF; }
 
 .contenedorServ {
   background-color: #CFE3E2;
@@ -266,21 +267,6 @@ ol {
   color: black;
   font-family: 'Roboto', sans-serif; }
 
-.formModal {
-  background-color: #CFE3E2;
-  border-radius: 10px;
-  padding: 20px 0px 10px 0px;
-  margin: 10px 40px; }
-  .formModal .form-group {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
-  .formModal .formModal__item {
-    width: 200px; }
-  .formModal .form-control-sm {
-    border: solid 1px #80C5FF;
-    border-radius: 5px; }
-
 /* Sección quienesSomos.html */
 .contenedorInfo {
   display: flex;
@@ -301,16 +287,10 @@ ol {
     display: flex;
     flex-direction: column;
     justify-content: center; }
-  .contenedorInfo .contenedorInfo__lista {
-    text-align: center; }
-  .contenedorInfo .contenedorInfo__lista::before {
-    content: "\276F";
-    color: #80C5FF;
-    padding-right: 10px; }
   .contenedorInfo .contenedorInfo__dialogo {
     font-style: oblique; }
   .contenedorInfo .contenedorInfo__firma {
-    margin-top: 0px;
+    margin-top: 10px;
     font-weight: bold;
     text-align: end;
     color: #787878; }
@@ -325,21 +305,33 @@ ol {
   margin-bottom: 0px; }
 
 /* Sección propiedades.html */
-.propSeleccInfo {
-  background-color: #CFE3E2; }
+.contenedorExplicacion {
+  margin: 0px 70px 30px 70px;
+  border: solid 1px #80C5FF;
+  border-radius: 10px;
+  padding: 10px; }
+
+.contenedorFiltros {
+  background-color: #CFE3E2;
+  margin-left: 40px;
+  padding: 10px;
+  border-radius: 10px; }
 
 .card {
   margin: 0px 30px 50px 30px; }
   .card .card-header {
     padding: 0px; }
 
-.cardNro13 {
-  margin: 0px 30px 0px 30px; }
-
 .propContenedor {
   display: flex;
   flex-direction: column;
   align-items: center; }
+
+.cardNro13 {
+  margin: 0px 30px 0px 30px; }
+
+.propSeleccInfo {
+  background-color: #CFE3E2; }
 
 .dropdown, .card-text, .propContenedorInfoNoHay {
   display: flex;
@@ -352,12 +344,6 @@ ol {
 .input-group-text, .custom-select, .form-control, .dropdown-toggle {
   font-family: 'Roboto', sans-serif;
   font-size: 14px; }
-
-.contenedorFiltros {
-  background-color: #CFE3E2;
-  margin-left: 20px;
-  padding: 10px;
-  border-radius: 10px; }
 
 .carritoCant {
   font-size: 16px; }
@@ -375,11 +361,30 @@ ol {
 .input-group-text {
   width: 90px; }
 
+.input-group-text, .input-group-item {
+  border: solid 1px #80C5FF;
+  border-radius: 5px; }
+
 .modalListo {
   color: green; }
 
 .modalError {
   color: red; }
+
+.formModal {
+  background-color: #CFE3E2;
+  border-radius: 10px;
+  padding: 20px 0px 10px 0px;
+  margin: 10px 40px; }
+  .formModal .form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+  .formModal .formModal__item {
+    width: 200px; }
+  .formModal .form-control-sm {
+    border: solid 1px #80C5FF;
+    border-radius: 5px; }
 
 /* Sección infoInteres.html */
 .card-deck {
@@ -388,25 +393,19 @@ ol {
 .card-deck-ultimo {
   margin: 0px 55px 0px 55px; }
 
-.card-body {
-  font-size: 14px;
-  color: black;
-  font-family: 'Roboto', sans-serif; }
-  .card-body .infoImportante {
-    padding: 10px 5px;
-    margin: 10px 40px;
-    background-color: #CFE3E2;
-    text-align: center;
-    text-indent: 0px; }
-  .card-body .calculoCoef {
-    padding: 10px;
-    margin: 10px 30px 10px 10px;
-    border: solid 1px #CFE3E2;
-    border-radius: 5px;
-    text-align: center; }
+.infoImportante {
+  padding: 10px 5px;
+  margin: 10px 40px;
+  background-color: #CFE3E2;
+  text-indent: 0px; }
+
+.calculoCoef {
+  padding: 10px;
+  margin: 10px 30px 10px 10px;
+  border: solid 1px #CFE3E2;
+  border-radius: 5px; }
 
 .infoPrestador {
-  text-align: center;
   margin: 20px 0px; }
   .infoPrestador .infoPrestador__img {
     border-radius: 10px; }
@@ -492,7 +491,41 @@ ol {
   font-family: 'Roboto', sans-serif; }
 
 @media only screen and (max-width: 768px) {
-  /* Imágen parallax */
+  /* Configuración general */
+  h1 {
+    margin: 20px 10px;
+    font-size: 40px; }
+  h2 {
+    margin: 0px 10px; }
+  h3 {
+    margin: 20px 10px; }
+  h4 {
+    margin: 10px 10px; }
+  p {
+    margin: 5px 10px; }
+  .center {
+    text-align: justify; }
+  .introFormContacto {
+    margin: 0px 20px; }
+  .formContacto {
+    margin: 10px;
+    padding: 20px; }
+  /* Seccion index.html */
+  .contenedorBienvenida {
+    margin-top: 20px; }
+    .contenedorBienvenida .contenedorBienvenida__contenedorImg {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+      .contenedorBienvenida .contenedorBienvenida__contenedorImg .contenedorBienvenida__contenedorImg--imgLogo {
+        height: 250px;
+        width: 251px; }
+    .contenedorBienvenida .contenedorBienvenida__subtituloSeccion {
+      margin: 30px 0px 0px 0px; }
+      .contenedorBienvenida .contenedorBienvenida__subtituloSeccion .contenedorBienvenida__subtituloSeccion--bienv {
+        font-size: 40px; }
+      .contenedorBienvenida .contenedorBienvenida__subtituloSeccion .contenedorBienvenida__subtituloSeccion--sub {
+        margin-top: 20px; }
   .parallax {
     /* The image used */
     background-image: url("../img/paralaxVertical.jpg");
@@ -508,44 +541,17 @@ ol {
         width: 100px; }
       .parallax .parallax__contenedor .parallax__contenedor--ItemTitulo {
         font-size: 24px; }
-  h1 {
-    margin: 20px 10px;
-    font-size: 40px; }
-  h2 {
-    margin: 0px 10px; }
-  h3 {
-    margin: 20px 10px; }
-  h4 {
-    margin: 10px 10px; }
-  p {
-    margin: 5px 10px; }
-  .center {
-    text-align: start; }
-  .formContacto {
-    margin: 10px;
-    padding: 20px; }
-  /* Seccion index.html */
-  .parrafoCentrado {
-    text-align: start; }
-  .contenedorBienvenida {
-    margin-top: 20px; }
-    .contenedorBienvenida .contenedorBienvenida__subtituloSeccion {
-      margin: 30px 0px 0px 0px; }
-      .contenedorBienvenida .contenedorBienvenida__subtituloSeccion .contenedorBienvenida__subtituloSeccion--sub {
-        margin-top: 20px; }
-  .contenedorBienvenida__contenedorImg {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
-    .contenedorBienvenida__contenedorImg .contenedorBienvenida__contenedorImg--imgLogo {
-      height: 250px;
-      width: 251px; }
   .contenedorServ {
     margin: 0px 0px 40px 0px;
     padding: 0px 5px; }
   .contenedorServUltimo {
     margin: 0px; }
   /* Sección quienesSomos.html */
+  .contenedorInfo .contenedorInfo__textosMobile {
+    padding: 20px; }
+  .contenedorInfo .contenedorInfo__dialogo {
+    margin-top: 20px;
+    font-style: oblique; }
   .contenedorInfo .contenedorInfo__contenedor {
     border: none; }
   /* Sección infoPropiedades.html */
@@ -556,9 +562,37 @@ ol {
   .contenedorFiltros {
     margin: 0px 20px 20px 20px; }
   /* Sección infoInteres.html */
-  .card-body .infoImportante {
-    margin: 10px 5px; }
+  .card-deck {
+    margin: 0px; }
+  .card-deck-ultimo {
+    margin: 0px; }
+  .card-body {
+    padding-right: 20px;
+    padding-left: 20px; }
+  .infoImportante {
+    margin: 10px 5px;
+    padding-right: 10px;
+    padding-left: 10px; }
+  .infoPrestador__contenedorImg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
   /* Sección contacto.html */
+  .oficinaCont {
+    margin: 0px 10px; }
+    .oficinaCont .oficinaCont__item {
+      text-align: start; }
+  .redesSocialesCont {
+    margin: 0px 10px; }
+    .redesSocialesCont .redesSocialesCont__interno {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 20px; }
+  .redesSociales__img {
+    margin-left: 0px;
+    height: 90px;
+    width: 90px; }
   /* Footer de las secciones */
   .container-fluid .footerBootstrap .footerBootstrap__contenedorTexto {
     padding-left: 30px; }

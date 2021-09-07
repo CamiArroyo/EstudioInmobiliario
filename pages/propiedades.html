@@ -8,14 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pompiere&display=swap" rel="stylesheet">
-    <!-- Google fonts textos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <!-- Título -->
     <title>Propiedades</title>
-    <!-- Importación del código JS -->
-    <script src="main.js"> </script>
     <!-- Link CSS de Bootstrap v.4.0 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <!-- Importación de AOS -->
@@ -111,13 +108,29 @@
     <!-- Cierre de carousel -->
 
     <!-- Apertura de section -->
-
     <div class="row" data-aos="fade-down" data-aos-duration="800">
         <div class="col-xs-12 col-lg-12">
             <div class="subtituloSeccion">
                 <h2>PROPIEDADES</h2>
                 <img src="../img/subrayado.png" height="20px" width="315px">
             </div>
+        </div>
+    </div>
+
+    <div class="contenedorExplicacion" data-aos="fade-up" data-aos-duration="700">
+        <p>Se muestran a continuación todas las propiedades disponibles en este momento. En cada una encontrarás su <span class="bold">descripción completa</span> sobre cómo esta compuesta dicha propiedad. En caso de las <span class="bold">propiedades en alquiler</span>, el valor informado corresponde a la cantidad (en pesos argentinos) a pagar mensualmente. En caso de las <span class="bold">propiedad en venta</span>, el valor informado (en dólares) es el precio de venta. De acuerdo a lo que estés buscando, a la izquierda de la pantalla podrás <span class="bold">filtrar la búsqueda</span> según diferentes criterios.</p>
+        <p>Selecciona las propiedades que te gustaría ver antes de tomar una decisión, y haz click en el botón "ENVIAR SOLICITUD". Nosotros coordinaremos un plan de visita a esas propiedades y nos comunicaremos con vos para <span class="bold">recorrerlas juntos</span> y evacuar todas tus dudas.</p>
+    </div>
+
+    <div class="col-xs-12 col-lg-12" data-aos="fade-up" data-aos-duration="700">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                PROPIEDADES A SOLICITAR <span id="carritoCantidad" class="badge badge-light carritoCant">0</span>
+            </button>
+            <div id="carritoPropiedades" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <!-- Acá genero el carrito -->
+            </div>
+            <button type="button" id="buttonEnviarSoli" class="btn btn-secondary boton botonSolicitar" data-toggle="modal" data-target="#exampleModal2">ENVIAR SOLICITUD</button>
         </div>
     </div>
 
@@ -134,7 +147,7 @@
                         <div class="input-group-prepend">  
                             <label class="input-group-text" for="filtroActividades">Acción</label>
                         </div>
-                        <select class="custom-select" id="filtroTipoActividad"></select>
+                        <select class="custom-select input-group-item" id="filtroTipoActividad"></select>
                     </div>
                 </div>
                 <div>
@@ -143,7 +156,7 @@
                         <div class="input-group-prepend">  
                             <label class="input-group-text" for="filtroCategorias">Categoria</label>
                         </div>
-                        <select class="custom-select" id="filtroTipoPropiedad"></select>
+                        <select class="custom-select input-group-item" id="filtroTipoPropiedad"></select>
                     </div>
                 </div>
                 <div>
@@ -152,13 +165,13 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroup-sizing-default">Mínimo</span>
                         </div>
-                        <input id="minProducto" value="10000" type="number" class="form-control inputPrecio" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <input id="minProducto" value="10000" type="number" class="form-control inputPrecio input-group-item" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroup-sizing-default">Máximo</span>
                         </div>
-                        <input id="maxProducto" value="50000" type="number" class="form-control inputPrecio" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <input id="maxProducto" value="50000" type="number" class="form-control inputPrecio input-group-item" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                 </div>
                 <div class="botones">
@@ -168,16 +181,6 @@
             </div>
         </div>
         <div class="col-xs-12 col-lg-8">
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    PROPIEDADES A SOLICITAR <span id="carritoCantidad" class="badge badge-light carritoCant">0</span>
-                </button>
-                <div id="carritoPropiedades" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <!-- Acá genero el carrito -->
-                </div>
-                <button type="button" id="buttonEnviarSoli" class="btn btn-secondary boton botonSolicitar" data-toggle="modal" data-target="#exampleModal2">ENVIAR SOLICITUD</button>
-            </div>
-            
             <div id="propiedadesContenedor" class="propContenedor col">
                 <!-- Acá se van agregando las propiedades disponibles -->
             </div>
@@ -259,7 +262,6 @@
         </div>
     </div>
     <!-- Cierre de modal -->
-
     <!-- Cierre de section -->
 
     <!-- Apertura de footer -->
