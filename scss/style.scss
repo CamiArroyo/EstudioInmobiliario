@@ -12,6 +12,10 @@ html, body{
     background-color: $azulBrillante;
     font-size: $xsmall;
     font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 60px;
+    z-index: 12;
+    position: fixed;
 }
 
 .listaNav{
@@ -150,6 +154,7 @@ ol {
 }
 
 .imgCarousel {
+    margin-top: 60px;
     opacity: 0.4;
 }
 
@@ -201,6 +206,7 @@ ol {
     flex-direction: row;
     justify-content: center;
     margin: 20px 0px;
+    margin-top: 80px;
 
     .contenedorBienvenida__subtituloSeccion {
         margin: 80px 5px 30px 5px;
@@ -376,6 +382,7 @@ ol {
 
 .card {
     margin: 0px 30px 50px 30px;
+
     .card-header {
         padding: 0px;
     }
@@ -608,7 +615,28 @@ ol {
     }
 }
 
+@media only screen and (min-width:768px) {
+    
+    .imgCarouselMobile {
+        display: none;
+    }
+
+}
+
 @media only screen and (max-width:768px) {
+
+    .hijoTituloSeccion {
+        margin-top: 30px;
+    }
+
+    .imgCarousel {
+        display: none;
+    }
+
+    .imgCarouselMobile {
+        margin-top: 60px;
+        opacity: 0.4;
+    }
 
     /* Configuración general */
 
@@ -641,7 +669,6 @@ ol {
     /* Seccion index.html */
 
     .contenedorBienvenida {
-        margin-top: 20px;
 
         .contenedorBienvenida__contenedorImg {
             display: flex;
@@ -720,18 +747,39 @@ ol {
         }
     }
 
-    /* Sección infoPropiedades.html */
+    /* Sección propiedades.html */
 
-    .card {
-        margin: 0px 5px 20px 5px;
-    }
-
-    .card-deck {
-        margin: 0px 10px 30px 10px;
+    .contenedorExplicacion {
+        margin: 0px 10px 20px 10px;
+        padding: 0px;
+        border: none;
     }
 
     .contenedorFiltros {
         margin: 0px 20px 20px 20px;
+    }
+
+    .propContenedor {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .card {
+        margin: 0px 10px 30px 10px;
+    }
+
+    .formModal {
+        padding: 20px 0px 10px 0px;
+        margin: 10px 0px;
+    
+        .formModal__item {
+            width: 140px;
+
+            .formModal__item--p {
+                text-align: start;
+                text-indent: 0px;
+            }
+        }
     }
 
     /* Sección infoInteres.html */

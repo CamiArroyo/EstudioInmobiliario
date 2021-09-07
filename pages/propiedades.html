@@ -25,7 +25,7 @@
     <!-- Apertura de nav -->
     <div class="contenedor">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <img src="../img/logoEmpresaCorto.png" height="50px" width="50px" data-aos="flip-right" data-aos-duration="1000">
+            <img src="../img/logoEmpresaCorto.png" alt="logoEmpresaCorto" height="50px" width="50px" data-aos="flip-right" data-aos-duration="1000">
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNavDropdown">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -100,7 +100,8 @@
     <div id="carouselExampleSlidesOnly" class="carousel slide padretituloSeccion" data-ride="carousel" data-aos="flip-right" data-aos-duration="1000">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="../img/casas3.jpg" class="d-block w-100 imgCarousel" alt="...">
+                <img src="../img/casasDesk.jpg" alt="carrouselCasas" class="w-100 imgCarousel">
+                <img src="../img/casasMobile.jpg" alt="carrouselCasas" class="w-100 imgCarouselMobile">
             </div>
         </div>
         <h1 class="hijoTituloSeccion">PROPIEDADES DISPONIBLES</h1>
@@ -112,7 +113,7 @@
         <div class="col-xs-12 col-lg-12">
             <div class="subtituloSeccion">
                 <h2>PROPIEDADES</h2>
-                <img src="../img/subrayado.png" height="20px" width="315px">
+                <img src="../img/subrayado.png" alt="subrayado" height="20px" width="315px">
             </div>
         </div>
     </div>
@@ -122,7 +123,7 @@
         <p>Selecciona las propiedades que te gustaría ver antes de tomar una decisión, y haz click en el botón "ENVIAR SOLICITUD". Nosotros coordinaremos un plan de visita a esas propiedades y nos comunicaremos con vos para <span class="bold">recorrerlas juntos</span> y evacuar todas tus dudas.</p>
     </div>
 
-    <div class="col-xs-12 col-lg-12" data-aos="fade-up" data-aos-duration="700">
+    <div class="col-xs-12 col-lg-12">
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 PROPIEDADES A SOLICITAR <span id="carritoCantidad" class="badge badge-light carritoCant">0</span>
@@ -184,7 +185,6 @@
             <div id="propiedadesContenedor" class="propContenedor col">
                 <!-- Acá se van agregando las propiedades disponibles -->
             </div>
-
             <div id="propiedadesContenedorInfo" class="propContenedorInfoNoHay">
                 <!-- Acá se informa cuando no se filtra nada -->
             </div>
@@ -230,23 +230,23 @@
                     <div id="listaPropiedadesSoli"></div>
                     <form id="registroSolicitante" class="formModal" style="display: none;">
                         <div class="form-group">
-                            <label for="name" class="formModal__item"><p>Nombre y apellido:</p></label>
+                            <label for="name" class="formModal__item"><p class="formModal__item--p">Nombre y apellido:</p></label>
                             <input id="name" class="formModal__item form-control-sm" type="text" required>
                         </div>
                         <div class="form-group">
-                            <label for="DNI" class="formModal__item"><p>Número de DNI:</p></label>
+                            <label for="DNI" class="formModal__item"><p class="formModal__item--p">Número de DNI:</p></label>
                             <input id="DNI" class="formModal__item form-control-sm" type="number" required>
                         </div>
                         <div class="form-group">
-                            <label for="fechaNac" class="formModal__item"><p>Fecha de nacimiento:</p></label>
+                            <label for="fechaNac" class="formModal__item"><p class="formModal__item--p">Fecha de nacimiento:</p></label>
                             <input id="fechaNac" class="formModal__item form-control-sm" type="date" required>
                         </div>
                         <div class="form-group">
-                            <label for="tel" class="formModal__item"><p>Teléfono de contacto:</p></label>
+                            <label for="tel" class="formModal__item"><p class="formModal__item--p">Teléfono de contacto:</p></label>
                             <input id="tel" class="formModal__item form-control-sm" type="number" required>
                         </div>
                         <div class="form-group">
-                            <label for="correo" class="formModal__item"><p>Correo electrónico:</p></label>
+                            <label for="correo" class="formModal__item"><p class="formModal__item--p">Correo electrónico:</p></label>
                             <input id="correo" class="formModal__item form-control-sm" type="mail">
                         </div>
                         <div class="botones">
@@ -268,7 +268,7 @@
     <div class="container-fluid">
         <div class="row footerBootstrap">
             <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorImg">
-                <img src="../img/logoEmpresa.png" height="200px" width="201px" data-aos="flip-right" data-aos-duration="1000">
+                <img src="../img/logoEmpresa.png" alt="logoEmpresa" height="200px" width="201px" data-aos="flip-right" data-aos-duration="1000">
             </div>
             <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorTexto">
                 <p class="footerBootstrap__itemFooter">SECCIONES</p>
@@ -280,16 +280,16 @@
             </div>
             <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorTexto">
                 <p class="footerBootstrap__itemFooter">NUESTRA OFICINA</p>
-                <p class="footerBootstrap__contenido"><img src="../img/logoUbicacion.png" height="20px" width="20px" class="footerBootstrap__logo">Perón 205 Devoto, Córdoba</p>
-                <p class="footerBootstrap__contenido"><img src="../img/logoLlamada.png" height="20px" width="20px" class="footerBootstrap__logo">(03564)15328063</p>
-                <p class="footerBootstrap__contenido"><img src="../img/logoMail.png" height="20px" width="20px" class="footerBootstrap__logo">inmobiliaria_raices@gmail.com</p>
+                <p class="footerBootstrap__contenido"><img src="../img/logoUbicacion.png" alt="logoUbicacion" height="20px" width="20px" class="footerBootstrap__logo">Perón 205 Devoto, Córdoba</p>
+                <p class="footerBootstrap__contenido"><img src="../img/logoLlamada.png" alt="logoLlamada" height="20px" width="20px" class="footerBootstrap__logo">(03564)15328063</p>
+                <p class="footerBootstrap__contenido"><img src="../img/logoMail.png" alt="logoMail" height="20px" width="20px" class="footerBootstrap__logo">inmobiliaria_raices@gmail.com</p>
                 <p class="footerBootstrap__contenido"></p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.1597695731916!2d-62.30840738485217!3d-31.40972388140632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cb33f900609bc9%3A0xce084b0def08eebe!2sEstudio%20Inmobiliario%20Raices!5e0!3m2!1ses-419!2sar!4v1629820296499!5m2!1ses-419!2sar" width="200" height="80" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <div class="col-xs-12 col-lg-3 footerBootstrap__contenedorTexto">
                 <p class="footerBootstrap__itemFooter">REDES SOCIALES</p>
-                <a href="https://www.facebook.com/cami.arroyo.1" target="_blank"><img src="../img/facebook.png" height="70px" width="70px" class="footerBootstrap__img"></a>
-                <a href="https://www.instagram.com/cami.arroyo.010/" target="_blank"><img src="../img/instragram.png" height="70px" width="70px" class="footerBootstrap__img"></a>
+                <a href="https://www.facebook.com/cami.arroyo.1" target="_blank"><img src="../img/facebook.png" alt="facebook" height="70px" width="70px" class="footerBootstrap__img"></a>
+                <a href="https://www.instagram.com/cami.arroyo.010/" target="_blank"><img src="../img/instragram.png" alt="instagram" height="70px" width="70px" class="footerBootstrap__img"></a>
                 <p class="footerBootstrap__itemFooter">FORMULARIO DE CONTACTO</p>
                 <div><a href="contacto.html#formulario"><button type="button" class="btn btnFooter"><p class="footerBootstrap__contenido footerBootstrap__enlace">Ir al formulario</p></button></a></div>
             </div>

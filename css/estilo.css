@@ -9,7 +9,11 @@ html, body {
 .navbar {
   background-color: #80C5FF;
   font-size: 16px;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  height: 60px;
+  z-index: 12;
+  position: fixed; }
 
 .listaNav {
   display: flex;
@@ -154,6 +158,7 @@ ol {
   margin: 80px 5px 30px 5px; }
 
 .imgCarousel {
+  margin-top: 60px;
   opacity: 0.4; }
 
 .padreTituloSeccion {
@@ -193,7 +198,8 @@ ol {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 20px 0px; }
+  margin: 20px 0px;
+  margin-top: 80px; }
   .contenedorBienvenida .contenedorBienvenida__subtituloSeccion {
     margin: 80px 5px 30px 5px; }
     .contenedorBienvenida .contenedorBienvenida__subtituloSeccion .contenedorBienvenida__subtituloSeccion--bienv {
@@ -490,7 +496,18 @@ ol {
   color: black;
   font-family: 'Roboto', sans-serif; }
 
+@media only screen and (min-width: 768px) {
+  .imgCarouselMobile {
+    display: none; } }
+
 @media only screen and (max-width: 768px) {
+  .hijoTituloSeccion {
+    margin-top: 30px; }
+  .imgCarousel {
+    display: none; }
+  .imgCarouselMobile {
+    margin-top: 60px;
+    opacity: 0.4; }
   /* Configuración general */
   h1 {
     margin: 20px 10px;
@@ -511,21 +528,19 @@ ol {
     margin: 10px;
     padding: 20px; }
   /* Seccion index.html */
-  .contenedorBienvenida {
-    margin-top: 20px; }
-    .contenedorBienvenida .contenedorBienvenida__contenedorImg {
-      display: flex;
-      flex-direction: row;
-      justify-content: center; }
-      .contenedorBienvenida .contenedorBienvenida__contenedorImg .contenedorBienvenida__contenedorImg--imgLogo {
-        height: 250px;
-        width: 251px; }
-    .contenedorBienvenida .contenedorBienvenida__subtituloSeccion {
-      margin: 30px 0px 0px 0px; }
-      .contenedorBienvenida .contenedorBienvenida__subtituloSeccion .contenedorBienvenida__subtituloSeccion--bienv {
-        font-size: 40px; }
-      .contenedorBienvenida .contenedorBienvenida__subtituloSeccion .contenedorBienvenida__subtituloSeccion--sub {
-        margin-top: 20px; }
+  .contenedorBienvenida .contenedorBienvenida__contenedorImg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .contenedorBienvenida .contenedorBienvenida__contenedorImg .contenedorBienvenida__contenedorImg--imgLogo {
+      height: 250px;
+      width: 251px; }
+  .contenedorBienvenida .contenedorBienvenida__subtituloSeccion {
+    margin: 30px 0px 0px 0px; }
+    .contenedorBienvenida .contenedorBienvenida__subtituloSeccion .contenedorBienvenida__subtituloSeccion--bienv {
+      font-size: 40px; }
+    .contenedorBienvenida .contenedorBienvenida__subtituloSeccion .contenedorBienvenida__subtituloSeccion--sub {
+      margin-top: 20px; }
   .parallax {
     /* The image used */
     background-image: url("../img/paralaxVertical.jpg");
@@ -554,13 +569,26 @@ ol {
     font-style: oblique; }
   .contenedorInfo .contenedorInfo__contenedor {
     border: none; }
-  /* Sección infoPropiedades.html */
-  .card {
-    margin: 0px 5px 20px 5px; }
-  .card-deck {
-    margin: 0px 10px 30px 10px; }
+  /* Sección propiedades.html */
+  .contenedorExplicacion {
+    margin: 0px 10px 20px 10px;
+    padding: 0px;
+    border: none; }
   .contenedorFiltros {
     margin: 0px 20px 20px 20px; }
+  .propContenedor {
+    padding-right: 0px;
+    padding-left: 0px; }
+  .card {
+    margin: 0px 10px 30px 10px; }
+  .formModal {
+    padding: 20px 0px 10px 0px;
+    margin: 10px 0px; }
+    .formModal .formModal__item {
+      width: 140px; }
+      .formModal .formModal__item .formModal__item--p {
+        text-align: start;
+        text-indent: 0px; }
   /* Sección infoInteres.html */
   .card-deck {
     margin: 0px; }
