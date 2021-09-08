@@ -22,6 +22,7 @@ html, body{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    background-color: $azulBrillante;
 
     .dropdown-menu {
         background-color: $azulBrillante;
@@ -444,23 +445,31 @@ ol {
 }
 
 .modalListo {
-    color: green;
+    color: $verde;
 }
 
 .modalError {
-    color: red;
+    color: $rojo;
 }
 
 .formModal {
     background-color: $grisClaro;
     border-radius: 10px;
     padding: 20px 0px 10px 0px;
-    margin: 10px 40px;
+    margin: 10px;
+
+    .listaPropiedadesSoli {
+        border: solid 1px $azulBrillante;
+        border-radius: 10px;
+        background-color: $blanco;
+        margin-bottom: 20px;
+    }
 
     .form-group {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        height: 50px;
     }
 
     .formModal__item {
@@ -625,17 +634,15 @@ ol {
 
 @media only screen and (max-width:768px) {
 
-    .hijoTituloSeccion {
-        margin-top: 30px;
-    }
+    .listaNav{
 
-    .imgCarousel {
-        display: none;
-    }
-
-    .imgCarouselMobile {
-        margin-top: 60px;
-        opacity: 0.4;
+        .dropdown-toggle {
+            display: none;
+        }
+    
+        .dropdown-menu {
+            display: none;
+        }
     }
 
     /* Configuración general */
@@ -664,6 +671,21 @@ ol {
     .formContacto {
         margin: 10px;
         padding: 20px;
+    }
+
+    .imgCarousel {
+        display: none;
+    }
+
+    .imgCarouselMobile {
+        margin-top: 60px;
+        opacity: 0.4;
+    }
+
+    .hijoTituloSeccion {
+        margin: 0px;
+        margin-top: 30px;
+        font-size: $xlargeM;
     }
 
     /* Seccion index.html */

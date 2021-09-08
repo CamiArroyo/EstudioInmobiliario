@@ -5,7 +5,7 @@
         "calle": "Velez Sarsfield",
         "numero": "780",
         "tipo": "departamento",
-        "descripcion": "descripción 1",
+        "descripcion": "Departamento a estrenar ubicado en zona céntrica. Cocina comedor integrada con hermosa vista, una habitación y baño con bañera. Edificio con seguridad las 24hs del día.",
         "precio": "15000"
     },
     {
@@ -14,7 +14,7 @@
         "calle": "San Martin",
         "numero": "310",
         "tipo": "departamento",
-        "descripcion": "descripción 2",
+        "descripcion": "Departamento ubicado en planta baja. Edificio pet friendly. Cocina comedor integrada con horno eléctrico a estrenar. Dos habitaciones, baño con ducha. Patio interno con asador.",
         "precio": "75000"
     },
     {
@@ -23,7 +23,7 @@
         "calle": "Alem",
         "numero": "132",
         "tipo": "casa",
-        "descripcion": "descripción 3",
+        "descripcion": "Casa amplia ubicada en barrio privado. El living comedor cuenta con grandes ventanales con salida al patio, con piscina. Dos habitaciones muy amplias, dos baños (uno es suite), garage doble.",
         "precio": "87000"
     },
     {
@@ -32,8 +32,8 @@
         "calle": "Sarmiento",
         "numero": "100",
         "tipo": "departamento",
-        "descripcion": "descripción 4",
-        "precio": "18000"
+        "descripcion": "Departamento de gran categoría. Cocina comedor integrada con muebles de última generación, y con salida a balcón externo. Una habitación muy amplia, baño en suite con bañera.",
+        "precio": "28000"
     },
     {
         "actividad": "comprar",
@@ -41,7 +41,7 @@
         "calle": "Velez Sarsfield",
         "numero": "935",
         "tipo": "casa",
-        "descripcion": "descripción 5",
+        "descripcion": "Hermosa casa amoblada. Comedor amplio. Cocina separada con ventana. Living comedor amplio y cómodo, con estufa a leña. Tres habitaciones. Dos baños. Garage amplio. Gran patio con árboles frutales.",
         "precio": "95000"
     },
     {
@@ -50,7 +50,7 @@
         "calle": "Buenos Aires",
         "numero": "35",
         "tipo": "departamento",
-        "descripcion": "descripción 6",
+        "descripcion": "Departamento ubicado en el 4to piso, con balcón interno. Cocina comedor integrada, una habitación y un baño con bañera. Edificio con estacionamiento incluído, quincho y patio con pileta.",
         "precio": "15000"
     },
     {
@@ -59,8 +59,8 @@
         "calle": "Perón",
         "numero": "230",
         "tipo": "casa",
-        "descripcion": "descripción 7",
-        "precio": "30000"
+        "descripcion": "Hermosa casa a estrenar de dos pisos. Planta baja: cocina comedor con living integrado. Ventanal con salida al patio. Un baño, un lavero. Planta alta: dos habitaciones amplias, un baño.",
+        "precio": "40000"
     },
     {
         "actividad": "comprar",
@@ -68,7 +68,7 @@
         "calle": "Belgrano",
         "numero": "536",
         "tipo": "departamento",
-        "descripcion": "descripción 8",
+        "descripcion": "Departamento formado por cocina comedor integrada y living con salida a balcón externo con hermosa vista. Una habitación y un baño. Edificio con quincho y patio, con servicio de lavandería.",
         "precio": "80000"
     },
     {
@@ -77,7 +77,7 @@
         "calle": "Sarmiento",
         "numero": "260",
         "tipo": "casa",
-        "descripcion": "descripción 9",
+        "descripcion": "Hermosa casa ubicada en el centro del pueblo. Cocina comedor integrada, con salida al patio. Dos habitaciones y dos baños. Una oficina o local comercial separado, con ingreso desde el exterior.",
         "precio": "115000"
     },
     {
@@ -86,8 +86,8 @@
         "calle": "Velez Sarsfield",
         "numero": "940",
         "tipo": "casa",
-        "descripcion": "descripción 10",
-        "precio": "22000"
+        "descripcion": "Moderna casa de dos pisos, a estrenar. Planta baja: cocina comedor integrada muy amplia, y un baño. Planta alta: dos habitaciones y dos baños. Además, cuenta con garage y patio con un lavadero.",
+        "precio": "32000"
     },
     {
         "actividad": "alquilar",
@@ -95,8 +95,8 @@
         "calle": "Alem",
         "numero": "283",
         "tipo": "departamento",
-        "descripcion": "descripción 11",
-        "precio": "18000"
+        "descripcion": "Departamento amoblado, ubicado en planta baja. Cocina comedor integrada con electrodomésticos de última generación, una habitación, un baño. Edificio tranquilo con patio interno compartido, y con quincho.",
+        "precio": "15000"
     },
     {
         "actividad": "alquilar",
@@ -104,8 +104,8 @@
         "calle": "San Martin",
         "numero": "586",
         "tipo": "oficina",
-        "descripcion": "descripción 12",
-        "precio": "12500"
+        "descripcion": "Amplia oficina amoblada, a estrenar. La sala principal está formada por: mesa de reuniones, cocina con cafetera incluída, zona de estar con sillón y televisor. Además, cuenta con dos baños, uno de hombres y otro de mujeres.",
+        "precio": "15500"
     },
     {
         "actividad": "alquilar",
@@ -113,7 +113,7 @@
         "calle": "San Martin",
         "numero": "720",
         "tipo": "oficina",
-        "descripcion": "descripción 13",
-        "precio": "16000"
+        "descripcion": "Oficina formada por tres mesas de trabajo por separado, con un total de 26 conexiones para computadores en red. Sala de estar con sillón y televisor. Cocina. Dos baños. Amplio balcón externo.",
+        "precio": "22000"
     }
 ]
