@@ -387,8 +387,8 @@ ol {
     border: solid 1px #80C5FF;
     border-radius: 10px;
     background-color: #FFFFFF;
-    margin: 10px;
-    margin-bottom: 20px; }
+    margin: 20px 10px;
+    margin-bottom: 25px; }
   .formModal .form-group {
     display: flex;
     flex-direction: row;
@@ -600,9 +600,6 @@ ol {
   .formModal {
     padding: 20px 0px 10px 0px;
     margin: 10px 0px; }
-    .formModal .listaPropiedadesSoli {
-      margin: 5px;
-      margin-bottom: 20px; }
     .formModal .formModal__item {
       width: 140px; }
       .formModal .formModal__item .formModal__item--p {

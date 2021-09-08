@@ -462,8 +462,8 @@ ol {
         border: solid 1px $azulBrillante;
         border-radius: 10px;
         background-color: $blanco;
-        margin: 10px;
-        margin-bottom: 20px;
+        margin: 20px 10px;
+        margin-bottom: 25px;
     }
 
     .form-group {
@@ -798,11 +798,6 @@ ol {
     .formModal {
         padding: 20px 0px 10px 0px;
         margin: 10px 0px;
-
-        .listaPropiedadesSoli {
-            margin: 5px;
-            margin-bottom: 20px;
-        }
     
         .formModal__item {
             width: 140px;
