@@ -1,3 +1,5 @@
+/* DEFINICIÓN DE VARIABLES GLOBALES */
+
 const propiedades = [];
 
 const carrito = [];

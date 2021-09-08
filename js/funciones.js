@@ -1,26 +1,29 @@
-//Funciones para filtros
+/* DEFINICIÓN DE FUNCIONES GENERALES */
+
+//---------> Funcion que muestra una cadena con todas las propiedades del array
 
 function mostrarTodos(array) {
     let salida = "";
     for(let i=0 ; i<array.length ; i++) {
         salida += "PROPIEDAD N° " + array[i].id + "\n" +
-                " Actividad: " + array[i].actividad +
-                " Calle: " + array[i].calle +
-                " Número: " + array[i].numero + 
                 " Tipo: " + array[i].tipo +
-                " Alquiler: $" + array[i].precio + "\n"
+                " Actividad: " + array[i].actividad +
+                " Calle: " + array[i].calle + array[i].numero +
+                " Descripcion: " + array[i].descripcion +
+                " Valor: " + array[i].precio + "\n"
     }
     return salida;
 }
 
-//Función que genera los elementos HTML en la interfaz dinámica
+//---------> Función que genera los elementos HTML (propiedades) en la interfaz dinámica
 
 function propiedadesUIjQuery(propiedades, id) {
     //Importante: vaciar la interfaz primero
     $(id).empty();
+    //Agrego a la interfaz propiedad por propiedad
     for (const propiedad of propiedades) {
+
         //1° genero la interfaz de los productos
-        let honorariosProp = propiedad.montoHonorariosValor();
         let montoValor = propiedad.mostrarValor();
         let infoHonorarios = propiedad.mostrarHonorarios();
         $(id).append(`<div class="card cardNro${propiedad.id} text-center">
@@ -78,22 +81,23 @@ function propiedadesUIjQuery(propiedades, id) {
                         </div>
                         `)
         }
+
         //2° asocio los eventos a los botones de la interfaz
-        //Botón "ver información"
+        //Botón "VER INFORMACIÓN"
         $(".btnProp").click(function (e) {
             propID = e.target.id;
             $("#infoProp" + propID).slideDown();
         });
-        //Botón "ocultar información"
+        //Botón "OCULTAR INFORMACIÓN"
         $(".btnPropMenos").click(function (e) {
             propID = e.target.id;
             $("#infoProp" + propID).slideUp();
         });
-        //Botón "solicitar"
+        //Botón "SOLICITAR"
         $(".btnSoli").click(solicitudPropiedad);
 }
 
-//Función para generar el select usado en filtro por tipo de actividad
+//---------> Función para generar el select usado en filtro por tipo de actividad
 
 function selectActUI(lista, selector) {
     $(selector).empty(); //lo vaciamos por las dudas
@@ -102,7 +106,7 @@ function selectActUI(lista, selector) {
     }
 }
 
-//Función para generar el select usado en filtro por categoría
+//---------> Función para generar el select usado en filtro por categoría
 
 function selectCatUI(lista, selector) {
     $(selector).empty(); //lo vaciamos por las dudas
@@ -111,10 +115,12 @@ function selectCatUI(lista, selector) {
     }
 }
 
-//Función manejadora del evento "click" del botón "solicitar"
+//---------> Función manejadora del evento "click" del botón "solicitar"
 
 function solicitudPropiedad(e) {
-    e.preventDefault(); //prevengo que se refresque la página cuando se presiona el botón "solicitar", que es un enlace (ver etiqueta <a></a>)
+    //Prevengo que se refresque la página cuando se presiona el botón "solicitar", que es un enlace <a></a>
+    e.preventDefault();
+
     const propiedadID = e.target.id;
     const propSeleccionada = propiedades.find(propiedad => propiedad.id == propiedadID);
 
@@ -122,8 +128,7 @@ function solicitudPropiedad(e) {
 
     if (carrito.includes(propSeleccionada)) {
         console.log("Propiedad repetida, no puede agregarse");
-    }
-    else {
+    } else {
         carrito.push(propSeleccionada);
         console.log(carrito);
         console.log("¡Propiedad agregada con éxito!")
@@ -138,6 +143,58 @@ function solicitudPropiedad(e) {
     console.log(bandera);
     mostrarResultado(bandera);
 }
+
+//---------> Función que genera la interfaz del carrito
+
+function carritoUI(carrito) {
+    //Modifico la cantidad
+    $("#carritoCantidad").html(carrito.length);
+    //Elimino todo lo que esté acumulado para evitar duplicación de información
+    $("#carritoPropiedades").empty();
+    //Modifico la lista de las propiedades del carrito
+    for (const propiedad of carrito) {
+        $("#carritoPropiedades").append(componenteCarrito(propiedad));
+    }
+    //Asociación de evento para eliminar una propiedad
+    $(".btn-delete").on("click", eliminarCarrito);
+}
+
+//---------> Función que agrega los datos de una propiedad al carrito
+
+function componenteCarrito(propiedad) {
+    let valorProp = datosValor(propiedad);
+
+    return `<p>${propiedad.calle} ${propiedad.numero} - ${valorProp}
+            <a id="${propiedad.id}" class="btn btn-delete boton botonX">X</a></p>`
+}
+
+//---------> Función que define cómo se agrega la información del valor (alquiler o compra) de la propiedad a la interfaz del carrito
+
+function datosValor(propiedad) {
+    let valor = propiedad.mostrarValor();
+    if (propiedad.actividad == "ALQUILAR") {
+        return "Valor de alquiler: " + valor
+    } else {
+        return "Valor de compra: " + valor
+    }
+}
+
+//---------> Función manejador del evento "click" del botón "X", para eliminar una propiedad del carrito
+
+function eliminarCarrito(e) {
+    const propiedadID = e.target.id;
+    //1°: busco la posición del elemento a eliminar
+    let posicion = carrito.findIndex(producto => producto.id == propiedadID);
+    //2°: corto el array carrito --> splice(desde qué posición, cuántos elementos borro)
+    carrito.splice(posicion, 1);
+    //3°: actualizar interfaz
+    carritoUI(carrito);
+
+    //Guardamos el carrito modificado en el storage
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+
+//---------> Función que agrega el contenido del modal que informa si la propiedad pudo agregarse al carrito o no
 
 function mostrarResultado(bandera) {
     if(bandera == true) {
@@ -155,61 +212,7 @@ function mostrarResultado(bandera) {
     }
 }
 
-function carritoUI(carrito) {
-    //Modifico la cantidad
-    $("#carritoCantidad").html(carrito.length);
-    //Elimino todo lo que esté acumulado para evitar duplicación de información
-    $("#carritoPropiedades").empty();
-    //Modifico la lista de las propiedades del carrito
-    for (const propiedad of carrito) {
-        $("#carritoPropiedades").append(componenteCarrito(propiedad));
-    }
-    //Asociación de evento para eliminar una propiedad
-    $(".btn-delete").on("click", eliminarCarrito);
-}
-
-function datosValor(propiedad) {
-    let valor = propiedad.mostrarValor();
-    if (propiedad.actividad == "ALQUILAR") {
-        return "Valor de alquiler: " + valor
-    } else {
-        return "Valor de compra: " + valor
-    }
-}
-
-function componenteCarrito(propiedad) {
-    let valorProp = datosValor(propiedad);
-
-    return `<p>${propiedad.calle} ${propiedad.numero} - ${valorProp}
-            <a id="${propiedad.id}" class="btn btn-delete boton botonX">X</a></p>`
-}
-
-function eliminarCarrito(e) {
-    const propiedadID = e.target.id;
-    //1°: busco la posición del elemento a eliminar
-    let posicion = carrito.findIndex(producto => producto.id == propiedadID);
-    //2°: corto el array carrito --> splice(desde qué posición, cuántos elementos borro)
-    carrito.splice(posicion, 1);
-    //3°: actualizar interfaz
-    carritoUI(carrito);
-
-    //Guardamos el carrito modificado en el storage
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-}
-
-function envioFormularioSolicitud() {
-    if (carrito.length == 0) {
-        $("#registroSolicitante").hide();
-        $("#listaPropiedadesSoli").append(`<p>No ha seleccionado ninguna propiedad.</p>`)
-    } else {
-        $("#registroSolicitante").show();
-        $("#listaPropiedadesSoli").append(`<p>Seleccionaste las siguientes propiedades:</p>`)
-    }
-
-    for (const propiedad of carrito) {
-        $("#listaPropiedadesSoli").append(componenteCarritoForm(propiedad));
-    }
-}
+//---------> Función que agrega los datos de una propiedad al formulario
 
 function componenteCarritoForm(propiedad) {
     let valorProp = datosValor(propiedad);

@@ -455,13 +455,14 @@ ol {
 .formModal {
     background-color: $grisClaro;
     border-radius: 10px;
-    padding: 20px 0px 10px 0px;
-    margin: 10px;
+    padding: 10px 0px;
+    margin: 5px;
 
     .listaPropiedadesSoli {
         border: solid 1px $azulBrillante;
         border-radius: 10px;
         background-color: $blanco;
+        margin: 10px;
         margin-bottom: 20px;
     }
 
@@ -624,6 +625,8 @@ ol {
     }
 }
 
+/* Media query Desktop */
+
 @media only screen and (min-width:768px) {
     
     .imgCarouselMobile {
@@ -631,6 +634,8 @@ ol {
     }
 
 }
+
+/* Media query Mobile */
 
 @media only screen and (max-width:768px) {
 
@@ -793,6 +798,11 @@ ol {
     .formModal {
         padding: 20px 0px 10px 0px;
         margin: 10px 0px;
+
+        .listaPropiedadesSoli {
+            margin: 5px;
+            margin-bottom: 20px;
+        }
     
         .formModal__item {
             width: 140px;
